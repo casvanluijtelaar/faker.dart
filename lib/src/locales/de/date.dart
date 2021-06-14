@@ -1,8 +1,8 @@
 class Date {
 
 // Source: http://unicode.org/cldr/trac/browser/tags/release-27/common/main/en.xml#L1799
-Map<String, dynamic> month =   {
-  'wide': [
+Map<String, dynamic> month = {
+  "wide": [
     'Januar',
     'Februar',
     'März',
@@ -18,7 +18,7 @@ Map<String, dynamic> month =   {
   ],
   // Property "wide_context" is optional, if not set then "wide" will be used instead
   // It is used to specify a word in context, which may differ from a stand-alone word
-  'wide_context': [
+  "wide_context": [
     'Januar',
     'Februar',
     'März',
@@ -32,7 +32,7 @@ Map<String, dynamic> month =   {
     'November',
     'Dezember',
   ],
-  'abbr': [
+  "abbr": [
     'Jan',
     'Feb',
     'Mrz',
@@ -48,7 +48,7 @@ Map<String, dynamic> month =   {
   ],
   // Property "abbr_context" is optional, if not set then "abbr" will be used instead
   // It is used to specify a word in context, which may differ from a stand-alone word
-  'abbr_context': [
+  "abbr_context": [
     'Jan',
     'Feb',
     'Mrz',
@@ -65,8 +65,8 @@ Map<String, dynamic> month =   {
 };
 
 // Source: http://unicode.org/cldr/trac/browser/tags/release-27/common/main/en.xml#L1847
-Map<String, dynamic> weekday =  {
-  'wide': [
+Map<String, dynamic> weekday = {
+  "wide": [
     "Sonntag",
     "Montag",
     "Dienstag",
@@ -77,7 +77,7 @@ Map<String, dynamic> weekday =  {
   ],
   // Property "wide_context" is optional, if not set then "wide" will be used instead
   // It is used to specify a word in context, which may differ from a stand-alone word
-  'wide_context': [
+  "wide_context": [
     "Sonntag",
     "Montag",
     "Dienstag",
@@ -86,7 +86,7 @@ Map<String, dynamic> weekday =  {
     "Freitag",
     "Samstag"
   ],
-  'abbr': [
+  "abbr": [
     "So.",
     "Mo.",
     "Di.",
@@ -97,7 +97,7 @@ Map<String, dynamic> weekday =  {
   ],
   // Property "abbr_context" is optional, if not set then "abbr" will be used instead
   // It is used to specify a word in context, which may differ from a stand-alone word
-  'abbr_context': [
+  "abbr_context": [
     "So.",
     "Mo.",
     "Di.",

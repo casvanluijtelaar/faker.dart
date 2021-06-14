@@ -13,7 +13,7 @@ List<String> city = [
   "#{Name.last_name}#{city_suffix}"
 ];
 
-List<String> city_name = [
+List<String> cityName = [
   "Abilene",
   "Akron",
   "Alafaya",

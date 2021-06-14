@@ -2,7 +2,7 @@ class Date {
 
 // Source: http://unicode.org/cldr/trac/browser/tags/release-27/common/main/en.xml#L1799
 Map<String, dynamic> month = {
-  'wide': [
+  "wide": [
     "January",
     "February",
     "March",
@@ -18,7 +18,7 @@ Map<String, dynamic> month = {
   ],
   // Property "wide_context" is optional, if not set then "wide" will be used instead
   // It is used to specify a word in context, which may differ from a stand-alone word
-  'wide_context': [
+  "wide_context": [
     "January",
     "February",
     "March",
@@ -32,7 +32,7 @@ Map<String, dynamic> month = {
     "November",
     "December"
   ],
-  'abbr': [
+  "abbr": [
     "Jan",
     "Feb",
     "Mar",
@@ -48,7 +48,7 @@ Map<String, dynamic> month = {
   ],
   // Property "abbr_context" is optional, if not set then "abbr" will be used instead
   // It is used to specify a word in context, which may differ from a stand-alone word
-  'abbr_context': [
+  "abbr_context": [
     "Jan",
     "Feb",
     "Mar",
@@ -66,7 +66,7 @@ Map<String, dynamic> month = {
 
 // Source: http://unicode.org/cldr/trac/browser/tags/release-27/common/main/en.xml#L1847
 Map<String, dynamic> weekday = {
-  'wide': [
+  "wide": [
     "Sunday",
     "Monday",
     "Tuesday",
@@ -77,7 +77,7 @@ Map<String, dynamic> weekday = {
   ],
   // Property "wide_context" is optional, if not set then "wide" will be used instead
   // It is used to specify a word in context, which may differ from a stand-alone word
-  'wide_context': [
+  "wide_context": [
     "Sunday",
     "Monday",
     "Tuesday",
@@ -86,7 +86,7 @@ Map<String, dynamic> weekday = {
     "Friday",
     "Saturday"
   ],
-  'abbr': [
+  "abbr": [
     "Sun",
     "Mon",
     "Tue",
@@ -97,7 +97,7 @@ Map<String, dynamic> weekday = {
   ],
   // Property "abbr_context" is optional, if not set then "abbr" will be used instead
   // It is used to specify a word in context, which may differ from a stand-alone word
-  'abbr_context': [
+  "abbr_context": [
     "Sun",
     "Mon",
     "Tue",

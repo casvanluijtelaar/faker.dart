@@ -2,7 +2,7 @@ class Date {
 
 // source: http://unicode.org/cldr/trac/browser/tags/release-27/common/main/ru.xml#L1734
 Map<String, dynamic> month = {
-  'wide': [
+  "wide": [
     "yanvar",
     "fevral",
     "mart",
@@ -16,7 +16,7 @@ Map<String, dynamic> month = {
     "noyabr",
     "dekabr"
   ],
-  'wide_context': [
+  "wide_context": [
     "января",
     "февраля",
     "марта",
@@ -30,7 +30,7 @@ Map<String, dynamic> month = {
     "ноября",
     "декабря"
   ],
-  'abbr': [
+  "abbr": [
     "янв.",
     "февр.",
     "март",
@@ -44,7 +44,7 @@ Map<String, dynamic> month = {
     "нояб.",
     "дек."
   ],
-  'abbr_context': [
+  "abbr_context": [
     "янв.",
     "февр.",
     "марта",
@@ -61,8 +61,8 @@ Map<String, dynamic> month = {
 };
 
 // source: http://unicode.org/cldr/trac/browser/tags/release-27/common/main/ru.xml#L1825
-Map<String, dynamic> weekday =  {
-  'wide': [
+Map<String, dynamic> weekday = {
+  "wide": [
     "Bazar",
     "Bazar ertəsi",
     "Çərşənbə axşamı",
@@ -71,7 +71,7 @@ Map<String, dynamic> weekday =  {
     "Cümə",
     "Şənbə"
   ],
-  'wide_context': [
+  "wide_context": [
     "воскресенье",
     "понедельник",
     "вторник",
@@ -80,7 +80,7 @@ Map<String, dynamic> weekday =  {
     "пятница",
     "суббота"
   ],
-  'abbr': [
+  "abbr": [
     "Ba",
     "BE",
     "ÇA",
@@ -89,7 +89,7 @@ Map<String, dynamic> weekday =  {
     "Cü",
     "Şə"
   ],
-  'abbr_context': [
+  "abbr_context": [
     "вс",
     "пн",
     "вт",
