@@ -8,30 +8,30 @@ enum UnsplashCategory {
 }
 
 class Unsplash {
-  String image(double? w, double? h, String? keyword) =>
+  String image({int? w, int? h, String? keyword}) =>
       _imageUrl(w, h, null, keyword);
 
-  String food(double? w, double? h, String? keyword) =>
+  String food({int? w, int? h, String? keyword}) =>
       _imageUrl(w, h, UnsplashCategory.food, keyword);
 
-  String people(double? w, double? h, String? keyword) =>
+  String people({int? w, int? h, String? keyword}) =>
       _imageUrl(w, h, UnsplashCategory.people, keyword);
 
-  String nature(double? w, double? h, String? keyword) =>
+  String nature({int? w, int? h, String? keyword}) =>
       _imageUrl(w, h, UnsplashCategory.nature, keyword);
 
-  String technology(double? w, double? h, String? keyword) =>
+  String technology({int? w, int? h, String? keyword}) =>
       _imageUrl(w, h, UnsplashCategory.technology, keyword);
 
-  String objects(double? w, double? h, String? keyword) =>
+  String objects({int? w, int? h, String? keyword}) =>
       _imageUrl(w, h, UnsplashCategory.objects, keyword);
 
-  String buildings(double? w, double? h, String? keyword) =>
+  String buildings({int? w, int? h, String? keyword}) =>
       _imageUrl(w, h, UnsplashCategory.buildings, keyword);
 
   String _imageUrl(
-    double? w,
-    double? h,
+    int? w,
+    int? h,
     UnsplashCategory? category,
     String? keyword,
   ) {

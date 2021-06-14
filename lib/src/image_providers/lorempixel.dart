@@ -1,6 +1,6 @@
 import 'dart:math';
 
-enum LorempixelCategory {
+enum LoremPixelCategory {
   abstract,
   animals,
   business,
@@ -16,50 +16,52 @@ enum LorempixelCategory {
   transport,
 }
 
-class Lorempixel {
-  String abstract(width, height) =>
-      _imageUrl(width, height, LorempixelCategory.abstract);
+class LoremPixel {
+  String image({int? width, int? height}) => _imageUrl(width, height, null);
 
-  String animals(width, height) =>
-      _imageUrl(width, height, LorempixelCategory.animals);
+  String abstract({int? width, int? height}) =>
+      _imageUrl(width, height, LoremPixelCategory.abstract);
 
-  String business(width, height) =>
-      _imageUrl(width, height, LorempixelCategory.business);
+  String animals({int? width, int? height}) =>
+      _imageUrl(width, height, LoremPixelCategory.animals);
 
-  String cats(width, height) =>
-      _imageUrl(width, height, LorempixelCategory.cats);
+  String business({int? width, int? height}) =>
+      _imageUrl(width, height, LoremPixelCategory.business);
 
-  String city(width, height) =>
-      _imageUrl(width, height, LorempixelCategory.city);
+  String cats({int? width, int? height}) =>
+      _imageUrl(width, height, LoremPixelCategory.cats);
 
-  String food(width, height) =>
-      _imageUrl(width, height, LorempixelCategory.food);
+  String city({int? width, int? height}) =>
+      _imageUrl(width, height, LoremPixelCategory.city);
 
-  String nightlife(width, height) =>
-      _imageUrl(width, height, LorempixelCategory.nightlife);
+  String food({int? width, int? height}) =>
+      _imageUrl(width, height, LoremPixelCategory.food);
 
-  String fashion(width, height) =>
-      _imageUrl(width, height, LorempixelCategory.fashion);
+  String nightlife({int? width, int? height}) =>
+      _imageUrl(width, height, LoremPixelCategory.nightlife);
 
-  String people(width, height) =>
-      _imageUrl(width, height, LorempixelCategory.people);
+  String fashion({int? width, int? height}) =>
+      _imageUrl(width, height, LoremPixelCategory.fashion);
 
-  String nature(width, height) =>
-      _imageUrl(width, height, LorempixelCategory.nature);
+  String people({int? width, int? height}) =>
+      _imageUrl(width, height, LoremPixelCategory.people);
 
-  String sports(width, height) =>
-      _imageUrl(width, height, LorempixelCategory.sports);
+  String nature({int? width, int? height}) =>
+      _imageUrl(width, height, LoremPixelCategory.nature);
 
-  String technics(width, height) =>
-      _imageUrl(width, height, LorempixelCategory.technics);
+  String sports({int? width, int? height}) =>
+      _imageUrl(width, height, LoremPixelCategory.sports);
 
-  String transport(width, height) =>
-      _imageUrl(width, height, LorempixelCategory.transport);
+  String technics({int? width, int? height}) =>
+      _imageUrl(width, height, LoremPixelCategory.technics);
+
+  String transport({int? width, int? height}) =>
+      _imageUrl(width, height, LoremPixelCategory.transport);
 
   String _imageUrl(
-    double? w,
-    double? h,
-    LorempixelCategory? category,
+    int? w,
+    int? h,
+    LoremPixelCategory? category,
   ) {
     final width = w ?? 640;
     final height = h ?? 480;
@@ -72,5 +74,5 @@ class Lorempixel {
     return url;
   }
 
-  String _enumToString(LorempixelCategory c) => c.toString().split('.').last;
+  String _enumToString(LoremPixelCategory c) => c.toString().split('.').last;
 }
