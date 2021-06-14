@@ -1,3 +1,5 @@
+import 'package:faker_dart/src/locales.dart';
+
 import "./team.dart";
 import "./phone_number.dart";
 import "./name.dart";
@@ -12,7 +14,7 @@ import "./cell_phone.dart";
 import "./business.dart";
 import "./app.dart";
 import "./address.dart";
-class El {
+class El extends FakerLocale {
     final Address address = Address();
     final App app = App();
     final Business business = Business();

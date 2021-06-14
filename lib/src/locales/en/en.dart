@@ -1,3 +1,5 @@
+import 'package:faker_dart/src/locales.dart';
+
 import "./word.dart";
 import "./vehicle.dart";
 import "./team.dart";
@@ -18,7 +20,7 @@ import "./business.dart";
 import "./app.dart";
 import "./animal.dart";
 import "./address.dart";
-class En {
+class En extends FakerLocale {
     final Address address = Address();
     final Animal animal = Animal();
     final App app = App();
