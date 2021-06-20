@@ -1,3 +1,4 @@
+import 'package:faker_dart/src/datatype.dart';
 import 'package:faker_dart/src/locales/af_ZA.dart';
 import 'package:faker_dart/src/locales/ar.dart';
 import 'package:faker_dart/src/locales/az.dart';
@@ -53,6 +54,7 @@ import 'package:faker_dart/src/locales/vi.dart';
 import 'package:faker_dart/src/locales/zh_CN.dart';
 import 'package:faker_dart/src/locales/zh_TW.dart';
 import 'package:faker_dart/src/locales/zu_ZA.dart';
+import 'package:faker_dart/src/random.dart';
 
 import 'models/faker_locale.dart';
 
@@ -65,8 +67,8 @@ class Faker {
   final FakerLocaleType locale;
   late FakerLocale _locale;
 
-
-  
+  final Randoms random = Randoms();
+  final DataType dataType = DataType();
 
   Map<String, dynamic> _enumToLocale(FakerLocaleType type) {
     switch (type) {
