@@ -1,17 +1,18 @@
 import 'dart:convert';
 
+import 'package:collection/collection.dart';
 import 'package:equatable/equatable.dart';
 
-class App extends Equatable {
-  final List<String> author;
-  final List<String> name;
-  final List<String> version;
+class App {
+  final List<String>? author;
+  final List<String>? name;
+  final List<String>? version;
   App({
-    required this.author,
-    required this.name,
-    required this.version,
+    this.author,
+    this.name,
+    this.version,
   });
-
+  
 
   App copyWith({
     List<String>? author,
@@ -46,8 +47,19 @@ class App extends Equatable {
   factory App.fromJson(String source) => App.fromMap(json.decode(source));
 
   @override
-  bool get stringify => true;
+  String toString() => 'App(author: $author, name: $name, version: $version)';
 
   @override
-  List<Object> get props => [author, name, version];
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+    final listEquals = const DeepCollectionEquality().equals;
+  
+    return other is App &&
+      listEquals(other.author, author) &&
+      listEquals(other.name, name) &&
+      listEquals(other.version, version);
+  }
+
+  @override
+  int get hashCode => author.hashCode ^ name.hashCode ^ version.hashCode;
 }

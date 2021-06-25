@@ -3,13 +3,13 @@ import 'dart:convert';
 import 'package:collection/collection.dart';
 
 class Word {
-  final List<String> adjective;
-  final List<String> adverb;
-  final List<String> conjunction;
-  final List<String> interjection;
-  final List<String> noun;
-  final List<String> preposition;
-  final List<String> verb;
+  final List<String>? adjective;
+  final List<String>? adverb;
+  final List<String>? conjunction;
+  final List<String>? interjection;
+  final List<String>? noun;
+  final List<String>? preposition;
+  final List<String>? verb;
   Word({
     required this.adjective,
     required this.adverb,
@@ -77,25 +77,25 @@ class Word {
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
     final listEquals = const DeepCollectionEquality().equals;
-  
+
     return other is Word &&
-      listEquals(other.adjective, adjective) &&
-      listEquals(other.adverb, adverb) &&
-      listEquals(other.conjunction, conjunction) &&
-      listEquals(other.interjection, interjection) &&
-      listEquals(other.noun, noun) &&
-      listEquals(other.preposition, preposition) &&
-      listEquals(other.verb, verb);
+        listEquals(other.adjective, adjective) &&
+        listEquals(other.adverb, adverb) &&
+        listEquals(other.conjunction, conjunction) &&
+        listEquals(other.interjection, interjection) &&
+        listEquals(other.noun, noun) &&
+        listEquals(other.preposition, preposition) &&
+        listEquals(other.verb, verb);
   }
 
   @override
   int get hashCode {
     return adjective.hashCode ^
-      adverb.hashCode ^
-      conjunction.hashCode ^
-      interjection.hashCode ^
-      noun.hashCode ^
-      preposition.hashCode ^
-      verb.hashCode;
+        adverb.hashCode ^
+        conjunction.hashCode ^
+        interjection.hashCode ^
+        noun.hashCode ^
+        preposition.hashCode ^
+        verb.hashCode;
   }
 }

@@ -44,10 +44,8 @@ class Date {
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
-  
-    return other is Date &&
-      other.month == month &&
-      other.weekday == weekday;
+
+    return other is Date && other.month == month && other.weekday == weekday;
   }
 
   @override
@@ -55,10 +53,10 @@ class Date {
 }
 
 class Month {
-  final List<String> wide;
-  final List<String> wide_context;
-  final List<String> abbr;
-  final List<String> abbr_context;
+  final List<String>? wide;
+  final List<String>? wide_context;
+  final List<String>? abbr;
+  final List<String>? abbr_context;
   Month({
     required this.wide,
     required this.wide_context,
@@ -111,28 +109,28 @@ class Month {
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
     final listEquals = const DeepCollectionEquality().equals;
-  
+
     return other is Month &&
-      listEquals(other.wide, wide) &&
-      listEquals(other.wide_context, wide_context) &&
-      listEquals(other.abbr, abbr) &&
-      listEquals(other.abbr_context, abbr_context);
+        listEquals(other.wide, wide) &&
+        listEquals(other.wide_context, wide_context) &&
+        listEquals(other.abbr, abbr) &&
+        listEquals(other.abbr_context, abbr_context);
   }
 
   @override
   int get hashCode {
     return wide.hashCode ^
-      wide_context.hashCode ^
-      abbr.hashCode ^
-      abbr_context.hashCode;
+        wide_context.hashCode ^
+        abbr.hashCode ^
+        abbr_context.hashCode;
   }
 }
 
 class Weekday {
-  final List<String> wide;
-  final List<String> wide_context;
-  final List<String> abbr;
-  final List<String> abbr_context;
+  final List<String>? wide;
+  final List<String>? wide_context;
+  final List<String>? abbr;
+  final List<String>? abbr_context;
   Weekday({
     required this.wide,
     required this.wide_context,
@@ -174,7 +172,8 @@ class Weekday {
 
   String toJson() => json.encode(toMap());
 
-  factory Weekday.fromJson(String source) => Weekday.fromMap(json.decode(source));
+  factory Weekday.fromJson(String source) =>
+      Weekday.fromMap(json.decode(source));
 
   @override
   String toString() {
@@ -185,19 +184,19 @@ class Weekday {
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
     final listEquals = const DeepCollectionEquality().equals;
-  
+
     return other is Weekday &&
-      listEquals(other.wide, wide) &&
-      listEquals(other.wide_context, wide_context) &&
-      listEquals(other.abbr, abbr) &&
-      listEquals(other.abbr_context, abbr_context);
+        listEquals(other.wide, wide) &&
+        listEquals(other.wide_context, wide_context) &&
+        listEquals(other.abbr, abbr) &&
+        listEquals(other.abbr_context, abbr_context);
   }
 
   @override
   int get hashCode {
     return wide.hashCode ^
-      wide_context.hashCode ^
-      abbr.hashCode ^
-      abbr_context.hashCode;
+        wide_context.hashCode ^
+        abbr.hashCode ^
+        abbr_context.hashCode;
   }
 }

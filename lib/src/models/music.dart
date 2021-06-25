@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:collection/collection.dart';
 
 class Music {
-  final List<String> genre;
+  final List<String>? genre;
   Music({
     required this.genre,
   });
@@ -39,9 +39,8 @@ class Music {
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
     final listEquals = const DeepCollectionEquality().equals;
-  
-    return other is Music &&
-      listEquals(other.genre, genre);
+
+    return other is Music && listEquals(other.genre, genre);
   }
 
   @override

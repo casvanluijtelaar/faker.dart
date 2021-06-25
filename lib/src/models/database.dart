@@ -3,10 +3,10 @@ import 'dart:convert';
 import 'package:collection/collection.dart';
 
 class Database {
-  final List<String> collation;
-  final List<String> column;
-  final List<String> engine;
-  final List<String> type;
+  final List<String>? collation;
+  final List<String>? column;
+  final List<String>? engine;
+  final List<String>? type;
   Database({
     required this.collation,
     required this.column,
@@ -48,7 +48,8 @@ class Database {
 
   String toJson() => json.encode(toMap());
 
-  factory Database.fromJson(String source) => Database.fromMap(json.decode(source));
+  factory Database.fromJson(String source) =>
+      Database.fromMap(json.decode(source));
 
   @override
   String toString() {
@@ -59,19 +60,19 @@ class Database {
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
     final listEquals = const DeepCollectionEquality().equals;
-  
+
     return other is Database &&
-      listEquals(other.collation, collation) &&
-      listEquals(other.column, column) &&
-      listEquals(other.engine, engine) &&
-      listEquals(other.type, type);
+        listEquals(other.collation, collation) &&
+        listEquals(other.column, column) &&
+        listEquals(other.engine, engine) &&
+        listEquals(other.type, type);
   }
 
   @override
   int get hashCode {
     return collation.hashCode ^
-      column.hashCode ^
-      engine.hashCode ^
-      type.hashCode;
+        column.hashCode ^
+        engine.hashCode ^
+        type.hashCode;
   }
 }

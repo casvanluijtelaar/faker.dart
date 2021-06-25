@@ -1,12 +1,13 @@
 import 'dart:convert';
 
-import 'package:equatable/equatable.dart';
+import 'package:collection/collection.dart';
 
-class CellPhone extends Equatable {
-  final List<String> formats;
+class CellPhone {
+  final List<String>? formats;
   CellPhone({
-    required this.formats,
+    this.formats,
   });
+ 
 
   CellPhone copyWith({
     List<String>? formats,
@@ -33,8 +34,17 @@ class CellPhone extends Equatable {
   factory CellPhone.fromJson(String source) => CellPhone.fromMap(json.decode(source));
 
   @override
-  bool get stringify => true;
+  String toString() => 'CellPhone(formats: $formats)';
 
   @override
-  List<Object> get props => [formats];
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+    final listEquals = const DeepCollectionEquality().equals;
+  
+    return other is CellPhone &&
+      listEquals(other.formats, formats);
+  }
+
+  @override
+  int get hashCode => formats.hashCode;
 }

@@ -3,15 +3,15 @@ import 'dart:convert';
 import 'package:collection/collection.dart';
 
 class Name {
-  final List<String> binaryGender;
-  final List<String> femaleFirstName;
-  final List<String> firstName;
-  final List<String> gender;
-  final List<String> lastName;
-  final List<String> maleFirstName;
-  final List<String> name;
-  final List<String> prefix;
-  final List<String> suffix;
+  final List<String>? binaryGender;
+  final List<String>? femaleFirstName;
+  final List<String>? firstName;
+  final List<String>? gender;
+  final List<String>? lastName;
+  final List<String>? maleFirstName;
+  final List<String>? name;
+  final List<String>? prefix;
+  final List<String>? suffix;
   final Title title;
   Name({
     required this.binaryGender,
@@ -95,39 +95,39 @@ class Name {
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
     final listEquals = const DeepCollectionEquality().equals;
-  
+
     return other is Name &&
-      listEquals(other.binaryGender, binaryGender) &&
-      listEquals(other.femaleFirstName, femaleFirstName) &&
-      listEquals(other.firstName, firstName) &&
-      listEquals(other.gender, gender) &&
-      listEquals(other.lastName, lastName) &&
-      listEquals(other.maleFirstName, maleFirstName) &&
-      listEquals(other.name, name) &&
-      listEquals(other.prefix, prefix) &&
-      listEquals(other.suffix, suffix) &&
-      other.title == title;
+        listEquals(other.binaryGender, binaryGender) &&
+        listEquals(other.femaleFirstName, femaleFirstName) &&
+        listEquals(other.firstName, firstName) &&
+        listEquals(other.gender, gender) &&
+        listEquals(other.lastName, lastName) &&
+        listEquals(other.maleFirstName, maleFirstName) &&
+        listEquals(other.name, name) &&
+        listEquals(other.prefix, prefix) &&
+        listEquals(other.suffix, suffix) &&
+        other.title == title;
   }
 
   @override
   int get hashCode {
     return binaryGender.hashCode ^
-      femaleFirstName.hashCode ^
-      firstName.hashCode ^
-      gender.hashCode ^
-      lastName.hashCode ^
-      maleFirstName.hashCode ^
-      name.hashCode ^
-      prefix.hashCode ^
-      suffix.hashCode ^
-      title.hashCode;
+        femaleFirstName.hashCode ^
+        firstName.hashCode ^
+        gender.hashCode ^
+        lastName.hashCode ^
+        maleFirstName.hashCode ^
+        name.hashCode ^
+        prefix.hashCode ^
+        suffix.hashCode ^
+        title.hashCode;
   }
 }
 
 class Title {
-  final List<String> descriptor;
-  final List<String> level;
-  final List<String> job;
+  final List<String>? descriptor;
+  final List<String>? level;
+  final List<String>? job;
   Title({
     required this.descriptor,
     required this.level,
@@ -167,17 +167,18 @@ class Title {
   factory Title.fromJson(String source) => Title.fromMap(json.decode(source));
 
   @override
-  String toString() => 'Title(descriptor: $descriptor, level: $level, job: $job)';
+  String toString() =>
+      'Title(descriptor: $descriptor, level: $level, job: $job)';
 
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
     final listEquals = const DeepCollectionEquality().equals;
-  
+
     return other is Title &&
-      listEquals(other.descriptor, descriptor) &&
-      listEquals(other.level, level) &&
-      listEquals(other.job, job);
+        listEquals(other.descriptor, descriptor) &&
+        listEquals(other.level, level) &&
+        listEquals(other.job, job);
   }
 
   @override

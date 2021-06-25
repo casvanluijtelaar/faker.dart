@@ -1,40 +1,41 @@
 import 'dart:convert';
 
+import 'package:collection/collection.dart';
 import 'package:equatable/equatable.dart';
 
-class Animal extends Equatable {
-  final List<String> bear;
-  final List<String> bird;
-  final List<String> cat;
-  final List<String> cetacean;
-  final List<String> cow;
-  final List<String> crocodilia;
-  final List<String> dog;
-  final List<String> fish;
-  final List<String> horse;
+class Animal {
+  final List<String>? bear;
+  final List<String>? bird;
+  final List<String>? cat;
+  final List<String>? cetacean;
+  final List<String>? cow;
+  final List<String>? crocodilia;
+  final List<String>? dog;
+  final List<String>? fish;
+  final List<String>? horse;
 
-  final List<String> insect;
-  final List<String> lion;
-  final List<String> rabbit;
-  final List<String> snake;
-  final List<String> type;
+  final List<String>? insect;
+  final List<String>? lion;
+  final List<String>? rabbit;
+  final List<String>? snake;
+  final List<String>? type;
   Animal({
-    required this.bear,
-    required this.bird,
-    required this.cat,
-    required this.cetacean,
-    required this.cow,
-    required this.crocodilia,
-    required this.dog,
-    required this.fish,
-    required this.horse,
-    required this.insect,
-    required this.lion,
-    required this.rabbit,
-    required this.snake,
-    required this.type,
+    this.bear,
+    this.bird,
+    this.cat,
+    this.cetacean,
+    this.cow,
+    this.crocodilia,
+    this.dog,
+    this.fish,
+    this.horse,
+    this.insect,
+    this.lion,
+    this.rabbit,
+    this.snake,
+    this.type,
   });
-
+ 
 
   Animal copyWith({
     List<String>? bear,
@@ -113,25 +114,47 @@ class Animal extends Equatable {
   factory Animal.fromJson(String source) => Animal.fromMap(json.decode(source));
 
   @override
-  bool get stringify => true;
+  String toString() {
+    return 'Animal(bear: $bear, bird: $bird, cat: $cat, cetacean: $cetacean, cow: $cow, crocodilia: $crocodilia, dog: $dog, fish: $fish, horse: $horse, insect: $insect, lion: $lion, rabbit: $rabbit, snake: $snake, type: $type)';
+  }
 
   @override
-  List<Object> get props {
-    return [
-      bear,
-      bird,
-      cat,
-      cetacean,
-      cow,
-      crocodilia,
-      dog,
-      fish,
-      horse,
-      insect,
-      lion,
-      rabbit,
-      snake,
-      type,
-    ];
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+    final listEquals = const DeepCollectionEquality().equals;
+  
+    return other is Animal &&
+      listEquals(other.bear, bear) &&
+      listEquals(other.bird, bird) &&
+      listEquals(other.cat, cat) &&
+      listEquals(other.cetacean, cetacean) &&
+      listEquals(other.cow, cow) &&
+      listEquals(other.crocodilia, crocodilia) &&
+      listEquals(other.dog, dog) &&
+      listEquals(other.fish, fish) &&
+      listEquals(other.horse, horse) &&
+      listEquals(other.insect, insect) &&
+      listEquals(other.lion, lion) &&
+      listEquals(other.rabbit, rabbit) &&
+      listEquals(other.snake, snake) &&
+      listEquals(other.type, type);
+  }
+
+  @override
+  int get hashCode {
+    return bear.hashCode ^
+      bird.hashCode ^
+      cat.hashCode ^
+      cetacean.hashCode ^
+      cow.hashCode ^
+      crocodilia.hashCode ^
+      dog.hashCode ^
+      fish.hashCode ^
+      horse.hashCode ^
+      insect.hashCode ^
+      lion.hashCode ^
+      rabbit.hashCode ^
+      snake.hashCode ^
+      type.hashCode;
   }
 }

@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:collection/collection.dart';
 
 class PhoneNumber {
-  final List<String> formats;
+  final List<String>? formats;
   PhoneNumber({
     required this.formats,
   });
@@ -30,7 +30,8 @@ class PhoneNumber {
 
   String toJson() => json.encode(toMap());
 
-  factory PhoneNumber.fromJson(String source) => PhoneNumber.fromMap(json.decode(source));
+  factory PhoneNumber.fromJson(String source) =>
+      PhoneNumber.fromMap(json.decode(source));
 
   @override
   String toString() => 'PhoneNumber(formats: $formats)';
@@ -39,9 +40,8 @@ class PhoneNumber {
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
     final listEquals = const DeepCollectionEquality().equals;
-  
-    return other is PhoneNumber &&
-      listEquals(other.formats, formats);
+
+    return other is PhoneNumber && listEquals(other.formats, formats);
   }
 
   @override

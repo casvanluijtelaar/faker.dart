@@ -3,12 +3,12 @@ import 'dart:convert';
 import 'package:collection/collection.dart';
 
 class Hacker {
-  final List<String> abbreviation;
-  final List<String> adjective;
-  final List<String> ingverb;
-  final List<String> noun;
-  final List<String> phrase;
-  final List<String> verb;
+  final List<String>? abbreviation;
+  final List<String>? adjective;
+  final List<String>? ingverb;
+  final List<String>? noun;
+  final List<String>? phrase;
+  final List<String>? verb;
   Hacker({
     required this.abbreviation,
     required this.adjective,
@@ -71,23 +71,23 @@ class Hacker {
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
     final listEquals = const DeepCollectionEquality().equals;
-  
+
     return other is Hacker &&
-      listEquals(other.abbreviation, abbreviation) &&
-      listEquals(other.adjective, adjective) &&
-      listEquals(other.ingverb, ingverb) &&
-      listEquals(other.noun, noun) &&
-      listEquals(other.phrase, phrase) &&
-      listEquals(other.verb, verb);
+        listEquals(other.abbreviation, abbreviation) &&
+        listEquals(other.adjective, adjective) &&
+        listEquals(other.ingverb, ingverb) &&
+        listEquals(other.noun, noun) &&
+        listEquals(other.phrase, phrase) &&
+        listEquals(other.verb, verb);
   }
 
   @override
   int get hashCode {
     return abbreviation.hashCode ^
-      adjective.hashCode ^
-      ingverb.hashCode ^
-      noun.hashCode ^
-      phrase.hashCode ^
-      verb.hashCode;
+        adjective.hashCode ^
+        ingverb.hashCode ^
+        noun.hashCode ^
+        phrase.hashCode ^
+        verb.hashCode;
   }
 }

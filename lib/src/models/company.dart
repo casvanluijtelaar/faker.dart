@@ -3,14 +3,14 @@ import 'dart:convert';
 import 'package:collection/collection.dart';
 
 class Company {
-  final List<String> adjective;
-  final List<String> bsAdjective;
-  final List<String> bsNoun;
-  final List<String> bsVerb;
-  final List<String> descriptor;
-  final List<String> name;
-  final List<String> noun;
-  final List<String> suffix;
+  final List<String>? adjective;
+  final List<String>? bsAdjective;
+  final List<String>? bsNoun;
+  final List<String>? bsVerb;
+  final List<String>? descriptor;
+  final List<String>? name;
+  final List<String>? noun;
+  final List<String>? suffix;
   Company({
     required this.adjective,
     required this.bsAdjective,
@@ -72,7 +72,8 @@ class Company {
 
   String toJson() => json.encode(toMap());
 
-  factory Company.fromJson(String source) => Company.fromMap(json.decode(source));
+  factory Company.fromJson(String source) =>
+      Company.fromMap(json.decode(source));
 
   @override
   String toString() {
@@ -83,27 +84,27 @@ class Company {
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
     final listEquals = const DeepCollectionEquality().equals;
-  
+
     return other is Company &&
-      listEquals(other.adjective, adjective) &&
-      listEquals(other.bsAdjective, bsAdjective) &&
-      listEquals(other.bsNoun, bsNoun) &&
-      listEquals(other.bsVerb, bsVerb) &&
-      listEquals(other.descriptor, descriptor) &&
-      listEquals(other.name, name) &&
-      listEquals(other.noun, noun) &&
-      listEquals(other.suffix, suffix);
+        listEquals(other.adjective, adjective) &&
+        listEquals(other.bsAdjective, bsAdjective) &&
+        listEquals(other.bsNoun, bsNoun) &&
+        listEquals(other.bsVerb, bsVerb) &&
+        listEquals(other.descriptor, descriptor) &&
+        listEquals(other.name, name) &&
+        listEquals(other.noun, noun) &&
+        listEquals(other.suffix, suffix);
   }
 
   @override
   int get hashCode {
     return adjective.hashCode ^
-      bsAdjective.hashCode ^
-      bsNoun.hashCode ^
-      bsVerb.hashCode ^
-      descriptor.hashCode ^
-      name.hashCode ^
-      noun.hashCode ^
-      suffix.hashCode;
+        bsAdjective.hashCode ^
+        bsNoun.hashCode ^
+        bsVerb.hashCode ^
+        descriptor.hashCode ^
+        name.hashCode ^
+        noun.hashCode ^
+        suffix.hashCode;
   }
 }

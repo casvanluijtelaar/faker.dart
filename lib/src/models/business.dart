@@ -1,18 +1,17 @@
 import 'dart:convert';
 
+import 'package:collection/collection.dart';
 import 'package:equatable/equatable.dart';
 
-class Business extends Equatable {
-  final List<String> creditCardExpiryDates;
-  final List<String> creditCardNumbers;
-  final List<String> creditCardTypes;
+class Business {
+  final List<String>? creditCardExpiryDates;
+  final List<String>? creditCardNumbers;
+  final List<String>? creditCardTypes;
   Business({
-    required this.creditCardExpiryDates,
-    required this.creditCardNumbers,
-    required this.creditCardTypes,
+    this.creditCardExpiryDates,
+    this.creditCardNumbers,
+    this.creditCardTypes,
   });
-
-
 
   Business copyWith({
     List<String>? creditCardExpiryDates,
@@ -47,8 +46,19 @@ class Business extends Equatable {
   factory Business.fromJson(String source) => Business.fromMap(json.decode(source));
 
   @override
-  bool get stringify => true;
+  String toString() => 'Business(creditCardExpiryDates: $creditCardExpiryDates, creditCardNumbers: $creditCardNumbers, creditCardTypes: $creditCardTypes)';
 
   @override
-  List<Object> get props => [creditCardExpiryDates, creditCardNumbers, creditCardTypes];
-}
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+    final listEquals = const DeepCollectionEquality().equals;
+  
+    return other is Business &&
+      listEquals(other.creditCardExpiryDates, creditCardExpiryDates) &&
+      listEquals(other.creditCardNumbers, creditCardNumbers) &&
+      listEquals(other.creditCardTypes, creditCardTypes);
+  }
+
+  @override
+  int get hashCode => creditCardExpiryDates.hashCode ^ creditCardNumbers.hashCode ^ creditCardTypes.hashCode;
+  }

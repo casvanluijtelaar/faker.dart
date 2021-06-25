@@ -3,11 +3,11 @@ import 'dart:convert';
 import 'package:collection/collection.dart';
 
 class Vehicle {
-  final List<String> bicycle;
-  final List<String> fuel;
-  final List<String> manufacturer;
-  final List<String> model;
-  final List<String> vehicleType;
+  final List<String>? bicycle;
+  final List<String>? fuel;
+  final List<String>? manufacturer;
+  final List<String>? model;
+  final List<String>? vehicleType;
   Vehicle({
     required this.bicycle,
     required this.fuel,
@@ -54,7 +54,8 @@ class Vehicle {
 
   String toJson() => json.encode(toMap());
 
-  factory Vehicle.fromJson(String source) => Vehicle.fromMap(json.decode(source));
+  factory Vehicle.fromJson(String source) =>
+      Vehicle.fromMap(json.decode(source));
 
   @override
   String toString() {
@@ -65,21 +66,21 @@ class Vehicle {
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
     final listEquals = const DeepCollectionEquality().equals;
-  
+
     return other is Vehicle &&
-      listEquals(other.bicycle, bicycle) &&
-      listEquals(other.fuel, fuel) &&
-      listEquals(other.manufacturer, manufacturer) &&
-      listEquals(other.model, model) &&
-      listEquals(other.vehicleType, vehicleType);
+        listEquals(other.bicycle, bicycle) &&
+        listEquals(other.fuel, fuel) &&
+        listEquals(other.manufacturer, manufacturer) &&
+        listEquals(other.model, model) &&
+        listEquals(other.vehicleType, vehicleType);
   }
 
   @override
   int get hashCode {
     return bicycle.hashCode ^
-      fuel.hashCode ^
-      manufacturer.hashCode ^
-      model.hashCode ^
-      vehicleType.hashCode;
+        fuel.hashCode ^
+        manufacturer.hashCode ^
+        model.hashCode ^
+        vehicleType.hashCode;
   }
 }

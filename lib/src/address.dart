@@ -1,4 +1,3 @@
-import 'package:faker_dart/src/models/faker_locale.dart';
 import 'package:faker_dart/src/random.dart';
 
 import 'faker.dart';
@@ -14,7 +13,7 @@ class Address {
    */
   String zipCode() {
     final localFormat = _faker.locale.address.postcode;
-    final format = Randoms.arrayElement(localFormat);
+    final format = Randoms.arrayElement(localFormat ?? []);
 
     return _faker.helpers.replaceSymbols(format);
   }
@@ -27,7 +26,7 @@ class Address {
    * to the locale's zip format.
    */
   String zipCodeByState(String state) {
-    final zipRange = _faker.locale.address.postcodeByState.indexOf(state);
+    final zipRange = _faker.locale.address.postcodeByState!.indexOf(state);
     if (zipRange != -1) return _faker.datatype.number(max: zipRange).toString();
     return zipCode();
   }
@@ -62,4 +61,46 @@ class Address {
 
     return _faker.fake(formats[index]);
   }
+
+  /**
+   * Return a random localized city prefix
+   */
+  String cityPrefix() {
+    return Randoms.arrayElement(_faker.locale.address.cityPrefix!);
+  }
+
+  /**
+   * Return a random localized city suffix
+   */
+  String citySuffix() {
+    return Randoms.arrayElement(_faker.locale.address.citySuffix!);
+  }
+
+  /**
+   * Returns a random city name
+   */
+  String cityName() {
+    return Randoms.arrayElement(_faker.locale.address.cityName!);
+  }
+
+/**
+   * Returns a random localized street name
+   */
+
+  String streetName() {
+    var suffix = streetSuffix();
+    if (suffix != "") suffix = " " + suffix;
+
+    return _faker.datatype.boolean()
+        ? _faker.name.lastName() + suffix
+        : _faker.name.firstName() + suffix;
+  }
+
+    /**
+   * streetSuffixx
+   */
+  String streetSuffix() {
+    return Randoms.arrayElement(_faker.locale.address.streetSuffix!);
+  }
+
 }

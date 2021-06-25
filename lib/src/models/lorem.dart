@@ -3,8 +3,8 @@ import 'dart:convert';
 import 'package:collection/collection.dart';
 
 class Lorem {
-  final List<String> supplemental;
-  final List<String> words;
+  final List<String>? supplemental;
+  final List<String>? words;
   Lorem({
     required this.supplemental,
     required this.words,
@@ -45,10 +45,10 @@ class Lorem {
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
     final listEquals = const DeepCollectionEquality().equals;
-  
+
     return other is Lorem &&
-      listEquals(other.supplemental, supplemental) &&
-      listEquals(other.words, words);
+        listEquals(other.supplemental, supplemental) &&
+        listEquals(other.words, words);
   }
 
   @override

@@ -3,8 +3,8 @@ import 'dart:convert';
 import 'package:collection/collection.dart';
 
 class Team {
-  final List<String> creature;
-  final List<String> name;
+  final List<String>? creature;
+  final List<String>? name;
   Team({
     required this.creature,
     required this.name,
@@ -45,10 +45,10 @@ class Team {
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
     final listEquals = const DeepCollectionEquality().equals;
-  
+
     return other is Team &&
-      listEquals(other.creature, creature) &&
-      listEquals(other.name, name);
+        listEquals(other.creature, creature) &&
+        listEquals(other.name, name);
   }
 
   @override
