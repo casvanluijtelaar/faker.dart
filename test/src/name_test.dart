@@ -105,7 +105,6 @@ void main() {
     expect(name.gender(binary: true), 'non');
   });
 
-
   test('prefix with genders', () {
     when(() => faker.locale.name.malePrefix).thenReturn(['John']);
     when(() => faker.locale.name.femalePrefix).thenReturn(['Lucy']);
@@ -134,22 +133,21 @@ void main() {
     expect(neutral, 'Bert');
   });
 
-
- test('suffix', () {
+  test('suffix', () {
     when(() => faker.locale.name.suffix).thenReturn(['son']);
     expect(name.suffix(), 'son');
   });
 
- test('jobDescriptor', () {
+  test('jobDescriptor', () {
     when(() => faker.locale.name.title!.descriptor).thenReturn(['h']);
     expect(name.jobDescriptor(), 'h');
   });
 
-   test('jobSector', () {
+  test('jobSector', () {
     when(() => faker.locale.name.title!.level).thenReturn(['h']);
     expect(name.jobSector(), 'h');
   });
-   test('jobType', () {
+  test('jobType', () {
     when(() => faker.locale.name.title!.job).thenReturn(['h']);
     expect(name.jobType(), 'h');
   });

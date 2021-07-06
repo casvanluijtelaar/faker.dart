@@ -4,10 +4,12 @@ import 'faker.dart';
 
 /// defines a gender used for gender specific names
 enum Gender {
-  /// male gender names, e.g. John 
+  /// male gender names, e.g. John
   male,
+
   /// female gender names, e.g. Lucy
   female,
+
   /// unspecified gender, can return male or female names
   unspecified,
 }
@@ -20,6 +22,37 @@ class Name {
   const Name(this._faker);
 
   final Faker _faker;
+
+  /// returns a persons full name including a [firstName], [lastName] and
+  /// a chance for a prefix or suffix. if a [firstName] and/or [lastName]
+  /// are used instead.
+  String fullName({
+    String? firstName,
+    String? lastName,
+    Gender gender = Gender.unspecified,
+  }) {
+    firstName ??= _faker.name.firstName(gender: gender);
+    lastName ??= _faker.name.lastName(gender: gender);
+
+    final chance = _faker.datatype.number(max: 8);
+
+    if (chance == 0) {
+      final prefix = _faker.name.prefix(gender: gender);
+      return '$prefix $firstName $lastName';
+    }
+
+    if (chance == 1) {
+      final suffix = _faker.name.suffix();
+      return '$firstName $lastName $suffix';
+    }
+
+    if (chance == 2) {
+      final middleName = _faker.name.middleName(gender: gender);
+      return '$firstName $middleName $lastName';
+    }
+
+    return '$firstName $lastName';
+  }
 
   /// returns a random first name, optional [Gender] can be provided if
   /// locale supports gender specific first names
