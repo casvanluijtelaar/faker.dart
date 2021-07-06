@@ -1,3 +1,4 @@
+// ignore_for_file: public_member_api_docs,sort_constructors_first, directives_ordering, lines_longer_than_80_chars
 import 'dart:convert';
 
 import 'package:collection/collection.dart';
@@ -11,13 +12,13 @@ class Word {
   final List<String>? preposition;
   final List<String>? verb;
   Word({
-    required this.adjective,
-    required this.adverb,
-    required this.conjunction,
-    required this.interjection,
-    required this.noun,
-    required this.preposition,
-    required this.verb,
+     this.adjective,
+     this.adverb,
+     this.conjunction,
+     this.interjection,
+     this.noun,
+     this.preposition,
+     this.verb,
   });
 
   Word copyWith({

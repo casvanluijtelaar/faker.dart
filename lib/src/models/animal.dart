@@ -1,7 +1,7 @@
+// ignore_for_file: public_member_api_docs,sort_constructors_first, directives_ordering, lines_longer_than_80_chars
 import 'dart:convert';
 
 import 'package:collection/collection.dart';
-import 'package:equatable/equatable.dart';
 
 class Animal {
   final List<String>? bear;
@@ -35,7 +35,6 @@ class Animal {
     this.snake,
     this.type,
   });
- 
 
   Animal copyWith({
     List<String>? bear,
@@ -122,39 +121,39 @@ class Animal {
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
     final listEquals = const DeepCollectionEquality().equals;
-  
+
     return other is Animal &&
-      listEquals(other.bear, bear) &&
-      listEquals(other.bird, bird) &&
-      listEquals(other.cat, cat) &&
-      listEquals(other.cetacean, cetacean) &&
-      listEquals(other.cow, cow) &&
-      listEquals(other.crocodilia, crocodilia) &&
-      listEquals(other.dog, dog) &&
-      listEquals(other.fish, fish) &&
-      listEquals(other.horse, horse) &&
-      listEquals(other.insect, insect) &&
-      listEquals(other.lion, lion) &&
-      listEquals(other.rabbit, rabbit) &&
-      listEquals(other.snake, snake) &&
-      listEquals(other.type, type);
+        listEquals(other.bear, bear) &&
+        listEquals(other.bird, bird) &&
+        listEquals(other.cat, cat) &&
+        listEquals(other.cetacean, cetacean) &&
+        listEquals(other.cow, cow) &&
+        listEquals(other.crocodilia, crocodilia) &&
+        listEquals(other.dog, dog) &&
+        listEquals(other.fish, fish) &&
+        listEquals(other.horse, horse) &&
+        listEquals(other.insect, insect) &&
+        listEquals(other.lion, lion) &&
+        listEquals(other.rabbit, rabbit) &&
+        listEquals(other.snake, snake) &&
+        listEquals(other.type, type);
   }
 
   @override
   int get hashCode {
     return bear.hashCode ^
-      bird.hashCode ^
-      cat.hashCode ^
-      cetacean.hashCode ^
-      cow.hashCode ^
-      crocodilia.hashCode ^
-      dog.hashCode ^
-      fish.hashCode ^
-      horse.hashCode ^
-      insect.hashCode ^
-      lion.hashCode ^
-      rabbit.hashCode ^
-      snake.hashCode ^
-      type.hashCode;
+        bird.hashCode ^
+        cat.hashCode ^
+        cetacean.hashCode ^
+        cow.hashCode ^
+        crocodilia.hashCode ^
+        dog.hashCode ^
+        fish.hashCode ^
+        horse.hashCode ^
+        insect.hashCode ^
+        lion.hashCode ^
+        rabbit.hashCode ^
+        snake.hashCode ^
+        type.hashCode;
   }
 }

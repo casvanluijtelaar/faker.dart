@@ -1,3 +1,4 @@
+// ignore_for_file: public_member_api_docs,sort_constructors_first, directives_ordering, lines_longer_than_80_chars
 import 'dart:convert';
 
 import 'package:collection/collection.dart';
@@ -12,14 +13,14 @@ class Company {
   final List<String>? noun;
   final List<String>? suffix;
   Company({
-    required this.adjective,
-    required this.bsAdjective,
-    required this.bsNoun,
-    required this.bsVerb,
-    required this.descriptor,
-    required this.name,
-    required this.noun,
-    required this.suffix,
+     this.adjective,
+     this.bsAdjective,
+     this.bsNoun,
+     this.bsVerb,
+     this.descriptor,
+     this.name,
+     this.noun,
+     this.suffix,
   });
 
   Company copyWith({

@@ -1,7 +1,7 @@
+// ignore_for_file: public_member_api_docs,sort_constructors_first, directives_ordering, lines_longer_than_80_chars
 import 'dart:convert';
 
 import 'package:collection/collection.dart';
-import 'package:equatable/equatable.dart';
 
 class App {
   final List<String>? author;
@@ -12,7 +12,6 @@ class App {
     this.name,
     this.version,
   });
-  
 
   App copyWith({
     List<String>? author,
@@ -53,11 +52,11 @@ class App {
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
     final listEquals = const DeepCollectionEquality().equals;
-  
+
     return other is App &&
-      listEquals(other.author, author) &&
-      listEquals(other.name, name) &&
-      listEquals(other.version, version);
+        listEquals(other.author, author) &&
+        listEquals(other.name, name) &&
+        listEquals(other.version, version);
   }
 
   @override

@@ -1,25 +1,30 @@
-import 'locales/_locales.dart';
-import 'locales/af_ZA.dart';
-import 'models/faker_locale.dart';
+import '../locales/_locales.dart';
+import '../locales/af_ZA.dart';
+import '../models/faker_locale.dart';
 
 class LocaleUtils {
+  
   static FakerLocale generateLocale(FakerLocaleType type) {
     final localeData = _enumToLocale(type);
-    final localeWithFallbackData = _recursiveNullReplace(localeData, en);
+    final completedData = FakerLocale.fromMap(localeData).toMap();
+    final localeWithFallbackData = _recursiveNullReplace(completedData, en);
 
     return FakerLocale.fromMap(localeWithFallbackData);
   }
 
-  static Map<String, dynamic> _recursiveNullReplace(Map base, Map replacement) {
+  static Map<String, dynamic> _recursiveNullReplace(
+    Map<String, dynamic> base,
+    Map<String, dynamic> replacement,
+  ) {
     return base.map((key, value) {
-      var updatedValue = value;
-      if (value == null) {
-        updatedValue = replacement[key];
+      var updated = value;
+      if (updated is Map<String, dynamic>) {
+        updated = _recursiveNullReplace(base[key], replacement[key]);
+      } else {
+        updated ??= replacement[key];
       }
-      if (updatedValue is Map) {
-        _recursiveNullReplace(base[key], replacement[key]);
-      }
-      return MapEntry(key, updatedValue);
+
+      return MapEntry(key, updated);
     });
   }
 
@@ -139,7 +144,10 @@ class LocaleUtils {
   }
 }
 
+/// all support locales
 enum FakerLocaleType {
+  // ignore_for_file: constant_identifier_names
+  // ignore_for_file: public_member_api_docs
   af_ZA,
   ar,
   az,

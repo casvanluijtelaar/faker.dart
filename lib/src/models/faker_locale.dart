@@ -1,4 +1,7 @@
+// ignore_for_file: public_member_api_docs,sort_constructors_first, directives_ordering, lines_longer_than_80_chars
 import 'dart:convert';
+
+import 'package:faker_dart/src/models/system.dart';
 
 import 'database.dart';
 import 'date.dart';
@@ -11,6 +14,7 @@ import 'phone_number.dart';
 import 'team.dart';
 import 'vehicle.dart';
 import 'word.dart';
+
 import 'address.dart';
 import 'animal.dart';
 import 'app.dart';
@@ -36,10 +40,12 @@ class FakerLocale {
   final Music music;
   final Name name;
   final PhoneNumber phoneNumber;
+  final System system;
 
   final Team team;
   final Vehicle vehicle;
   final Word word;
+
   FakerLocale({
     required this.address,
     required this.animal,
@@ -56,6 +62,7 @@ class FakerLocale {
     required this.music,
     required this.name,
     required this.phoneNumber,
+    required this.system,
     required this.team,
     required this.vehicle,
     required this.word,
@@ -77,6 +84,7 @@ class FakerLocale {
     Music? music,
     Name? name,
     PhoneNumber? phoneNumber,
+    System? system,
     Team? team,
     Vehicle? vehicle,
     Word? word,
@@ -97,6 +105,7 @@ class FakerLocale {
       music: music ?? this.music,
       name: name ?? this.name,
       phoneNumber: phoneNumber ?? this.phoneNumber,
+      system: system ?? this.system,
       team: team ?? this.team,
       vehicle: vehicle ?? this.vehicle,
       word: word ?? this.word,
@@ -120,6 +129,7 @@ class FakerLocale {
       'music': music.toMap(),
       'name': name.toMap(),
       'phoneNumber': phoneNumber.toMap(),
+      'system': system.toMap(),
       'team': team.toMap(),
       'vehicle': vehicle.toMap(),
       'word': word.toMap(),
@@ -143,6 +153,7 @@ class FakerLocale {
       music: Music.fromMap(map['music']),
       name: Name.fromMap(map['name']),
       phoneNumber: PhoneNumber.fromMap(map['phoneNumber']),
+      system: System.fromMap(map['system']),
       team: Team.fromMap(map['team']),
       vehicle: Vehicle.fromMap(map['vehicle']),
       word: Word.fromMap(map['word']),
@@ -151,57 +162,60 @@ class FakerLocale {
 
   String toJson() => json.encode(toMap());
 
-  factory FakerLocale.fromJson(String source) => FakerLocale.fromMap(json.decode(source));
+  factory FakerLocale.fromJson(String source) =>
+      FakerLocale.fromMap(json.decode(source));
 
   @override
   String toString() {
-    return 'FakerLocale(address: $address, animal: $animal, app: $app, business: $business, cellPhone: $cellPhone, commerce: $commerce, company: $company, database: $database, date: $date, hacker: $hacker, internet: $internet, lorem: $lorem, music: $music, name: $name, phoneNumber: $phoneNumber, team: $team, vehicle: $vehicle, word: $word)';
+    return 'FakerLocale(address: $address, animal: $animal, app: $app, business: $business, cellPhone: $cellPhone, commerce: $commerce, company: $company, database: $database, date: $date, hacker: $hacker, internet: $internet, lorem: $lorem, music: $music, name: $name, phoneNumber: $phoneNumber, system: $system, team: $team, vehicle: $vehicle, word: $word)';
   }
 
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
-  
+
     return other is FakerLocale &&
-      other.address == address &&
-      other.animal == animal &&
-      other.app == app &&
-      other.business == business &&
-      other.cellPhone == cellPhone &&
-      other.commerce == commerce &&
-      other.company == company &&
-      other.database == database &&
-      other.date == date &&
-      other.hacker == hacker &&
-      other.internet == internet &&
-      other.lorem == lorem &&
-      other.music == music &&
-      other.name == name &&
-      other.phoneNumber == phoneNumber &&
-      other.team == team &&
-      other.vehicle == vehicle &&
-      other.word == word;
+        other.address == address &&
+        other.animal == animal &&
+        other.app == app &&
+        other.business == business &&
+        other.cellPhone == cellPhone &&
+        other.commerce == commerce &&
+        other.company == company &&
+        other.database == database &&
+        other.date == date &&
+        other.hacker == hacker &&
+        other.internet == internet &&
+        other.lorem == lorem &&
+        other.music == music &&
+        other.name == name &&
+        other.phoneNumber == phoneNumber &&
+        other.system == system &&
+        other.team == team &&
+        other.vehicle == vehicle &&
+        other.word == word;
   }
 
   @override
   int get hashCode {
     return address.hashCode ^
-      animal.hashCode ^
-      app.hashCode ^
-      business.hashCode ^
-      cellPhone.hashCode ^
-      commerce.hashCode ^
-      company.hashCode ^
-      database.hashCode ^
-      date.hashCode ^
-      hacker.hashCode ^
-      internet.hashCode ^
-      lorem.hashCode ^
-      music.hashCode ^
-      name.hashCode ^
-      phoneNumber.hashCode ^
-      team.hashCode ^
-      vehicle.hashCode ^
-      word.hashCode;
+        animal.hashCode ^
+        app.hashCode ^
+        business.hashCode ^
+        cellPhone.hashCode ^
+        commerce.hashCode ^
+        company.hashCode ^
+        database.hashCode ^
+        date.hashCode ^
+        hacker.hashCode ^
+        internet.hashCode ^
+        lorem.hashCode ^
+        music.hashCode ^
+        name.hashCode ^
+        phoneNumber.hashCode ^
+        system.hashCode ^
+        team.hashCode ^
+        vehicle.hashCode ^
+        word.hashCode;
   }
 }

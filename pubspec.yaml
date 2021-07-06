@@ -1,6 +1,6 @@
 name: faker_dart
 description: generate massive amounts of fake data in dart!
-version: 0.0.1-dev.2
+version: 0.0.1
 homepage: https://github.com/casvanluijtelaar/faker.dart
 
 environment:
@@ -12,3 +12,5 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  very_good_analysis: ^2.1.2
+  mocktail: ^0.1.4

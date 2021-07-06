@@ -1,3 +1,4 @@
+// ignore_for_file: public_member_api_docs,sort_constructors_first, directives_ordering, lines_longer_than_80_chars
 import 'dart:convert';
 
 import 'package:collection/collection.dart';
@@ -8,10 +9,10 @@ class Database {
   final List<String>? engine;
   final List<String>? type;
   Database({
-    required this.collation,
-    required this.column,
-    required this.engine,
-    required this.type,
+     this.collation,
+     this.column,
+     this.engine,
+     this.type,
   });
 
   Database copyWith({

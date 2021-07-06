@@ -1,3 +1,4 @@
+// ignore_for_file: public_member_api_docs,sort_constructors_first, directives_ordering, lines_longer_than_80_chars
 import 'dart:convert';
 
 import 'package:collection/collection.dart';
@@ -8,10 +9,10 @@ class Commerce {
   final List<String>? productDescription;
   final ProductName productName;
   Commerce({
-    required this.color,
-    required this.department,
-    required this.productDescription,
-    required this.productName,
+     this.color,
+     this.department,
+     this.productDescription,
+     required this.productName,
   });
 
   Commerce copyWith({
@@ -82,9 +83,9 @@ class ProductName {
   final List<String>? material;
   final List<String>? product;
   ProductName({
-    required this.adjective,
-    required this.material,
-    required this.product,
+    this.adjective,
+    this.material,
+    this.product,
   });
 
   ProductName copyWith({

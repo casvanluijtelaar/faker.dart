@@ -1,3 +1,4 @@
+// ignore_for_file: public_member_api_docs,sort_constructors_first, directives_ordering, lines_longer_than_80_chars
 import 'dart:convert';
 
 import 'package:collection/collection.dart';
@@ -10,12 +11,12 @@ class Hacker {
   final List<String>? phrase;
   final List<String>? verb;
   Hacker({
-    required this.abbreviation,
-    required this.adjective,
-    required this.ingverb,
-    required this.noun,
-    required this.phrase,
-    required this.verb,
+     this.abbreviation,
+     this.adjective,
+     this.ingverb,
+     this.noun,
+     this.phrase,
+     this.verb,
   });
 
   Hacker copyWith({

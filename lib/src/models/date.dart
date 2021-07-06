@@ -1,3 +1,4 @@
+// ignore_for_file: public_member_api_docs,sort_constructors_first, directives_ordering, lines_longer_than_80_chars, non_constant_identifier_names
 import 'dart:convert';
 
 import 'package:collection/collection.dart';
@@ -6,8 +7,8 @@ class Date {
   final Month month;
   final Weekday weekday;
   Date({
-    required this.month,
-    required this.weekday,
+     required this.month,
+     required this.weekday,
   });
 
   Date copyWith({
@@ -58,10 +59,10 @@ class Month {
   final List<String>? abbr;
   final List<String>? abbr_context;
   Month({
-    required this.wide,
-    required this.wide_context,
-    required this.abbr,
-    required this.abbr_context,
+     this.wide,
+     this.wide_context,
+     this.abbr,
+     this.abbr_context,
   });
 
   Month copyWith({
@@ -132,10 +133,10 @@ class Weekday {
   final List<String>? abbr;
   final List<String>? abbr_context;
   Weekday({
-    required this.wide,
-    required this.wide_context,
-    required this.abbr,
-    required this.abbr_context,
+     this.wide,
+     this.wide_context,
+     this.abbr,
+     this.abbr_context,
   });
 
   Weekday copyWith({

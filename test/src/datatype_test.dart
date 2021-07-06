@@ -4,7 +4,11 @@ import 'package:faker_dart/src/datatype.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
-  DataType datatype = DataType();
+  late DataType datatype;
+
+  setUp(() {
+    datatype = DataType();
+  });
 
   test('integer', () {
     final result = datatype.number(min: 1, max: 4);
@@ -42,10 +46,10 @@ void main() {
   test('json', () {
     final result = datatype.json();
     expect(jsonDecode(result) is Map, isTrue);
-    expect(jsonDecode(result).keys.length, 7);
+    expect((jsonDecode(result) as Map).keys.length, 7);
   });
 
-    test('list', () {
+  test('list', () {
     final result = datatype.list(length: 40);
     expect(result.length, 40);
     expect(result.any((element) => element != null), isTrue);

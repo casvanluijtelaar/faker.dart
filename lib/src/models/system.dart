@@ -1,3 +1,4 @@
+// ignore_for_file: public_member_api_docs,sort_constructors_first, directives_ordering, lines_longer_than_80_chars
 import 'dart:convert';
 
 class System {
@@ -22,7 +23,7 @@ class System {
 
   factory System.fromMap(Map<String, dynamic> map) {
     return System(
-      temp: map['temp'],
+      temp: map['temp'] ?? true,
     );
   }
 

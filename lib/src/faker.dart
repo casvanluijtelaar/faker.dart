@@ -1,46 +1,51 @@
-import 'package:faker_dart/src/address.dart';
-import 'package:faker_dart/src/datatype.dart';
-import 'package:faker_dart/src/helpers.dart';
-import 'package:faker_dart/src/locale_utils.dart';
-
+import 'datatype.dart';
 import 'models/faker_locale.dart';
 import 'name.dart';
+import 'utils/locale_utils.dart';
 
+/// generate massive amounts of fake data in dart!
 class Faker {
-  Faker._privateConstructor();
 
-  static final Faker _instance = Faker._privateConstructor();
-  static Faker get instance => _instance;
 
+  Faker._internal();
+
+  /// [Faker] singleton
+  static final Faker instance = Faker._internal();
+ 
   /// default locale will always be English
   FakerLocale _locale = LocaleUtils.generateLocale(FakerLocaleType.en);
 
+  /// currently active locale
   FakerLocale get locale => _locale;
 
-  /// update the [FakerLocale] by setting the prefered [FakerLocaleType]
+  /// set a locale from one of the included locales
   void setLocale(FakerLocaleType type) =>
       _locale = LocaleUtils.generateLocale(type);
 
-  final Helpers helpers = Helpers(instance);
+  /// set a custom locale
+  void setCustomLocale(FakerLocale locale) => _locale = locale;
 
+  /// {@macro datatype}
   final DataType datatype = DataType();
-  final Name name = Name(instance);
-  final Address address = Address(instance);
 
-  /**
-   * Generator method for combining faker methods based on string input
-   *
-   * __Example:__
-   *
-   * ```
-   * print(faker.fake('{{name.lastName}}, {{name.firstName}} {{name.suffix}}'));
-   * //outputs: "Marks, Dean Sr."
-   * ```
-   *
-   * This will interpolate the format string with the value of methods
-   * [name.lastName], [name.firstName], and [name.suffix],
-   *
-   */
+  /// {@macro name}
+  Name get name => Name(instance);
+
+  /// Generator method for combining faker methods based on string input
+  ///
+  /// __Example:__
+  ///
+  /// ```
+  // ignore: lines_longer_than_80_chars
+  /// print(faker.fake('{{name.lastName}}, {{name.firstName}} {{name.suffix}}'));
+  /// outputs: "Marks, Dean Sr."
+  /// ```
+  ///
+  /// This will interpolate the format string with the value of methods
+  // ignore: comment_references
+  /// [name.lastName], [name.firstName], and [name.suffix],
+  ///
+  ///
   String fake(String str) {
     var res = '';
 
@@ -55,31 +60,56 @@ class Faker {
 
     // extract method name from between the {{ }} that we found
     // for example: {{name.firstName}}
-    final token = str.substring(start + 2, end - start - 2);
+    final token = str.substring(start + 2, end);
     var method = token.replaceAll('}}', '').replaceAll('{{', '');
     // split the method into module and function
     var parts = method.split('.');
 
-    if (_namespace[parts[0]] == null)
+    if (_namespace[parts[0]] == null) {
       throw ArgumentError('invalid module: ${parts[0]}');
-    if (_namespace[parts[0]]![parts[1]] == null)
+    }
+    if (_namespace[parts[0]]![parts[1]] == null) {
       throw ArgumentError('invalid method: ${parts[1]}');
+    }
 
-    // assign the function from the module.function namespace
+    // assign the function from the namespace
     final fn = _namespace[parts[0]]![parts[1]]!;
+    // ignore: avoid_dynamic_calls
     final result = fn();
 
     // replace the found tag with the returned fake value
-    res = str.replaceAll('{{' + token + '}}', result);
+    res = str.replaceAll('{{$token}}', result.toString());
 
     // return the response recursively until we are done finding all tags
     return fake(res);
   }
 
-  //TODO: fill up namespace
+  /// stores a reference to all faker methods in this package sorted by
+  /// module and method name
   Map<String, Map<String, Function>> get _namespace => {
-        'address': {
-          'zipCode': address.zipCode,
+        'datatype': {
+          'number': datatype.number,
+          'float': datatype.float,
+          'dateTime': datatype.dateTime,
+          'string': datatype.string,
+          'uuid': datatype.uuid,
+          'boolean': datatype.boolean,
+          'hexaDecimal': datatype.hexaDecimal,
+          'json': datatype.json,
+          'list': datatype.list,
+        },
+        'name': {
+          'firstName': name.firstName,
+          'middleName': name.middleName,
+          'lastName': name.lastName,
+          'jobTitle': name.jobTitle,
+          'gender': name.gender,
+          'prefix': name.prefix,
+          'suffix': name.suffix,
+          'title': name.title,
+          'jobDescriptor': name.jobDescriptor,
+          'jobArea': name.jobType,
+          'jobType': name.jobType,
         }
       };
 }

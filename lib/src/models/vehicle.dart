@@ -1,3 +1,4 @@
+// ignore_for_file: public_member_api_docs,sort_constructors_first, directives_ordering, lines_longer_than_80_chars
 import 'dart:convert';
 
 import 'package:collection/collection.dart';
@@ -9,11 +10,11 @@ class Vehicle {
   final List<String>? model;
   final List<String>? vehicleType;
   Vehicle({
-    required this.bicycle,
-    required this.fuel,
-    required this.manufacturer,
-    required this.model,
-    required this.vehicleType,
+     this.bicycle,
+     this.fuel,
+     this.manufacturer,
+     this.model,
+     this.vehicleType,
   });
 
   Vehicle copyWith({

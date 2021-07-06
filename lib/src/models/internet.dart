@@ -1,3 +1,4 @@
+// ignore_for_file: public_member_api_docs,sort_constructors_first, directives_ordering, lines_longer_than_80_chars
 import 'dart:convert';
 
 import 'package:collection/collection.dart';
@@ -8,10 +9,10 @@ class Internet {
   final List<String>? exampleEmail;
   final List<String>? freeEmail;
   Internet({
-    required this.avatarUri,
-    required this.domainSuffix,
-    required this.exampleEmail,
-    required this.freeEmail,
+     this.avatarUri,
+     this.domainSuffix,
+     this.exampleEmail,
+     this.freeEmail,
   });
 
   Internet copyWith({

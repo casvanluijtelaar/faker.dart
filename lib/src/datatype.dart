@@ -1,8 +1,11 @@
 import 'dart:convert';
 import 'dart:math';
 
-import 'package:faker_dart/src/random.dart';
+import 'package:faker_dart/src/utils/random_utils.dart';
 
+/// {@template datatype}
+/// generate random data types
+/// {@endtemplate}
 class DataType {
   final _random = Random();
 
@@ -41,10 +44,10 @@ class DataType {
   ///
   /// e.g. `string(length: 12) // 'dKebdPAOfkeB'`
   String string({int length = 10}) {
-    final chars = 'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz';
+    const chars = 'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz';
     var string = '';
 
-    for (int i = 0; i < length; i++) {
+    for (var i = 0; i < length; i++) {
       string += chars[_random.nextInt(chars.length)];
     }
 
@@ -53,7 +56,7 @@ class DataType {
 
   /// returns a random v4 uuid as a [String]
   String uuid() {
-    final template = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx';
+    const template = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx';
 
     return template.replaceAllMapped(RegExp(r'/[xy]/g'), (match) {
       final random = _random.nextInt(15);
@@ -71,13 +74,13 @@ class DataType {
   /// e.g. `hexaDecimal(length: 6) // '0xF475CD'`
   String hexaDecimal({int length = 6}) {
     final chars = [
-      ...["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a"],
-      ...["b", "c", "d", "e", "f", "A", "B", "C", "D", "E", "F"],
+      ...['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a'],
+      ...['b', 'c', 'd', 'e', 'f', 'A', 'B', 'C', 'D', 'E', 'F'],
     ];
     var string = '0x';
 
-    for (int i = 0; i < length; i++) {
-      string += Randoms.arrayElement(chars);
+    for (var i = 0; i < length; i++) {
+      string += RandomUtils.arrayElement(chars);
     }
     return string;
   }
