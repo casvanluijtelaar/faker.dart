@@ -6,7 +6,7 @@ import 'package:collection/collection.dart';
 class Music {
   final List<String>? genre;
   Music({
-     this.genre,
+    this.genre,
   });
 
   Music copyWith({

@@ -9,10 +9,10 @@ class Commerce {
   final List<String>? productDescription;
   final ProductName productName;
   Commerce({
-     this.color,
-     this.department,
-     this.productDescription,
-     required this.productName,
+    this.color,
+    this.department,
+    this.productDescription,
+    required this.productName,
   });
 
   Commerce copyWith({

@@ -8,7 +8,6 @@ class CellPhone {
   CellPhone({
     this.formats,
   });
- 
 
   CellPhone copyWith({
     List<String>? formats,
@@ -32,7 +31,8 @@ class CellPhone {
 
   String toJson() => json.encode(toMap());
 
-  factory CellPhone.fromJson(String source) => CellPhone.fromMap(json.decode(source));
+  factory CellPhone.fromJson(String source) =>
+      CellPhone.fromMap(json.decode(source));
 
   @override
   String toString() => 'CellPhone(formats: $formats)';
@@ -41,9 +41,8 @@ class CellPhone {
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
     final listEquals = const DeepCollectionEquality().equals;
-  
-    return other is CellPhone &&
-      listEquals(other.formats, formats);
+
+    return other is CellPhone && listEquals(other.formats, formats);
   }
 
   @override

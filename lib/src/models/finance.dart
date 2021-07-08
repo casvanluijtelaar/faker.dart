@@ -29,7 +29,8 @@ class Finance {
 
   String toJson() => json.encode(toMap());
 
-  factory Finance.fromJson(String source) => Finance.fromMap(json.decode(source));
+  factory Finance.fromJson(String source) =>
+      Finance.fromMap(json.decode(source));
 
   @override
   String toString() => 'Finance(temp: $temp)';
@@ -37,9 +38,8 @@ class Finance {
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
-  
-    return other is Finance &&
-      other.temp == temp;
+
+    return other is Finance && other.temp == temp;
   }
 
   @override

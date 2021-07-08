@@ -37,9 +37,8 @@ class System {
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
-  
-    return other is System &&
-      other.temp == temp;
+
+    return other is System && other.temp == temp;
   }
 
   @override

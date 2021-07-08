@@ -14,9 +14,7 @@ enum Gender {
   unspecified,
 }
 
-/// {@template name}
-/// generate rondom names & jobs
-/// {@endtemplate}
+/// {@macro name}
 class Name {
   /// {@macro name}
   const Name(this._faker);

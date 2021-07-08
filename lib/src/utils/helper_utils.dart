@@ -1,11 +1,10 @@
 import 'dart:math';
 
 import 'package:faker_dart/src/utils/random_utils.dart';
-  // ignore_for_file: public_member_api_docs
+// ignore_for_file: public_member_api_docs
 
 /// helper methods for string interactions
 class HelperUtils {
-
   static String slugify(String string) => string
       .replaceAll(RegExp(r'/ /g'), '-')
       .replaceAll(RegExp(r'/[^\一-龠\ぁ-ゔ\ァ-ヴー\w\.\-]+/g'), '');

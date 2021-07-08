@@ -3,9 +3,8 @@ import 'dart:math';
 
 import 'package:faker_dart/src/utils/random_utils.dart';
 
-/// {@template datatype}
-/// generate random data types
-/// {@endtemplate}
+
+/// {@macro datatype}
 class DataType {
   final _random = Random();
 

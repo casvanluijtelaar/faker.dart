@@ -6,7 +6,7 @@ import 'package:collection/collection.dart';
 class PhoneNumber {
   final List<String>? formats;
   PhoneNumber({
-     this.formats,
+    this.formats,
   });
 
   PhoneNumber copyWith({

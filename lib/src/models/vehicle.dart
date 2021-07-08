@@ -10,11 +10,11 @@ class Vehicle {
   final List<String>? model;
   final List<String>? vehicleType;
   Vehicle({
-     this.bicycle,
-     this.fuel,
-     this.manufacturer,
-     this.model,
-     this.vehicleType,
+    this.bicycle,
+    this.fuel,
+    this.manufacturer,
+    this.model,
+    this.vehicleType,
   });
 
   Vehicle copyWith({

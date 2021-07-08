@@ -11,12 +11,12 @@ class Hacker {
   final List<String>? phrase;
   final List<String>? verb;
   Hacker({
-     this.abbreviation,
-     this.adjective,
-     this.ingverb,
-     this.noun,
-     this.phrase,
-     this.verb,
+    this.abbreviation,
+    this.adjective,
+    this.ingverb,
+    this.noun,
+    this.phrase,
+    this.verb,
   });
 
   Hacker copyWith({

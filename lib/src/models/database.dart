@@ -9,10 +9,10 @@ class Database {
   final List<String>? engine;
   final List<String>? type;
   Database({
-     this.collation,
-     this.column,
-     this.engine,
-     this.type,
+    this.collation,
+    this.column,
+    this.engine,
+    this.type,
   });
 
   Database copyWith({

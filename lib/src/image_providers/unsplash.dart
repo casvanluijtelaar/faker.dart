@@ -9,7 +9,7 @@ enum UnsplashCategory {
   buildings,
 }
 
-/// handles image retrieval from `unsplash.com`
+/// {@macro unsplash}
 class Unsplash {
   /// return a random image with a specific width & height and an
   /// optional keyword

@@ -3,7 +3,6 @@ import '../locales/af_ZA.dart';
 import '../models/faker_locale.dart';
 
 class LocaleUtils {
-  
   static FakerLocale generateLocale(FakerLocaleType type) {
     final localeData = _enumToLocale(type);
     final completedData = FakerLocale.fromMap(localeData).toMap();

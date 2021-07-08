@@ -12,13 +12,13 @@ class Word {
   final List<String>? preposition;
   final List<String>? verb;
   Word({
-     this.adjective,
-     this.adverb,
-     this.conjunction,
-     this.interjection,
-     this.noun,
-     this.preposition,
-     this.verb,
+    this.adjective,
+    this.adverb,
+    this.conjunction,
+    this.interjection,
+    this.noun,
+    this.preposition,
+    this.verb,
   });
 
   Word copyWith({

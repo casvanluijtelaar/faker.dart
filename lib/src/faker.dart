@@ -1,3 +1,5 @@
+import 'package:faker_dart/src/image.dart';
+
 import 'datatype.dart';
 import 'models/faker_locale.dart';
 import 'name.dart';
@@ -5,13 +7,11 @@ import 'utils/locale_utils.dart';
 
 /// generate massive amounts of fake data in dart!
 class Faker {
-
-
   Faker._internal();
 
   /// [Faker] singleton
   static final Faker instance = Faker._internal();
- 
+
   /// default locale will always be English
   FakerLocale _locale = LocaleUtils.generateLocale(FakerLocaleType.en);
 
@@ -25,10 +25,19 @@ class Faker {
   /// set a custom locale
   void setCustomLocale(FakerLocale locale) => _locale = locale;
 
-  /// {@macro datatype}
+  /// {@template datatype}
+  /// generate random data types
+  /// {@endtemplate}
   final DataType datatype = DataType();
 
-  /// {@macro name}
+  /// {@template image}
+  /// generate rondom image urls from different sources
+  /// {@endtemplate}
+  final Image image = Image();
+
+  /// {@template name}
+  /// generate rondom names & jobs
+  /// {@endtemplate}
   Name get name => Name(instance);
 
   /// Generator method for combining faker methods based on string input

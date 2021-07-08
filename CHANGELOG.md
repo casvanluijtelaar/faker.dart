@@ -1,3 +1,12 @@
+## 0.0.2
+* added support for image urls!
+
+## 0.0.1-2
+* set dartfmt formatting
+* updated example & package description to match pub.dev guidelines
+
+## 0.0.1-1
+* added missing name.fullName implementation
 
 ## 0.0.1
 * added internal support for 54 locales!

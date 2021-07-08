@@ -18,7 +18,7 @@ enum LoremPixelCategory {
   transport,
 }
 
-/// handles image retrieval from `lorempixel.com`
+/// {@macro loremPixel}
 class LoremPixel {
   /// return a random image with a specific width & height
   String image({int? width, int? height}) => _imageUrl(width, height, null);

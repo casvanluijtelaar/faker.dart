@@ -1,14 +1,15 @@
-/// handles image retrieval from `picsum.com`
+/// {@macro loremPicsum}
 class LoremPicsum {
   /// return a random image with a specific width & height and an
-  /// optional seed 
+  /// optional seed
   String image({int? width, int? height, String? seed}) =>
       _imageUrl(width, height, null, null, seed);
+
   /// return a random image with a specific width & height and an
   /// optional seed and an optional blur amount
   String blurredImage({int? width, int? height, String? seed, int? blur}) =>
       _imageUrl(width, height, null, blur, seed);
-  
+
   /// return a random image with a specific width & height and an
   /// optional seed and an optional blur factor
   String grayImage({int? width, int? height, String? seed}) =>

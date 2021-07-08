@@ -7,8 +7,8 @@ class Team {
   final List<String>? creature;
   final List<String>? name;
   Team({
-     this.creature,
-     this.name,
+    this.creature,
+    this.name,
   });
 
   Team copyWith({

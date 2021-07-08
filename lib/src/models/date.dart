@@ -7,8 +7,8 @@ class Date {
   final Month month;
   final Weekday weekday;
   Date({
-     required this.month,
-     required this.weekday,
+    required this.month,
+    required this.weekday,
   });
 
   Date copyWith({
@@ -59,10 +59,10 @@ class Month {
   final List<String>? abbr;
   final List<String>? abbr_context;
   Month({
-     this.wide,
-     this.wide_context,
-     this.abbr,
-     this.abbr_context,
+    this.wide,
+    this.wide_context,
+    this.abbr,
+    this.abbr_context,
   });
 
   Month copyWith({
@@ -133,10 +133,10 @@ class Weekday {
   final List<String>? abbr;
   final List<String>? abbr_context;
   Weekday({
-     this.wide,
-     this.wide_context,
-     this.abbr,
-     this.abbr_context,
+    this.wide,
+    this.wide_context,
+    this.abbr,
+    this.abbr_context,
   });
 
   Weekday copyWith({

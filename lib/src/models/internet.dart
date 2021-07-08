@@ -9,10 +9,10 @@ class Internet {
   final List<String>? exampleEmail;
   final List<String>? freeEmail;
   Internet({
-     this.avatarUri,
-     this.domainSuffix,
-     this.exampleEmail,
-     this.freeEmail,
+    this.avatarUri,
+    this.domainSuffix,
+    this.exampleEmail,
+    this.freeEmail,
   });
 
   Internet copyWith({

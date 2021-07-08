@@ -15,6 +15,7 @@ void main(List<String> arguments) {
   print(faker.datatype.list());
 
   /// names
+  print(faker.name.fullName());
   print(faker.name.firstName());
   print(faker.name.middleName());
   print(faker.name.lastName());

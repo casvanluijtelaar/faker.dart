@@ -7,8 +7,8 @@ class Lorem {
   final List<String>? supplemental;
   final List<String>? words;
   Lorem({
-     this.supplemental,
-     this.words,
+    this.supplemental,
+    this.words,
   });
 
   Lorem copyWith({

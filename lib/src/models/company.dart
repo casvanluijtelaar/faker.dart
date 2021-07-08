@@ -13,14 +13,14 @@ class Company {
   final List<String>? noun;
   final List<String>? suffix;
   Company({
-     this.adjective,
-     this.bsAdjective,
-     this.bsNoun,
-     this.bsVerb,
-     this.descriptor,
-     this.name,
-     this.noun,
-     this.suffix,
+    this.adjective,
+    this.bsAdjective,
+    this.bsNoun,
+    this.bsVerb,
+    this.descriptor,
+    this.name,
+    this.noun,
+    this.suffix,
   });
 
   Company copyWith({

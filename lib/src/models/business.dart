@@ -3,7 +3,6 @@ import 'dart:convert';
 
 import 'package:collection/collection.dart';
 
-
 class Business {
   final List<String>? creditCardExpiryDates;
   final List<String>? creditCardNumbers;
@@ -20,7 +19,8 @@ class Business {
     List<String>? creditCardTypes,
   }) {
     return Business(
-      creditCardExpiryDates: creditCardExpiryDates ?? this.creditCardExpiryDates,
+      creditCardExpiryDates:
+          creditCardExpiryDates ?? this.creditCardExpiryDates,
       creditCardNumbers: creditCardNumbers ?? this.creditCardNumbers,
       creditCardTypes: creditCardTypes ?? this.creditCardTypes,
     );
@@ -44,22 +44,27 @@ class Business {
 
   String toJson() => json.encode(toMap());
 
-  factory Business.fromJson(String source) => Business.fromMap(json.decode(source));
+  factory Business.fromJson(String source) =>
+      Business.fromMap(json.decode(source));
 
   @override
-  String toString() => 'Business(creditCardExpiryDates: $creditCardExpiryDates, creditCardNumbers: $creditCardNumbers, creditCardTypes: $creditCardTypes)';
+  String toString() =>
+      'Business(creditCardExpiryDates: $creditCardExpiryDates, creditCardNumbers: $creditCardNumbers, creditCardTypes: $creditCardTypes)';
 
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
     final listEquals = const DeepCollectionEquality().equals;
-  
+
     return other is Business &&
-      listEquals(other.creditCardExpiryDates, creditCardExpiryDates) &&
-      listEquals(other.creditCardNumbers, creditCardNumbers) &&
-      listEquals(other.creditCardTypes, creditCardTypes);
+        listEquals(other.creditCardExpiryDates, creditCardExpiryDates) &&
+        listEquals(other.creditCardNumbers, creditCardNumbers) &&
+        listEquals(other.creditCardTypes, creditCardTypes);
   }
 
   @override
-  int get hashCode => creditCardExpiryDates.hashCode ^ creditCardNumbers.hashCode ^ creditCardTypes.hashCode;
-  }
+  int get hashCode =>
+      creditCardExpiryDates.hashCode ^
+      creditCardNumbers.hashCode ^
+      creditCardTypes.hashCode;
+}

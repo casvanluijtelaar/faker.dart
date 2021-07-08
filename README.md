@@ -4,15 +4,25 @@
 Faker.dart is a dart port of the famous [faker.js](https://github.com/Marak/faker.js) package for the web and NodeJS
 ## basic Usage
 
-
-
-
 ```dart
     final faker = Faker.instance;
 
     String randomName = faker.name.fullName(); // Rowan Nikolaus
     String randomHex = faker.datatype.hexaDecimal(); // 0xF74451AB
 ```
+## Faker.fake()
+
+faker.dart contains a super useful generator method `Faker.fake` for combining faker API methods using a mustache string format.
+
+**Example:**
+
+
+``` dart
+print(faker.fake("{{name.lastName}}, {{name.firstName}} {{name.suffix}}"));
+// outputs: "Marks, Dean Sr."
+```
+
+This will interpolate the format string with the value of methods `name.lastName()`, `name.firstName()`, and `name.suffix()`
 
 ### supported faker methods
 
@@ -27,7 +37,8 @@ Faker.dart is a dart port of the famous [faker.js](https://github.com/Marak/fake
   * hexaDecimal
   * json
   * list
-* name
+* name  
+  * fullName
   * firstName
   * lastName
   * middleName
@@ -42,19 +53,6 @@ Faker.dart is a dart port of the famous [faker.js](https://github.com/Marak/fake
   * jobType
 
 
-## Faker.fake()
-
-faker.dart contains a super useful generator method `Faker.fake` for combining faker API methods using a mustache string format.
-
-**Example:**
-
-
-``` dart
-print(faker.fake("{{name.lastName}}, {{name.firstName}} {{name.suffix}}"));
-// outputs: "Marks, Dean Sr."
-```
-
-This will interpolate the format string with the value of methods `name.lastName()`, `name.firstName()`, and `name.suffix()`
 
 ## Localization
 
@@ -119,3 +117,27 @@ faker.setCustomLocale(locale);
  * zh_CN
  * zh_TW
 
+## what's up next
+this package is still in active development. features still being added:
+
+ * address
+ * animal
+ * commerce
+ * company
+ * database
+ * date
+ * finance
+ * git
+ * hacker
+ * iban
+ * image
+ * internet
+ * lorem
+ * mersenne
+ * music
+ * phonenumber
+ * system
+ * time
+ * unique
+ * vehicle
+ * word

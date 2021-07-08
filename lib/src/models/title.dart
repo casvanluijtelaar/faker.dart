@@ -46,17 +46,18 @@ class Title {
   factory Title.fromJson(String source) => Title.fromMap(json.decode(source));
 
   @override
-  String toString() => 'Title(descriptor: $descriptor, level: $level, job: $job)';
+  String toString() =>
+      'Title(descriptor: $descriptor, level: $level, job: $job)';
 
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
     final listEquals = const DeepCollectionEquality().equals;
-  
+
     return other is Title &&
-      listEquals(other.descriptor, descriptor) &&
-      listEquals(other.level, level) &&
-      listEquals(other.job, job);
+        listEquals(other.descriptor, descriptor) &&
+        listEquals(other.level, level) &&
+        listEquals(other.job, job);
   }
 
   @override

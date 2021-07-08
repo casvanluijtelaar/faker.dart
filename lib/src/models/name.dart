@@ -147,45 +147,45 @@ class Name {
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
     final listEquals = const DeepCollectionEquality().equals;
-  
+
     return other is Name &&
-      listEquals(other.gender, gender) &&
-      listEquals(other.binaryGender, binaryGender) &&
-      listEquals(other.firstName, firstName) &&
-      listEquals(other.femaleFirstName, femaleFirstName) &&
-      listEquals(other.maleFirstName, maleFirstName) &&
-      listEquals(other.middleName, middleName) &&
-      listEquals(other.femaleMiddleName, femaleMiddleName) &&
-      listEquals(other.maleMiddleName, maleMiddleName) &&
-      listEquals(other.lastName, lastName) &&
-      listEquals(other.femaleLastName, femaleLastName) &&
-      listEquals(other.maleLastName, maleLastName) &&
-      listEquals(other.name, name) &&
-      listEquals(other.prefix, prefix) &&
-      listEquals(other.femalePrefix, femalePrefix) &&
-      listEquals(other.malePrefix, malePrefix) &&
-      listEquals(other.suffix, suffix) &&
-      other.title == title;
+        listEquals(other.gender, gender) &&
+        listEquals(other.binaryGender, binaryGender) &&
+        listEquals(other.firstName, firstName) &&
+        listEquals(other.femaleFirstName, femaleFirstName) &&
+        listEquals(other.maleFirstName, maleFirstName) &&
+        listEquals(other.middleName, middleName) &&
+        listEquals(other.femaleMiddleName, femaleMiddleName) &&
+        listEquals(other.maleMiddleName, maleMiddleName) &&
+        listEquals(other.lastName, lastName) &&
+        listEquals(other.femaleLastName, femaleLastName) &&
+        listEquals(other.maleLastName, maleLastName) &&
+        listEquals(other.name, name) &&
+        listEquals(other.prefix, prefix) &&
+        listEquals(other.femalePrefix, femalePrefix) &&
+        listEquals(other.malePrefix, malePrefix) &&
+        listEquals(other.suffix, suffix) &&
+        other.title == title;
   }
 
   @override
   int get hashCode {
     return gender.hashCode ^
-      binaryGender.hashCode ^
-      firstName.hashCode ^
-      femaleFirstName.hashCode ^
-      maleFirstName.hashCode ^
-      middleName.hashCode ^
-      femaleMiddleName.hashCode ^
-      maleMiddleName.hashCode ^
-      lastName.hashCode ^
-      femaleLastName.hashCode ^
-      maleLastName.hashCode ^
-      name.hashCode ^
-      prefix.hashCode ^
-      femalePrefix.hashCode ^
-      malePrefix.hashCode ^
-      suffix.hashCode ^
-      title.hashCode;
+        binaryGender.hashCode ^
+        firstName.hashCode ^
+        femaleFirstName.hashCode ^
+        maleFirstName.hashCode ^
+        middleName.hashCode ^
+        femaleMiddleName.hashCode ^
+        maleMiddleName.hashCode ^
+        lastName.hashCode ^
+        femaleLastName.hashCode ^
+        maleLastName.hashCode ^
+        name.hashCode ^
+        prefix.hashCode ^
+        femalePrefix.hashCode ^
+        malePrefix.hashCode ^
+        suffix.hashCode ^
+        title.hashCode;
   }
 }
