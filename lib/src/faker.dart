@@ -130,7 +130,7 @@ class Faker {
           'zipCode': address.zipCode,
           'city': address.city,
           'cityPrefix': address.cityPrefix,
-          'citysuffix': address.citySuffix,
+          'citySuffix': address.citySuffix,
           'cityName': address.cityName,
           'streetName': address.streetName,
           'streetSuffix': address.streetSuffix,

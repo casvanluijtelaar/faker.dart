@@ -13,6 +13,7 @@ Faker.dart is a dart port of the famous [faker.js](https://github.com/Marak/fake
 ## :hammer:  Usage
 
 faker.dart is split up into modules, where every module has a bunch of faker methods.
+### Basics
 
 ```dart
     final faker = Faker.instance;
@@ -36,36 +37,12 @@ This will interpolate the format string with the value of methods `name.lastName
 
 ### supported faker methods
 
-
-* datatype
-  * number
-  * float
-  * datetime
-  * string
-  * uuid
-  * boolean
-  * hexaDecimal
-  * json
-  * list
-* name  
-  * fullName
-  * firstName
-  * lastName
-  * middleName
-  * findName
-  * jobTitle
-  * gender
-  * prefix
-  * suffix
-  * title
-  * jobDescriptor
-  * jobArea
-  * jobType
-* image
-  * `picsum.photos`
-  * `lorempixel.com`
-  * `unsplash.com`
-
+| Module   	| Methods 	|
+|----------	|---------	|
+| datatype 	| number, float, datetime, string, uuid, boolean, hexaDecimal, json, list |
+| name    	| fullName, firstName, lastName, middleName, findName, jobTitle, gender, prefix, suffix, title, jobDescriptor, jobArea, jobType |
+| image     | image, loremPicsum, lorempixel |
+| addres    | zipCode, city, cityPrefix, citySuffix, cityName, streetName, streetSuffix, streetPrefix, streetAddress, secondaryAddress, county, country, countryCode, state, stateAbbr, latitude, longitude, direction, cardinalDirection, ordinalDirection, nearbyGPSCoordinate, timezone |
 
 
 ## :speech_balloon: Localization
@@ -158,4 +135,4 @@ this package is still in active development. features still being added:
 
  ## :wave: Get Involved
 
-If this package is useful to you please :thumbsup: on [pub.dev](https://pub.dev/packages) and :star: on github. If you have any Issues, recommendations or pull requests I'd love to see them!
+If this package is useful to you please :thumbsup: on [pub.dev](https://pub.dev/packages/faker_dart) and :star: on [Github](https://github.com/casvanluijtelaar/faker.dart). If you have any Issues, recommendations or pull requests I'd love to see them!

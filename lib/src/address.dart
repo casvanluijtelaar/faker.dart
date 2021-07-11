@@ -209,7 +209,7 @@ class Address {
     double radius = 10.0,
     bool isMetric = false,
   }) {
-    double degreesToRadians(double degrees) => degrees * (pi * 180.0);
+    double degreesToRadians(double degrees) => degrees * (pi / 180.0);
     double radiansToDegrees(double radians) => radians * (180.0 / pi);
     double kilometersToMiles(double miles) => miles * 0.621371;
 
