@@ -83,7 +83,7 @@ class LoremPixel {
     final width = w ?? 640;
     final height = h ?? 480;
 
-    var url = 'https://lorempixel.com/$width/$height';
+    var url = 'https://lorempixel.com/$width/$height/';
 
     if (category != null) url += '/${_enumToString(category)}';
     url += '${Random().nextInt(99999)}';

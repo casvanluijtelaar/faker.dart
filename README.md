@@ -1,8 +1,18 @@
-# Faker.dart  - generate massive amounts of fake data in Dart & Flutter
+
+[![Pub](https://img.shields.io/pub/v/faker_dart)](https://pub.dartlang.org/packages/faker_dart)
+[![Pub](https://img.shields.io/github/stars/casvanluijtelaar/faker.dart)](https://github.com/casvanluijtelaar/faker.dart)
+[![Pub](https://img.shields.io/github/last-commit/casvanluijtelaar/faker.dart)](https://github.com/casvanluijtelaar/faker.dart)
+
+
+<h1 align="center">
+  generate massive amounts of fake data in Dart & Flutter
+</h1>
 
 
 Faker.dart is a dart port of the famous [faker.js](https://github.com/Marak/faker.js) package for the web and NodeJS
-## basic Usage
+## :hammer:  Usage
+
+faker.dart is split up into modules, where every module has a bunch of faker methods.
 
 ```dart
     final faker = Faker.instance;
@@ -10,7 +20,7 @@ Faker.dart is a dart port of the famous [faker.js](https://github.com/Marak/fake
     String randomName = faker.name.fullName(); // Rowan Nikolaus
     String randomHex = faker.datatype.hexaDecimal(); // 0xF74451AB
 ```
-## Faker.fake()
+### Faker.fake()
 
 faker.dart contains a super useful generator method `Faker.fake` for combining faker API methods using a mustache string format.
 
@@ -51,10 +61,14 @@ This will interpolate the format string with the value of methods `name.lastName
   * jobDescriptor
   * jobArea
   * jobType
+* image
+  * `picsum.photos`
+  * `lorempixel.com`
+  * `unsplash.com`
 
 
 
-## Localization
+## :speech_balloon: Localization
 
 ### faker.dart currently supports 54 Locales!!!
 
@@ -117,7 +131,7 @@ faker.setCustomLocale(locale);
  * zh_CN
  * zh_TW
 
-## what's up next
+## :grey_question: what's up next
 this package is still in active development. features still being added:
 
  * address
@@ -130,7 +144,6 @@ this package is still in active development. features still being added:
  * git
  * hacker
  * iban
- * image
  * internet
  * lorem
  * mersenne
@@ -141,3 +154,8 @@ this package is still in active development. features still being added:
  * unique
  * vehicle
  * word
+
+
+ ## :wave: Get Involved
+
+If this package is useful to you please :thumbsup: on [pub.dev](https://pub.dev/packages) and :star: on github. If you have any Issues, recommendations or pull requests I'd love to see them!

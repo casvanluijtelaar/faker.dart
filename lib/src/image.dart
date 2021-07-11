@@ -1,9 +1,15 @@
+import 'package:faker_dart/faker_dart.dart';
 import 'package:faker_dart/src/image_providers/lorempicsum.dart';
 import 'package:faker_dart/src/image_providers/lorempixel.dart';
 import 'package:faker_dart/src/image_providers/unsplash.dart';
 
 /// {@macro image}
 class Image {
+  /// {@macro image}
+  Image(this._faker);
+
+  final Faker _faker;
+
   /// {@template loremPicsum}
   /// generate rondom image urls from loremPicsum
   /// {@endtemplate}
@@ -18,4 +24,13 @@ class Image {
   /// generate rondom image urls from unsplash
   /// {@endtemplate}
   final Unsplash unsplash = Unsplash();
+
+  /// returns a random image from a random image provider
+  String image({int? width, int? height}) {
+    final chance = _faker.datatype.number(max: 2);
+
+    if (chance == 0) return unsplash.image(w: width, h: height);
+    if (chance == 1) return loremPixel.image(width: width, height: height);
+    return loremPicsum.image(width: width, height: height);
+  }
 }

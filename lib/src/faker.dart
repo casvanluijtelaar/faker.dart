@@ -1,3 +1,4 @@
+import 'package:faker_dart/src/address.dart';
 import 'package:faker_dart/src/image.dart';
 
 import 'datatype.dart';
@@ -33,12 +34,17 @@ class Faker {
   /// {@template image}
   /// generate rondom image urls from different sources
   /// {@endtemplate}
-  final Image image = Image();
+  Image get image => Image(instance);
 
   /// {@template name}
   /// generate rondom names & jobs
   /// {@endtemplate}
   Name get name => Name(instance);
+
+  /// {@template address}
+  /// generate rondom addresses
+  /// {@endtemplate}
+  Address get address => Address(instance);
 
   /// Generator method for combining faker methods based on string input
   ///
@@ -119,6 +125,30 @@ class Faker {
           'jobDescriptor': name.jobDescriptor,
           'jobArea': name.jobType,
           'jobType': name.jobType,
+        },
+        'address': {
+          'zipCode': address.zipCode,
+          'city': address.city,
+          'cityPrefix': address.cityPrefix,
+          'citysuffix': address.citySuffix,
+          'cityName': address.cityName,
+          'streetName': address.streetName,
+          'streetSuffix': address.streetSuffix,
+          'streetPrefix': address.streetPrefix,
+          'streetAddress': address.streetAddress,
+          'secondaryAddress': address.secondaryAddress,
+          'county': address.county,
+          'country': address.country,
+          'countryCode': address.countryCode,
+          'state': address.state,
+          'stateAbbr': address.stateAbbr,
+          'latitude': address.latitude,
+          'longitude': address.longitude,
+          'direction': address.direction,
+          'cardinalDirection': address.cardinalDirection,
+          'ordinalDirection': address.ordinalDirection,
+          'nearbyGPSCoordinate': address.nearbyGPSCoordinate,
+          'timezone': address.timezone,
         }
       };
 }

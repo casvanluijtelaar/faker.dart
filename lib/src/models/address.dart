@@ -9,6 +9,7 @@ class Address {
   final List<String>? cityName;
   final List<String>? cityPrefix;
   final List<String>? citySuffix;
+  final List<String>? county;
   final List<String>? country;
   final List<String>? countryCode;
   final List<String>? countryCodeAlpha3;
@@ -22,6 +23,7 @@ class Address {
   final List<String>? stateAbbr;
   final List<String>? streetAddress;
   final List<String>? streetName;
+  final List<String>? streetPrefix;
   final List<String>? streetSuffix;
   final List<String>? timeZone;
   Address({
@@ -30,6 +32,7 @@ class Address {
     this.cityName,
     this.cityPrefix,
     this.citySuffix,
+    this.county,
     this.country,
     this.countryCode,
     this.countryCodeAlpha3,
@@ -43,6 +46,7 @@ class Address {
     this.stateAbbr,
     this.streetAddress,
     this.streetName,
+    this.streetPrefix,
     this.streetSuffix,
     this.timeZone,
   });
@@ -53,6 +57,7 @@ class Address {
     List<String>? cityName,
     List<String>? cityPrefix,
     List<String>? citySuffix,
+    List<String>? county,
     List<String>? country,
     List<String>? countryCode,
     List<String>? countryCodeAlpha3,
@@ -66,6 +71,7 @@ class Address {
     List<String>? stateAbbr,
     List<String>? streetAddress,
     List<String>? streetName,
+    List<String>? streetPrefix,
     List<String>? streetSuffix,
     List<String>? timeZone,
   }) {
@@ -75,6 +81,7 @@ class Address {
       cityName: cityName ?? this.cityName,
       cityPrefix: cityPrefix ?? this.cityPrefix,
       citySuffix: citySuffix ?? this.citySuffix,
+      county: county ?? this.county,
       country: country ?? this.country,
       countryCode: countryCode ?? this.countryCode,
       countryCodeAlpha3: countryCodeAlpha3 ?? this.countryCodeAlpha3,
@@ -88,6 +95,7 @@ class Address {
       stateAbbr: stateAbbr ?? this.stateAbbr,
       streetAddress: streetAddress ?? this.streetAddress,
       streetName: streetName ?? this.streetName,
+      streetPrefix: streetPrefix ?? this.streetPrefix,
       streetSuffix: streetSuffix ?? this.streetSuffix,
       timeZone: timeZone ?? this.timeZone,
     );
@@ -100,6 +108,7 @@ class Address {
       'cityName': cityName,
       'cityPrefix': cityPrefix,
       'citySuffix': citySuffix,
+      'county': county,
       'country': country,
       'countryCode': countryCode,
       'countryCodeAlpha3': countryCodeAlpha3,
@@ -113,6 +122,7 @@ class Address {
       'stateAbbr': stateAbbr,
       'streetAddress': streetAddress,
       'streetName': streetName,
+      'streetPrefix': streetPrefix,
       'streetSuffix': streetSuffix,
       'timeZone': timeZone,
     };
@@ -120,26 +130,28 @@ class Address {
 
   factory Address.fromMap(Map<String, dynamic> map) {
     return Address(
-      buildingNumber: List<String>.from(map['buildingNumber']),
-      city: List<String>.from(map['city']),
-      cityName: List<String>.from(map['cityName']),
-      cityPrefix: List<String>.from(map['cityPrefix']),
-      citySuffix: List<String>.from(map['citySuffix']),
-      country: List<String>.from(map['country']),
-      countryCode: List<String>.from(map['countryCode']),
-      countryCodeAlpha3: List<String>.from(map['countryCodeAlpha3']),
-      defaultCountry: List<String>.from(map['defaultCountry']),
-      direction: List<String>.from(map['direction']),
-      directionAbbr: List<String>.from(map['directionAbbr']),
-      postcode: List<String>.from(map['postcode']),
-      postcodeByState: List<String>.from(map['postcodeByState']),
-      secondaryAddress: List<String>.from(map['secondaryAddress']),
-      state: List<String>.from(map['state']),
-      stateAbbr: List<String>.from(map['stateAbbr']),
-      streetAddress: List<String>.from(map['streetAddress']),
-      streetName: List<String>.from(map['streetName']),
-      streetSuffix: List<String>.from(map['streetSuffix']),
-      timeZone: List<String>.from(map['timeZone']),
+      buildingNumber: map['buildingNumber'],
+      city: map['city'],
+      cityName: map['cityName'],
+      cityPrefix: map['cityPrefix'],
+      citySuffix: map['citySuffix'],
+      country: map['country'],
+      county: map['county'],
+      countryCode: map['countryCode'],
+      countryCodeAlpha3: map['countryCodeAlpha3'],
+      defaultCountry: map['defaultCountry'],
+      direction: map['direction'],
+      directionAbbr: map['directionAbbr'],
+      postcode: map['postcode'],
+      postcodeByState: map['postcodeByState'],
+      secondaryAddress: map['secondaryAddress'],
+      state: map['state'],
+      stateAbbr: map['stateAbbr'],
+      streetAddress: map['streetAddress'],
+      streetName: map['streetName'],
+      streetPrefix: map['streetPrefix'],
+      streetSuffix: map['streetSuffix'],
+      timeZone: map['timeZone'],
     );
   }
 
@@ -150,7 +162,7 @@ class Address {
 
   @override
   String toString() {
-    return 'Address(buildingNumber: $buildingNumber, city: $city, cityName: $cityName, cityPrefix: $cityPrefix, citySuffix: $citySuffix, country: $country, countryCode: $countryCode, countryCodeAlpha3: $countryCodeAlpha3, defaultCountry: $defaultCountry, direction: $direction, directionAbbr: $directionAbbr, postcode: $postcode, postcodeByState: $postcodeByState, secondaryAddress: $secondaryAddress, state: $state, stateAbbr: $stateAbbr, streetAddress: $streetAddress, streetName: $streetName, streetSuffix: $streetSuffix, timeZone: $timeZone)';
+    return 'Address(buildingNumber: $buildingNumber, city: $city, cityName: $cityName, cityPrefix: $cityPrefix, citySuffix: $citySuffix, county: $county, country: $country, countryCode: $countryCode, countryCodeAlpha3: $countryCodeAlpha3, defaultCountry: $defaultCountry, direction: $direction, directionAbbr: $directionAbbr, postcode: $postcode, postcodeByState: $postcodeByState, secondaryAddress: $secondaryAddress, state: $state, stateAbbr: $stateAbbr, streetAddress: $streetAddress, streetName: $streetName, streetPrefix: $streetPrefix, streetSuffix: $streetSuffix, timeZone: $timeZone)';
   }
 
   @override
@@ -164,6 +176,7 @@ class Address {
         listEquals(other.cityName, cityName) &&
         listEquals(other.cityPrefix, cityPrefix) &&
         listEquals(other.citySuffix, citySuffix) &&
+        listEquals(other.county, county) &&
         listEquals(other.country, country) &&
         listEquals(other.countryCode, countryCode) &&
         listEquals(other.countryCodeAlpha3, countryCodeAlpha3) &&
@@ -177,6 +190,7 @@ class Address {
         listEquals(other.stateAbbr, stateAbbr) &&
         listEquals(other.streetAddress, streetAddress) &&
         listEquals(other.streetName, streetName) &&
+        listEquals(other.streetPrefix, streetPrefix) &&
         listEquals(other.streetSuffix, streetSuffix) &&
         listEquals(other.timeZone, timeZone);
   }
@@ -188,6 +202,7 @@ class Address {
         cityName.hashCode ^
         cityPrefix.hashCode ^
         citySuffix.hashCode ^
+        county.hashCode ^
         country.hashCode ^
         countryCode.hashCode ^
         countryCodeAlpha3.hashCode ^
@@ -201,6 +216,7 @@ class Address {
         stateAbbr.hashCode ^
         streetAddress.hashCode ^
         streetName.hashCode ^
+        streetPrefix.hashCode ^
         streetSuffix.hashCode ^
         timeZone.hashCode;
   }

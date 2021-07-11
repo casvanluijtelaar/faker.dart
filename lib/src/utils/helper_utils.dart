@@ -9,7 +9,7 @@ class HelperUtils {
       .replaceAll(RegExp(r'/ /g'), '-')
       .replaceAll(RegExp(r'/[^\一-龠\ぁ-ゔ\ァ-ヴー\w\.\-]+/g'), '');
 
-  String replaceSymbolWithNumber(String string) {
+  static String replaceSymbolWithNumber(String string) {
     var replacement = '';
 
     for (var i = 0; i < string.length; i++) {
