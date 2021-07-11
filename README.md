@@ -37,12 +37,12 @@ This will interpolate the format string with the value of methods `name.lastName
 
 ### supported faker methods
 
-| Module   	| Methods 	|
-|----------	|---------	|
-| datatype 	| number, float, datetime, string, uuid, boolean, hexaDecimal, json, list |
-| name    	| fullName, firstName, lastName, middleName, findName, jobTitle, gender, prefix, suffix, title, jobDescriptor, jobArea, jobType |
-| image     | image, loremPicsum, lorempixel |
-| addres    | zipCode, city, cityPrefix, citySuffix, cityName, streetName, streetSuffix, streetPrefix, streetAddress, secondaryAddress, county, country, countryCode, state, stateAbbr, latitude, longitude, direction, cardinalDirection, ordinalDirection, nearbyGPSCoordinate, timezone |
+| Module  | Methods |
+| :----------:  | :---------: |
+| datatype  | number, float, datetime, string, uuid, boolean, hexaDecimal, json, list |
+| name  | fullName, firstName, lastName, middleName, findName, jobTitle, gender, prefix, suffix, title, jobDescriptor, jobArea, jobType |
+| image | image, loremPicsum, lorempixel  |
+| addres  | zipCode, city, cityPrefix, citySuffix, cityName, streetName, streetSuffix, streetPrefix, streetAddress, secondaryAddress, county, country, countryCode, state, stateAbbr, latitude, longitude, direction, cardinalDirection, ordinalDirection, nearbyGPSCoordinate, timezone  |
 
 
 ## :speech_balloon: Localization
@@ -111,7 +111,6 @@ faker.setCustomLocale(locale);
 ## :grey_question: what's up next
 this package is still in active development. features still being added:
 
- * address
  * animal
  * commerce
  * company

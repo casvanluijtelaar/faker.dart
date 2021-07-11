@@ -1,3 +1,7 @@
+## 0.0.3
+* properly updated the readme to reflect the 2.0 update...
+* couple little things that were missed in 0.0.2
+
 ## 0.0.2
 * added support for image urls!
 * added a bunch of random Address generators!
