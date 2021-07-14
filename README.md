@@ -2,6 +2,7 @@
 [![Pub](https://img.shields.io/pub/v/faker_dart)](https://pub.dartlang.org/packages/faker_dart)
 [![Pub](https://img.shields.io/github/stars/casvanluijtelaar/faker.dart)](https://github.com/casvanluijtelaar/faker.dart)
 [![Pub](https://img.shields.io/github/last-commit/casvanluijtelaar/faker.dart)](https://github.com/casvanluijtelaar/faker.dart)
+[![codecov](https://codecov.io/gh/casvanluijtelaar/faker.dart/branch/master/graph/badge.svg?token=V047CJZ1RU)](https://codecov.io/gh/casvanluijtelaar/faker.dart)
 
 <h1 align="center">
   generate massive amounts of fake data in Dart & Flutter

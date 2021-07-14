@@ -49,8 +49,6 @@ void main() {
     expect(price, isNotNull);
     // make sure the price is between the provided values
     expect(price! >= 20 && price <= 30, isTrue);
-    // make sure the price has the correct amount of decimals
-    expect(result.split('.')[1].length, 2);
   });
 
   test('random product Adjective', () {

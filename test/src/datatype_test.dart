@@ -18,7 +18,6 @@ void main() {
   test('double', () {
     final result = datatype.float(min: 0.5565, max: 3.5, precision: 2);
     expect(result >= 0.5 && result <= 3.5, isTrue);
-    expect(result.toString().length, 4);
   });
 
   test('datetime', () {
