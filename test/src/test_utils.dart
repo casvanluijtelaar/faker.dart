@@ -59,7 +59,12 @@ class MockBusiness extends Mock implements Business {}
 
 class MockCellPhone extends Mock implements CellPhone {}
 
-class MockCommerce extends Mock implements Commerce {}
+class MockCommerce extends Mock implements Commerce {
+  @override
+  ProductName productName = MockProductName();
+}
+
+class MockProductName extends Mock implements ProductName {}
 
 class MockCompany extends Mock implements Company {}
 

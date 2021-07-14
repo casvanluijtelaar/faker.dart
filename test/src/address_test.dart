@@ -169,7 +169,7 @@ void main() {
     expect(coord[1] >= -180 && coord[1] <= 180, isTrue);
   });
 
-    test('returns timezone', () {
+  test('returns timezone', () {
     when(() => faker.locale.address.timeZone).thenReturn(['+1']);
     final timezone = address.timezone();
 

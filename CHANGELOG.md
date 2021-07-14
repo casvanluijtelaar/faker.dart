@@ -1,3 +1,6 @@
+## 0.0.3-1
+* set dartfmt formatting for those sweet sweet pub points
+
 ## 0.0.3
 * properly updated the readme to reflect the 2.0 update...
 * couple little things that were missed in 0.0.2

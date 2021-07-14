@@ -1,6 +1,8 @@
 import 'package:faker_dart/src/address.dart';
 import 'package:faker_dart/src/image.dart';
 
+import 'animal.dart';
+import 'commerce.dart';
 import 'datatype.dart';
 import 'models/faker_locale.dart';
 import 'name.dart';
@@ -32,7 +34,7 @@ class Faker {
   final DataType datatype = DataType();
 
   /// {@template image}
-  /// generate rondom image urls from different sources
+  /// generate rondom  valid image urls from different sources
   /// {@endtemplate}
   Image get image => Image(instance);
 
@@ -45,6 +47,16 @@ class Faker {
   /// generate rondom addresses
   /// {@endtemplate}
   Address get address => Address(instance);
+
+  /// {@template animal}
+  /// generate rondom animals
+  /// {@endtemplate}
+  Animal get animal => Animal(instance);
+
+  /// {@template commerce}
+  /// generate rondom commerce related items
+  /// {@endtemplate}
+  Commerce get commerce => Commerce(instance);
 
   /// Generator method for combining faker methods based on string input
   ///
@@ -149,6 +161,33 @@ class Faker {
           'ordinalDirection': address.ordinalDirection,
           'nearbyGPSCoordinate': address.nearbyGPSCoordinate,
           'timezone': address.timezone,
+        },
+        'animal': {
+          'animal': animal.animal,
+          'type': animal.type,
+          'dog': animal.dog,
+          'cat': animal.cat,
+          'snake': animal.snake,
+          'bear': animal.bear,
+          'lion': animal.lion,
+          'cetacean': animal.cetacean,
+          'horse': animal.horse,
+          'bird': animal.bird,
+          'cow': animal.cow,
+          'fish': animal.fish,
+          'crocodilia': animal.crocodilia,
+          'instect': animal.insect,
+          'rabbit': animal.rabbit,
+        },
+        'commerce': {
+          'color': commerce.color,
+          'department': commerce.department,
+          'productName': commerce.productName,
+          'price': commerce.price,
+          'productAdjective': commerce.productAdjective,
+          'productMaterial': commerce.productMaterial,
+          'product': commerce.product,
+          'productDescription': commerce.productDescription,
         }
       };
 }
