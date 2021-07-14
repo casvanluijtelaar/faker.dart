@@ -34,9 +34,6 @@ jobs:
       # want to change this to 'flutter test'.
       - name: Run tests
         run: flutter test --coverage
-      - name: remove unwanted coverage
-        run: lcov --remove coverage/lcov.info 'lib/src/locales/*' 'lib/src/models/*' 'lib/faker_dart.dart' -o coverage/lcov.info
-
 
       - uses: codecov/codecov-action@v1
         with:
