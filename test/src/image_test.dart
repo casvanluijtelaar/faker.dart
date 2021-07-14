@@ -19,8 +19,6 @@ void main() {
 
   test('image returns a valid url', () {
     final url = image.image();
-
-    print(url);
     expect(url.contains('http'), isTrue);
   });
 }
