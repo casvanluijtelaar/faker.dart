@@ -35,7 +35,7 @@ jobs:
       - name: Run tests
         run: flutter test --coverage
       - name: remove unwanted coverage
-        run: flutter pub global run remove_from_coverage:remove_from_coverage -f coverage/lcov.info -r '\lib\src\locales\*.dart','\lib\src\models\*.dart'
+        run: lcov --remove coverage/lcov.info 'lib/src/locales/*' 'lib/src/models/*' 'lib/faker_dart.dart' -o coverage/lcov.info
 
 
       - uses: codecov/codecov-action@v1
