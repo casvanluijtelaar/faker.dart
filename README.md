@@ -3,7 +3,6 @@
 [![Pub](https://img.shields.io/github/stars/casvanluijtelaar/faker.dart)](https://github.com/casvanluijtelaar/faker.dart)
 [![Pub](https://img.shields.io/github/last-commit/casvanluijtelaar/faker.dart)](https://github.com/casvanluijtelaar/faker.dart)
 
-
 <h1 align="center">
   generate massive amounts of fake data in Dart & Flutter
 </h1>
