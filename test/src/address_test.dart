@@ -26,18 +26,16 @@ void main() {
     expect(zipcode[0], '-');
     expect(!zipcode.contains('#'), isTrue);
 
+    when(() => faker.locale.address.postcode).thenReturn(['-###']);
     zipcode = address.zipCode();
     expect(zipcode, isNotEmpty);
     expect(!zipcode.contains('#'), isTrue);
   });
 
   test('returns city in correct format', () {
-    when(() => faker.fake).thenReturn((str) => 'test');
-    // need to figure out how to properly mock faker.fake
-    var result = address.city();
-    expect(result, 'test');
-    result = address.city(format: '');
-    expect(result, 'test');
+    when(() => faker.fake('')).thenReturn('');
+    final result = address.city(format: '');
+    expect(result, '');
   });
 
   test('returns city prefix', () {
@@ -86,14 +84,14 @@ void main() {
   test('return valid street address format', () {
     final streetAddress = address.streetAddress();
     expect(streetAddress.split(' ').length >= 2, isTrue);
+    final streetAddressLong = address.streetAddress(useFullAddress: true);
+    expect(streetAddressLong.length > streetAddress.length, isTrue);
   });
 
   test('return valid secundary street address', () {
     final streetAddress = address.secondaryAddress();
     expect(streetAddress.split(' ').length >= 2, isTrue);
     expect(['Apt.', 'Suite'].contains(streetAddress.split(' ')[0]), isTrue);
-    final streetAddressLong = address.secondaryAddress();
-    expect(streetAddressLong.length > streetAddress.length, isTrue);
   });
 
   test('returns county', () {
@@ -176,7 +174,7 @@ void main() {
         .thenReturn(['a', 'a', 'a', 'a', 'a', 'a', 'a', 'a']);
     when(() => faker.locale.address.directionAbbr)
         .thenReturn(['b', 'b', 'b', 'b', 'b', 'b', 'b', 'b']);
-   
+
     final direction = address.ordinalDirection();
     expect(direction, 'a');
 

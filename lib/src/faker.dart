@@ -76,7 +76,7 @@ class Faker {
   String fake(String str) {
     var res = '';
 
-    if (str.isEmpty) throw ArgumentError('invalid fake string');
+    if (str.isEmpty) return str;
 
     // find first matching {{ and }}
     final start = str.indexOf('{{');

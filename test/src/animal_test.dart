@@ -26,26 +26,21 @@ void main() {
   });
 
   test('return a random animal', () {
-    final _animal = model.Animal(
-      bear: ['dog'],
-      bird: ['dog'],
-      cat: ['dog'],
-      cetacean: ['dog'],
-      cow: ['dog'],
-      crocodilia: ['dog'],
-      dog: ['dog'],
-      fish: ['dog'],
-      horse: ['dog'],
-      insect: ['dog'],
-      lion: ['dog'],
-      rabbit: ['dog'],
-      snake: ['dog'],
-      type: ['dog'],
-    );
-
-    when(() => faker.locale.animal).thenReturn(_animal);
+    when(() => faker.locale.animal.bear).thenReturn(['dog']);
+    when(() => faker.locale.animal.bird).thenReturn(['dog']);
+    when(() => faker.locale.animal.cat).thenReturn(['dog']);
+    when(() => faker.locale.animal.cetacean).thenReturn(['dog']);
+    when(() => faker.locale.animal.cow).thenReturn(['dog']);
+    when(() => faker.locale.animal.crocodilia).thenReturn(['dog']);
+    when(() => faker.locale.animal.dog).thenReturn(['dog']);
+    when(() => faker.locale.animal.fish).thenReturn(['dog']);
+    when(() => faker.locale.animal.horse).thenReturn(['dog']);
+    when(() => faker.locale.animal.insect).thenReturn(['dog']);
+    when(() => faker.locale.animal.lion).thenReturn(['dog']);
+    when(() => faker.locale.animal.rabbit).thenReturn(['dog']);
+    when(() => faker.locale.animal.snake).thenReturn(['dog']);
+   
     final result = animal.animal();
-
     expect(result, 'dog');
   });
 

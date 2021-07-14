@@ -29,11 +29,8 @@ class Address {
   ///
   /// where every `#` is replaced by a number
   String zipCode({String? format}) {
-    final localeFormat = format ??
-        RandomUtils.arrayElement(
-          _faker.locale.address.postcode,
-        );
-    return HelperUtils.replaceSymbols(localeFormat);
+    format ??= RandomUtils.arrayElement(_faker.locale.address.postcode);
+    return HelperUtils.replaceSymbols(format);
   }
 
   /// Generates a random localized city name. The format string can contain any
@@ -56,7 +53,6 @@ class Address {
     ];
 
     format ??= formats[_faker.datatype.number(max: formats.length - 1)];
-
     return _faker.fake(format);
   }
 

@@ -5,9 +5,6 @@ import 'package:faker_dart/src/utils/random_utils.dart';
 
 /// helper methods for string interactions
 class HelperUtils {
-  static String slugify(String string) => string
-      .replaceAll(RegExp(r'/ /g'), '-')
-      .replaceAll(RegExp(r'/[^\一-龠\ぁ-ゔ\ァ-ヴー\w\.\-]+/g'), '');
 
   static String replaceSymbolWithNumber(String string) {
     var replacement = '';
