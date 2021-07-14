@@ -1,3 +1,5 @@
+## 0.0.5
+* actually updated readme to reflect 0.0.4 :)
 
 ## 0.0.4
 * added the animal module! generate all them random animals!

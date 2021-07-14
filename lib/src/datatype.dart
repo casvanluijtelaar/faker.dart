@@ -5,7 +5,6 @@ import 'package:faker_dart/src/utils/random_utils.dart';
 
 /// {@macro datatype}
 class DataType {
-
   final _random = Random();
 
   /// returns a random [int] with optional [min] & [max] parameters

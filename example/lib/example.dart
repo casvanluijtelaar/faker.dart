@@ -10,5 +10,6 @@ void main(List<String> arguments) {
   print(faker.commerce.price());
 
   /// combine all prevous using the fake method
-  print(faker.fake('{{name.firstName}}, {{datatype.boolean}}, and also: {{commerce.price}}'));
+  print(faker.fake(
+      '{{name.firstName}}, {{datatype.boolean}}, and also: {{commerce.price}}'));
 }
