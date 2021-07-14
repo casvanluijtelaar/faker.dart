@@ -20,15 +20,24 @@ void main() {
   });
 
   test('return correctly formatted zipcode', () {
-    final zipcode = address.zipCode(format: '-###');
+    var zipcode = address.zipCode(format: '-###');
 
     expect(zipcode.length, 4);
     expect(zipcode[0], '-');
     expect(!zipcode.contains('#'), isTrue);
+
+    zipcode = address.zipCode();
+    expect(zipcode, isNotEmpty);
+    expect(!zipcode.contains('#'), isTrue);
   });
 
   test('returns city in correct format', () {
-    // needs to mock faker.fake, see faker_test.dart
+    when(() => faker.fake).thenReturn((str) => 'test');
+    // need to figure out how to properly mock faker.fake
+    var result = address.city();
+    expect(result, 'test');
+    result = address.city(format: '');
+    expect(result, 'test');
   });
 
   test('returns city prefix', () {
@@ -53,7 +62,10 @@ void main() {
   });
 
   test('returns street name', () {
-    final name = address.streetName();
+    late String name;
+    for (var i = 0; i < 10; i++) {
+      name = address.streetName();
+    }
     expect(name.split(' ').length, 2);
   });
 
@@ -65,7 +77,7 @@ void main() {
   });
 
   test('returns street prefix', () {
-    final prefix = address.streetSuffix();
+    final prefix = address.streetPrefix();
 
     expect(prefix, isNotNull);
     expect(prefix, const TypeMatcher<String>());
@@ -80,6 +92,8 @@ void main() {
     final streetAddress = address.secondaryAddress();
     expect(streetAddress.split(' ').length >= 2, isTrue);
     expect(['Apt.', 'Suite'].contains(streetAddress.split(' ')[0]), isTrue);
+    final streetAddressLong = address.secondaryAddress();
+    expect(streetAddressLong.length > streetAddress.length, isTrue);
   });
 
   test('returns county', () {
@@ -139,7 +153,9 @@ void main() {
     when(() => faker.locale.address.directionAbbr).thenReturn(['N']);
     final direction = address.direction();
 
-    expect(direction == 'North' || direction == 'N', isTrue);
+    expect(direction, 'North');
+    final abbr = address.direction(useAbbr: true);
+    expect(abbr, 'N');
   });
 
   test('return correct cardinal direction', () {
@@ -147,9 +163,12 @@ void main() {
         .thenReturn(['a', 'a', 'a', 'a', 'a', 'a', 'a', 'a']);
     when(() => faker.locale.address.directionAbbr)
         .thenReturn(['b', 'b', 'b', 'b', 'b', 'b', 'b', 'b']);
-    final direction = address.cardinalDirection();
 
-    expect(direction == 'a' || direction == 'b', isTrue);
+    final direction = address.cardinalDirection();
+    expect(direction, 'a');
+
+    final abbr = address.cardinalDirection(useAbbr: true);
+    expect(abbr, 'b');
   });
 
   test('return correct ordinal direction', () {
@@ -157,9 +176,12 @@ void main() {
         .thenReturn(['a', 'a', 'a', 'a', 'a', 'a', 'a', 'a']);
     when(() => faker.locale.address.directionAbbr)
         .thenReturn(['b', 'b', 'b', 'b', 'b', 'b', 'b', 'b']);
+   
     final direction = address.ordinalDirection();
+    expect(direction, 'a');
 
-    expect(direction == 'a' || direction == 'b', isTrue);
+    final abbr = address.ordinalDirection(useAbbr: true);
+    expect(abbr, 'b');
   });
 
   test('return a valid gps coordinate', () {

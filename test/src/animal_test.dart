@@ -1,6 +1,7 @@
 import 'package:faker_dart/src/animal.dart';
 import 'package:faker_dart/src/datatype.dart';
 import 'package:faker_dart/src/faker.dart';
+import 'package:faker_dart/src/models/animal.dart' as model;
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 
@@ -20,6 +21,30 @@ void main() {
   test('return a random animal type', () {
     when(() => faker.locale.animal.type).thenReturn(['dog']);
     final result = animal.type();
+
+    expect(result, 'dog');
+  });
+
+  test('return a random animal', () {
+    final _animal = model.Animal(
+      bear: ['dog'],
+      bird: ['dog'],
+      cat: ['dog'],
+      cetacean: ['dog'],
+      cow: ['dog'],
+      crocodilia: ['dog'],
+      dog: ['dog'],
+      fish: ['dog'],
+      horse: ['dog'],
+      insect: ['dog'],
+      lion: ['dog'],
+      rabbit: ['dog'],
+      snake: ['dog'],
+      type: ['dog'],
+    );
+
+    when(() => faker.locale.animal).thenReturn(_animal);
+    final result = animal.animal();
 
     expect(result, 'dog');
   });
@@ -103,6 +128,13 @@ void main() {
   test('return a random insect', () {
     when(() => faker.locale.animal.insect).thenReturn(['dog']);
     final result = animal.insect();
+
+    expect(result, 'dog');
+  });
+
+  test('return a random fish', () {
+    when(() => faker.locale.animal.fish).thenReturn(['dog']);
+    final result = animal.fish();
 
     expect(result, 'dog');
   });
