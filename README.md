@@ -111,7 +111,7 @@ faker.setCustomLocale(locale);
  * zh_TW
 
 ## :grey_question: what's up next
-this package is still in active development. features still being added:
+this package is still in active development. modules are still being added:
 
  * company
  * database
