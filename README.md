@@ -57,7 +57,7 @@ if your chosen locale doesn't support specific faker data, it will fall back to 
 
 ```dart
 // sets locale to de
-faker.setLocale(FakerLocaleType.en);
+faker.setLocale(FakerLocaleType.de);
 // set the locale to your custom Locale:
 final FakerLocale locale = FakerLocale(...);
 faker.setCustomLocale(locale);
