@@ -1,7 +1,9 @@
 import 'package:faker_dart/faker_dart.dart';
 import 'package:faker_dart/src/image_providers/lorempicsum.dart';
-import 'package:faker_dart/src/image_providers/lorempixel.dart';
-import 'package:faker_dart/src/image_providers/unsplash.dart';
+import 'package:faker_dart/src/image_providers/lorempixel.dart'
+    hide LoremPixelCategory;
+import 'package:faker_dart/src/image_providers/unsplash.dart'
+    hide UnsplashCategory;
 
 /// {@macro image}
 class Image {

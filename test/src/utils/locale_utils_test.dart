@@ -14,7 +14,6 @@ void main() {
     const locales = FakerLocaleType.values;
 
     for (final locale in locales) {
-      print(locale);
       final result = LocaleUtils.generateLocale(locale);
       expect(result is FakerLocale, isTrue);
     }
