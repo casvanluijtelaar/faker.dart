@@ -33,11 +33,11 @@ void main() {
   });
 
   test('returns city in correct format', () {
-    when(() => faker.fake('')).thenReturn('');
-    final result = address.city(format: '');
+  
+    final result = Faker.instance.address.city(format: '');
     expect(result, '');
 
-    final result2 = address.city();
+    final result2 = Faker.instance.address.city();
     expect(result2.isNotEmpty, isTrue);
   });
 
