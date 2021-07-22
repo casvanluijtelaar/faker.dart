@@ -57,8 +57,8 @@ The default language locale is set to English.
 if your chosen locale doesn't support specific faker data, it will fall back to the English locale.
 
 ```dart
-// sets locale to de
-faker.setLocale(FakerLocaleType.en);
+// sets locale to german
+faker.setLocale(FakerLocaleType.de);
 // set the locale to your custom Locale:
 final FakerLocale locale = FakerLocale(...);
 faker.setCustomLocale(locale);
@@ -112,7 +112,7 @@ faker.setCustomLocale(locale);
  * zh_TW
 
 ## :grey_question: what's up next
-this package is still in active development. features still being added:
+this package is still in active development. modules are still being added:
 
  * company
  * database
