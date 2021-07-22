@@ -56,7 +56,7 @@ class DataType {
   String uuid() {
     const template = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx';
 
-    return template.replaceAllMapped(RegExp(r'/[xy]/g'), (match) {
+    return template.replaceAllMapped(RegExp(r'[xy]'), (match) {
       final random = _random.nextInt(15);
       final value = match[0] == 'x' ? random : (random & 0x3 | 0x8);
 

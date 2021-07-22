@@ -9,16 +9,27 @@ import 'test_utils.dart';
 void main() {
   late Faker faker;
   late Image image;
+  late DataType dataype;
 
   setUp(() {
     faker = MockFaker();
     image = Image(faker);
+    dataype = MockDataType();
 
-    when(() => faker.datatype).thenReturn(DataType());
+    when(() => faker.datatype).thenReturn(dataype);
   });
 
   test('image returns a valid url', () {
-    final url = image.image();
-    expect(url.contains('http'), isTrue);
+    when(() => dataype.number(max: 2)).thenReturn(0);
+    final unsplash = image.image();
+    expect(unsplash.contains('unsplash'), isTrue);
+
+    when(() => dataype.number(max: 2)).thenReturn(1);
+    final lorempixel = image.image();
+    expect(lorempixel.contains('lorempixel'), isTrue);
+
+    when(() => dataype.number(max: 2)).thenReturn(2);
+    final lorempicsum = image.image();
+    expect(lorempicsum.contains('picsum'), isTrue);
   });
 }

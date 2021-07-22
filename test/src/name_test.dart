@@ -1,4 +1,5 @@
 import 'package:faker_dart/faker_dart.dart';
+import 'package:faker_dart/src/datatype.dart';
 import 'package:faker_dart/src/name.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
@@ -12,6 +13,7 @@ void main() {
   setUp(() {
     faker = MockFaker();
     name = Name(faker);
+    when(() => faker.datatype).thenReturn(DataType());
   });
 
   test('firstName with genders', () {
@@ -139,16 +141,60 @@ void main() {
   });
 
   test('jobDescriptor', () {
-    when(() => faker.locale.name.title!.descriptor).thenReturn(['h']);
+    when(() => faker.locale.name.title.descriptor).thenReturn(['h']);
     expect(name.jobDescriptor(), 'h');
   });
 
   test('jobSector', () {
-    when(() => faker.locale.name.title!.level).thenReturn(['h']);
+    when(() => faker.locale.name.title.level).thenReturn(['h']);
     expect(name.jobSector(), 'h');
   });
   test('jobType', () {
-    when(() => faker.locale.name.title!.job).thenReturn(['h']);
+    when(() => faker.locale.name.title.job).thenReturn(['h']);
     expect(name.jobType(), 'h');
+  });
+
+  test('jobtitle', () {
+    when(() => faker.locale.name.title.descriptor).thenReturn(['h']);
+    when(() => faker.locale.name.title.level).thenReturn(['h']);
+    when(() => faker.locale.name.title.job).thenReturn(['h']);
+
+    final result = name.jobTitle();
+
+    expect(result, 'h h h');
+  });
+
+  test('fullName', () {
+    when(() => faker.locale.name.malePrefix).thenReturn(['a']);
+    when(() => faker.locale.name.femalePrefix).thenReturn(['a']);
+    when(() => faker.locale.name.prefix).thenReturn(['a']);
+
+    when(() => faker.locale.name.maleFirstName).thenReturn(['a']);
+    when(() => faker.locale.name.femaleFirstName).thenReturn(['a']);
+    when(() => faker.locale.name.firstName).thenReturn(['a']);
+
+    when(() => faker.locale.name.maleMiddleName).thenReturn(['a']);
+    when(() => faker.locale.name.femaleMiddleName).thenReturn(['a']);
+    when(() => faker.locale.name.middleName).thenReturn(['a']);
+
+    when(() => faker.locale.name.maleLastName).thenReturn(['a']);
+    when(() => faker.locale.name.femaleLastName).thenReturn(['a']);
+    when(() => faker.locale.name.lastName).thenReturn(['a']);
+
+    when(() => faker.locale.name.suffix).thenReturn(['a']);
+
+    final result = name.fullName();
+
+    final match = result == 'a a a' || result == 'a a';
+    expect(match, isTrue);
+  });
+
+  test('title', () {
+    when(() => faker.locale.name.title.descriptor).thenReturn(['a']);
+    when(() => faker.locale.name.title.level).thenReturn(['a']);
+    when(() => faker.locale.name.title.job).thenReturn(['a']);
+
+    final result = name.title();
+    expect(result, 'a a a');
   });
 }

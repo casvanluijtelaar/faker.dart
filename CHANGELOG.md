@@ -1,3 +1,7 @@
+## 0.0.6
+* fixed regex bug with uuid generation
+* we now have 100% coverage!
+
 ## 0.0.5
 * actually updated readme to reflect 0.0.4 :)
 
@@ -8,6 +12,7 @@
 
 ## 0.0.3-1
 * set dartfmt formatting for those sweet sweet pub points
+
 ## 0.0.3
 * properly updated the readme to reflect the 2.0 update...
 * couple little things that were missed in 0.0.2
@@ -29,7 +34,6 @@
 * added names faker
 * implemented fake method
 * added option to implement custom faker locales
-
 
 ## 0.0.1-dev.1
 * initial package setup

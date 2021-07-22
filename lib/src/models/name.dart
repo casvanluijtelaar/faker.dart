@@ -29,7 +29,7 @@ class Name {
 
   final List<String>? suffix;
 
-  final Title? title;
+  final Title title;
   Name({
     this.gender,
     this.binaryGender,
@@ -47,7 +47,7 @@ class Name {
     this.femalePrefix,
     this.malePrefix,
     this.suffix,
-    this.title,
+    required this.title,
   });
 
   Name copyWith({
@@ -108,7 +108,7 @@ class Name {
       'femalePrefix': femalePrefix,
       'malePrefix': malePrefix,
       'suffix': suffix,
-      'title': title?.toMap(),
+      'title': title.toMap(),
     };
   }
 

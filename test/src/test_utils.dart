@@ -1,3 +1,4 @@
+import 'package:faker_dart/src/datatype.dart';
 import 'package:faker_dart/src/faker.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:faker_dart/src/models/_models.dart';
@@ -98,3 +99,6 @@ class MockTitle extends Mock implements Title {}
 class MockVehicle extends Mock implements Vehicle {}
 
 class MockWord extends Mock implements Word {}
+
+
+class MockDataType  extends Mock implements DataType {}

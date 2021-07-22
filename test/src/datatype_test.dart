@@ -31,11 +31,10 @@ void main() {
     expect(result.length, 20);
   });
 
-
-
   test('uuid', () {
     final result = datatype.uuid();
     expect(result.length, 36);
+    expect(!result.contains('x'), isTrue);
   });
   test('bool', () {
     final result = datatype.boolean();

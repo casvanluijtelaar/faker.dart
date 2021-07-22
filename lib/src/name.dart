@@ -29,23 +29,23 @@ class Name {
     String? lastName,
     Gender gender = Gender.unspecified,
   }) {
-    firstName ??= _faker.name.firstName(gender: gender);
-    lastName ??= _faker.name.lastName(gender: gender);
+    firstName ??= this.firstName(gender: gender);
+    lastName ??= this.lastName(gender: gender);
 
     final chance = _faker.datatype.number(max: 8);
 
     if (chance == 0) {
-      final prefix = _faker.name.prefix(gender: gender);
+      final prefix = this.prefix(gender: gender);
       return '$prefix $firstName $lastName';
     }
 
     if (chance == 1) {
-      final suffix = _faker.name.suffix();
+      final suffix = this.suffix();
       return '$firstName $lastName $suffix';
     }
 
     if (chance == 2) {
-      final middleName = _faker.name.middleName(gender: gender);
+      final middleName = this..middleName(gender: gender);
       return '$firstName $middleName $lastName';
     }
 
@@ -147,25 +147,25 @@ class Name {
   /// returns a random job title
   String title() {
     final descriptor =
-        RandomUtils.arrayElement(_faker.locale.name.title?.descriptor);
-    final level = RandomUtils.arrayElement(_faker.locale.name.title?.level);
-    final job = RandomUtils.arrayElement(_faker.locale.name.title?.job);
+        RandomUtils.arrayElement(_faker.locale.name.title.descriptor);
+    final level = RandomUtils.arrayElement(_faker.locale.name.title.level);
+    final job = RandomUtils.arrayElement(_faker.locale.name.title.job);
 
     return '$descriptor $level $job';
   }
 
   /// returns a random job description
   String jobDescriptor() {
-    return RandomUtils.arrayElement(_faker.locale.name.title?.descriptor);
+    return RandomUtils.arrayElement(_faker.locale.name.title.descriptor);
   }
 
   /// returns a random job sector e.g. creative, industry, ...
   String jobSector() {
-    return RandomUtils.arrayElement(_faker.locale.name.title?.level);
+    return RandomUtils.arrayElement(_faker.locale.name.title.level);
   }
 
   /// returns a random job type e.g. cook, driver, ...
   String jobType() {
-    return RandomUtils.arrayElement(_faker.locale.name.title?.job);
+    return RandomUtils.arrayElement(_faker.locale.name.title.job);
   }
 }
