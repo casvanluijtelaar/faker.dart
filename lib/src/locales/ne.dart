@@ -19,7 +19,6 @@ Map<String, dynamic> ne = {
       "Pokhara"
     ],
     "defaultCountry": ["Nepal"],
-    "postcode": [0],
     "state": [
       "Baglung",
       "Banke",

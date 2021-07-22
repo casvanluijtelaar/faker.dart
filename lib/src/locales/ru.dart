@@ -1746,8 +1746,6 @@ Map<String, dynamic> ru = {
       "#{female_first_name} #{female_middle_name} #{female_last_name}",
       "#{female_last_name} #{female_first_name} #{female_middle_name}"
     ],
-    "prefix": [],
-    "suffix": [],
     "title": {
       "descriptor": [
         "Ведущий",

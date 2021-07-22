@@ -1,7 +1,6 @@
 Map<String, dynamic> pt_BR = {
   "address": {
     "buildingNumber": ["#####", "####", "###"],
-    "cityPrefix": [],
     "citySuffix": [
       " do Descoberto",
       " de Nossa Senhora",

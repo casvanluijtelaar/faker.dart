@@ -326,7 +326,6 @@ Map<String, dynamic> az = {
     "defaultCountry": ["Azərbaycan"],
     "postcode": ["AZ####"],
     "secondaryAddress": ["m. ###"],
-    "state": [],
     "streetAddress": ["#{street_name}, #{building_number}"],
     "streetName": [
       "#{street_suffix} #{Address.street_title}",
@@ -658,7 +657,6 @@ Map<String, dynamic> az = {
       "#{prefix} #{Address.city_name}#{suffix}#{suffix}#{suffix}"
     ],
     "prefix": ["ASC", "MMC", "QSC"],
-    "suffix": []
   },
   "date": {
     "month": {
@@ -891,8 +889,6 @@ Map<String, dynamic> az = {
       "#{female_first_name} #{female_last_name}",
       "#{female_last_name} #{female_first_name}"
     ],
-    "prefix": [],
-    "suffix": []
   },
   "phoneNumber": {
     "formats": ["(9##)###-##-##"]

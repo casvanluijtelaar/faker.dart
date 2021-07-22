@@ -806,8 +806,6 @@ Map<String, dynamic> cz = {
     "defaultCountry": ["Česká republika"],
     "postcode": ["#####", "### ##", "###-##"],
     "secondaryAddress": ["Apt. ###", "Suite ###"],
-    "state": [],
-    "stateAbbr": [],
     "street": [
       "17. Listopadu",
       "17. Listopadu",

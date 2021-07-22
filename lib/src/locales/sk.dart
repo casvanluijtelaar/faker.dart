@@ -492,8 +492,6 @@ Map<String, dynamic> sk = {
     "defaultCountry": ["Slovensko"],
     "postcode": ["#####", "### ##", "## ###"],
     "secondaryAddress": ["Apt. ###", "Suite ###"],
-    "state": [],
-    "stateAbbr": [],
     "street": [
       "Adámiho",
       "Ahoj",

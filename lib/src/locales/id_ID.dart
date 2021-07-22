@@ -1423,7 +1423,6 @@ Map<String, dynamic> id_ID = {
       "#{female_last_name} #{female_first_name}",
       "#{female_first_name} #{female_first_name} #{female_last_name}"
     ],
-    "prefix": [],
     "suffix": [
       "S.Ked",
       "S.Gz",

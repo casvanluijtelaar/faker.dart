@@ -155,8 +155,6 @@ Map<String, dynamic> pt_PT = {
       "Viseu",
       "Vizela"
     ],
-    "cityPrefix": [],
-    "citySuffix": [],
     "country": [
       "África do Sul",
       "Áustria",
@@ -1124,7 +1122,6 @@ Map<String, dynamic> pt_PT = {
       "#{female_prefix} #{female_first_name} #{last_name}"
     ],
     "prefix": ["#{female_prefix}", "#{male_prefix}"],
-    "suffix": []
   },
   "phoneNumber": {
     "formats": [

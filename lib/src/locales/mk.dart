@@ -4168,7 +4168,6 @@ Map<String, dynamic> mk = {
       "#{male_first_name} #{male_last_name}"
     ],
     "prefix": ["#{female_prefix}", "#{male_prefix}"],
-    "suffix": [],
     "title": {
       "descriptor": [
         "Главен",

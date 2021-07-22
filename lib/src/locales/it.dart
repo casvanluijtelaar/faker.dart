@@ -7426,7 +7426,6 @@ Map<String, dynamic> it = {
       "#{female_first_name} #{last_name}"
     ],
     "prefix": ["Sig.", "Dott.", "Dr.", "Ing."],
-    "suffix": []
   },
   "phoneNumber": {
     "formats": [
