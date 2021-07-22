@@ -130,7 +130,7 @@ class Name {
       femalePrefix: map['femalePrefix'],
       malePrefix: map['malePrefix'],
       suffix: map['suffix'],
-      title: Title.fromMap(map['title']),
+      title: Title.fromMap(map['title'] ?? {}),
     );
   }
 

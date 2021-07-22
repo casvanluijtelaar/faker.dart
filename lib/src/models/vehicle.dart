@@ -45,11 +45,11 @@ class Vehicle {
 
   factory Vehicle.fromMap(Map<String, dynamic> map) {
     return Vehicle(
-      bicycle: List<String>.from(map['bicycle']),
-      fuel: List<String>.from(map['fuel']),
-      manufacturer: List<String>.from(map['manufacturer']),
-      model: List<String>.from(map['model']),
-      vehicleType: List<String>.from(map['vehicleType']),
+      bicycle: map['bicycle'],
+      fuel: map['fuel'],
+      manufacturer: map['manufacturer'],
+      model: map['model'],
+      vehicleType: map['vehicleType'],
     );
   }
 

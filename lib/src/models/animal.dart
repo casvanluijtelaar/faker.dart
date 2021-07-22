@@ -91,20 +91,20 @@ class Animal {
 
   factory Animal.fromMap(Map<String, dynamic> map) {
     return Animal(
-      bear: List<String>.from(map['bear']),
-      bird: List<String>.from(map['bird']),
-      cat: List<String>.from(map['cat']),
-      cetacean: List<String>.from(map['cetacean']),
-      cow: List<String>.from(map['cow']),
-      crocodilia: List<String>.from(map['crocodilia']),
-      dog: List<String>.from(map['dog']),
-      fish: List<String>.from(map['fish']),
-      horse: List<String>.from(map['horse']),
-      insect: List<String>.from(map['insect']),
-      lion: List<String>.from(map['lion']),
-      rabbit: List<String>.from(map['rabbit']),
-      snake: List<String>.from(map['snake']),
-      type: List<String>.from(map['type']),
+      bear: map['bear'],
+      bird: map['bird'],
+      cat: map['cat'],
+      cetacean: map['cetacean'],
+      cow: map['cow'],
+      crocodilia: map['crocodilia'],
+      dog: map['dog'],
+      fish: map['fish'],
+      horse: map['horse'],
+      insect: map['insect'],
+      lion: map['lion'],
+      rabbit: map['rabbit'],
+      snake: map['snake'],
+      type: map['type'],
     );
   }
 

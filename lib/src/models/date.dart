@@ -30,8 +30,8 @@ class Date {
 
   factory Date.fromMap(Map<String, dynamic> map) {
     return Date(
-      month: Month.fromMap(map['month']),
-      weekday: Weekday.fromMap(map['weekday']),
+      month: Month.fromMap(map['month'] ?? {}),
+      weekday: Weekday.fromMap(map['weekday'] ?? {}),
     );
   }
 
@@ -90,10 +90,10 @@ class Month {
 
   factory Month.fromMap(Map<String, dynamic> map) {
     return Month(
-      wide: List<String>.from(map['wide']),
-      wide_context: List<String>.from(map['wide_context']),
-      abbr: List<String>.from(map['abbr']),
-      abbr_context: List<String>.from(map['abbr_context']),
+      wide: map['wide'],
+      wide_context: map['wide_context'],
+      abbr: map['abbr'],
+      abbr_context: map['abbr_context'],
     );
   }
 
@@ -164,10 +164,10 @@ class Weekday {
 
   factory Weekday.fromMap(Map<String, dynamic> map) {
     return Weekday(
-      wide: List<String>.from(map['wide']),
-      wide_context: List<String>.from(map['wide_context']),
-      abbr: List<String>.from(map['abbr']),
-      abbr_context: List<String>.from(map['abbr_context']),
+      wide: map['wide'],
+      wide_context: map['wide_context'],
+      abbr: map['abbr'],
+      abbr_context: map['abbr_context'],
     );
   }
 

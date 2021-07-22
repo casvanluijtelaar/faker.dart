@@ -50,12 +50,12 @@ class Hacker {
 
   factory Hacker.fromMap(Map<String, dynamic> map) {
     return Hacker(
-      abbreviation: List<String>.from(map['abbreviation']),
-      adjective: List<String>.from(map['adjective']),
-      ingverb: List<String>.from(map['ingverb']),
-      noun: List<String>.from(map['noun']),
-      phrase: List<String>.from(map['phrase']),
-      verb: List<String>.from(map['verb']),
+      abbreviation: map['abbreviation'],
+      adjective: map['adjective'],
+      ingverb: map['ingverb'],
+      noun: map['noun'],
+      phrase: map['phrase'],
+      verb: map['verb'],
     );
   }
 

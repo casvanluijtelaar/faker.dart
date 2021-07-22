@@ -35,9 +35,9 @@ class Title {
 
   factory Title.fromMap(Map<String, dynamic> map) {
     return Title(
-      descriptor: List<String>.from(map['descriptor']),
-      level: List<String>.from(map['level']),
-      job: List<String>.from(map['job']),
+      descriptor: map['descriptor'],
+      level: map['level'],
+      job: map['job'],
     );
   }
 

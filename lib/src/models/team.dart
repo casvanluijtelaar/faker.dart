@@ -30,8 +30,8 @@ class Team {
 
   factory Team.fromMap(Map<String, dynamic> map) {
     return Team(
-      creature: List<String>.from(map['creature']),
-      name: List<String>.from(map['name']),
+      creature: map['creature'],
+      name: map['name'],
     );
   }
 

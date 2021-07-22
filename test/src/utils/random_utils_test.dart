@@ -12,4 +12,9 @@ void main() {
     final result = RandomUtils.arrayElements([1], 3);
     expect(result, [1, 1, 1]);
   });
+
+    test('get  random array elements from empty array or null', () {
+    final result = RandomUtils.arrayElements(null, 3);
+    expect(result, []);
+  });
 }

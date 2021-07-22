@@ -24,9 +24,7 @@ class CellPhone {
   }
 
   factory CellPhone.fromMap(Map<String, dynamic> map) {
-    return CellPhone(
-      formats: List<String>.from(map['formats']),
-    );
+    return CellPhone(formats: map['formats']);
   }
 
   String toJson() => json.encode(toMap());

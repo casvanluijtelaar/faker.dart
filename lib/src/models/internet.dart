@@ -40,10 +40,10 @@ class Internet {
 
   factory Internet.fromMap(Map<String, dynamic> map) {
     return Internet(
-      avatarUri: List<String>.from(map['avatarUri']),
-      domainSuffix: List<String>.from(map['domainSuffix']),
-      exampleEmail: List<String>.from(map['exampleEmail']),
-      freeEmail: List<String>.from(map['freeEmail']),
+      avatarUri: map['avatarUri'],
+      domainSuffix: map['domainSuffix'],
+      exampleEmail: map['exampleEmail'],
+      freeEmail: map['freeEmail'],
     );
   }
 

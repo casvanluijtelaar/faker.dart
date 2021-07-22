@@ -40,10 +40,10 @@ class Commerce {
 
   factory Commerce.fromMap(Map<String, dynamic> map) {
     return Commerce(
-      color: List<String>.from(map['color']),
-      department: List<String>.from(map['department']),
-      productDescription: List<String>.from(map['productDescription']),
-      productName: ProductName.fromMap(map['productName']),
+      color: map['color'],
+      department: map['department'],
+      productDescription: map['productDescription'],
+      productName: ProductName.fromMap(map['productName'] ?? {}),
     );
   }
 
@@ -110,9 +110,9 @@ class ProductName {
 
   factory ProductName.fromMap(Map<String, dynamic> map) {
     return ProductName(
-      adjective: List<String>.from(map['adjective']),
-      material: List<String>.from(map['material']),
-      product: List<String>.from(map['product']),
+      adjective: map['adjective'],
+      material: map['material'],
+      product: map['product'],
     );
   }
 

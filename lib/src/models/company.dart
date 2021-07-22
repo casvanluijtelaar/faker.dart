@@ -60,14 +60,14 @@ class Company {
 
   factory Company.fromMap(Map<String, dynamic> map) {
     return Company(
-      adjective: List<String>.from(map['adjective']),
-      bsAdjective: List<String>.from(map['bsAdjective']),
-      bsNoun: List<String>.from(map['bsNoun']),
-      bsVerb: List<String>.from(map['bsVerb']),
-      descriptor: List<String>.from(map['descriptor']),
-      name: List<String>.from(map['name']),
-      noun: List<String>.from(map['noun']),
-      suffix: List<String>.from(map['suffix']),
+      adjective: map['adjective'],
+      bsAdjective: map['bsAdjective'],
+      bsNoun: map['bsNoun'],
+      bsVerb: map['bsVerb'],
+      descriptor: map['descriptor'],
+      name: map['name'],
+      noun: map['noun'],
+      suffix: map['suffix'],
     );
   }
 

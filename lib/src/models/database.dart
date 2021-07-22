@@ -40,10 +40,10 @@ class Database {
 
   factory Database.fromMap(Map<String, dynamic> map) {
     return Database(
-      collation: List<String>.from(map['collation']),
-      column: List<String>.from(map['column']),
-      engine: List<String>.from(map['engine']),
-      type: List<String>.from(map['type']),
+      collation: map['collation'],
+      column: map['column'],
+      engine: map['engine'],
+      type: map['type'],
     );
   }
 

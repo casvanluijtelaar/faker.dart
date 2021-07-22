@@ -35,9 +35,9 @@ class App {
 
   factory App.fromMap(Map<String, dynamic> map) {
     return App(
-      author: List<String>.from(map['author']),
-      name: List<String>.from(map['name']),
-      version: List<String>.from(map['version']),
+      author: map['author'],
+      name: map['name'],
+      version: map['version'],
     );
   }
 

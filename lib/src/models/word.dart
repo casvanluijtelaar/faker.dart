@@ -55,13 +55,13 @@ class Word {
 
   factory Word.fromMap(Map<String, dynamic> map) {
     return Word(
-      adjective: List<String>.from(map['adjective']),
-      adverb: List<String>.from(map['adverb']),
-      conjunction: List<String>.from(map['conjunction']),
-      interjection: List<String>.from(map['interjection']),
-      noun: List<String>.from(map['noun']),
-      preposition: List<String>.from(map['preposition']),
-      verb: List<String>.from(map['verb']),
+      adjective: map['adjective'],
+      adverb: map['adverb'],
+      conjunction: map['conjunction'],
+      interjection: map['interjection'],
+      noun: map['noun'],
+      preposition: map['preposition'],
+      verb: map['verb'],
     );
   }
 

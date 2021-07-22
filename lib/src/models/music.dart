@@ -25,7 +25,7 @@ class Music {
 
   factory Music.fromMap(Map<String, dynamic> map) {
     return Music(
-      genre: List<String>.from(map['genre']),
+      genre: map['genre'],
     );
   }
 

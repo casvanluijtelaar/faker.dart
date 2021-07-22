@@ -36,9 +36,9 @@ class Business {
 
   factory Business.fromMap(Map<String, dynamic> map) {
     return Business(
-      creditCardExpiryDates: List<String>.from(map['creditCardExpiryDates']),
-      creditCardNumbers: List<String>.from(map['creditCardNumbers']),
-      creditCardTypes: List<String>.from(map['creditCardTypes']),
+      creditCardExpiryDates: map['creditCardExpiryDates'],
+      creditCardNumbers: map['creditCardNumbers'],
+      creditCardTypes: map['creditCardTypes'],
     );
   }
 

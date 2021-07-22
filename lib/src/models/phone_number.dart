@@ -25,7 +25,7 @@ class PhoneNumber {
 
   factory PhoneNumber.fromMap(Map<String, dynamic> map) {
     return PhoneNumber(
-      formats: List<String>.from(map['formats']),
+      formats: map['formats'],
     );
   }
 

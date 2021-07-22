@@ -30,8 +30,8 @@ class Lorem {
 
   factory Lorem.fromMap(Map<String, dynamic> map) {
     return Lorem(
-      supplemental: List<String>.from(map['supplemental']),
-      words: List<String>.from(map['words']),
+      supplemental: map['supplemental'],
+      words: map['words'],
     );
   }
 
