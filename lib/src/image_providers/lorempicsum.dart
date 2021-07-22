@@ -2,8 +2,14 @@
 class LoremPicsum {
   /// return a random image with a specific width & height and an
   /// optional seed
-  String image({int? width, int? height, String? seed}) =>
-      _imageUrl(width, height, null, null, seed);
+  String image({
+    int? width,
+    int? height,
+    String? seed,
+    bool? grayscale,
+    int? blur,
+  }) =>
+      _imageUrl(width, height, grayscale, blur, seed);
 
   /// return a random image with a specific width & height and an
   /// optional seed and an optional blur amount

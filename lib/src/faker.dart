@@ -64,7 +64,7 @@ class Faker {
   ///
   /// ```
   // ignore: lines_longer_than_80_chars
-  /// print(faker.fake('{{name.lastName}}, {{name.firstName}} {{name.suffix}}'));
+  /// print(faker.instance.fake('{{name.lastName}}, {{name.firstName}} {{name.suffix}}'));
   /// outputs: "Marks, Dean Sr."
   /// ```
   ///

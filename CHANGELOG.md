@@ -1,5 +1,6 @@
 ## 0.0.6
 * fixed regex bug with uuid generation
+* fixed an issue where some locales wouldn't properly generate
 * we now have 100% coverage!
 
 ## 0.0.5

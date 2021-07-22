@@ -6,7 +6,7 @@ void main() {
 
   setUp(() => loremPicsum = LoremPicsum());
   test('get image with seed', () {
-    final result1 = loremPicsum.image(seed: '578');
+    final result1 = loremPicsum.image(seed: '578', blur: 1, grayscale: true);
     expect(result1.contains('/seed/578'), isTrue);
   });
 
@@ -16,6 +16,11 @@ void main() {
   });
 
     test('get image with grayscale', () {
+    final result1 = loremPicsum.grayImage();
+    expect(result1.contains('grayscale'), isTrue);
+  });
+
+      test('get image with grayscale & blur', () {
     final result1 = loremPicsum.grayImage();
     expect(result1.contains('grayscale'), isTrue);
   });
