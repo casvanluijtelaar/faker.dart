@@ -36,6 +36,9 @@ void main() {
     when(() => faker.fake('')).thenReturn('');
     final result = address.city(format: '');
     expect(result, '');
+
+    final result2 = address.city();
+    expect(result2.isNotEmpty, isTrue);
   });
 
   test('returns city prefix', () {
@@ -187,6 +190,9 @@ void main() {
 
     expect(coord[0] >= -90 && coord[0] <= 90, isTrue);
     expect(coord[1] >= -180 && coord[1] <= 180, isTrue);
+
+    final coord2 = address.nearbyGPSCoordinate(coordinate: [2000, 2000]);
+    expect(coord, isNotEmpty);
   });
 
   test('returns timezone', () {
