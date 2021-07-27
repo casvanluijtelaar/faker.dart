@@ -46,7 +46,7 @@ This will interpolate the format string with the value of methods `name.lastName
 | address  | zipCode, city, cityPrefix, citySuffix, cityName, streetName, streetSuffix, streetPrefix, streetAddress, secondaryAddress, county, country, countryCode, state, stateAbbr, latitude, longitude, direction, cardinalDirection, ordinalDirection, nearbyGPSCoordinate, timezone  |
 | animal  | type, animal, dog, cat, snake, bear, lion, catecean, horse, bird, cow, fish, corocodilia, insect, rabbit  |
 | commerce  | color, department, productName, price, productAdjective, productMaterial, product, productDescription |
-
+| company  |  companyName, companySuffix, catchPhrase, bs, catchPhraseAdjective, catchPhraseDescriptor, catchPhraseNoun, bsAdjective, bsBuzz, bsNoun  |
 
 ## :speech_balloon: Localization
 
@@ -114,7 +114,6 @@ faker.setCustomLocale(locale);
 ## :grey_question: what's up next
 this package is still in active development. modules are still being added:
 
- * company
  * database
  * date
  * finance

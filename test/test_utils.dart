@@ -6,6 +6,9 @@ import 'package:faker_dart/src/models/_models.dart';
 class MockFaker extends Mock implements Faker {
   @override
   FakerLocale locale = MockFakerLocale();
+
+  @override
+  String fake(String input) => input;
 }
 
 class MockFakerLocale extends Mock implements FakerLocale {
@@ -100,5 +103,4 @@ class MockVehicle extends Mock implements Vehicle {}
 
 class MockWord extends Mock implements Word {}
 
-
-class MockDataType  extends Mock implements DataType {}
+class MockDataType extends Mock implements DataType {}

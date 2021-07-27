@@ -5,7 +5,7 @@ import 'package:faker_dart/src/faker.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 
-import 'test_utils.dart';
+import '../test_utils.dart';
 
 void main() {
   late Faker faker;
@@ -39,7 +39,7 @@ void main() {
     when(() => faker.locale.animal.lion).thenReturn(['dog']);
     when(() => faker.locale.animal.rabbit).thenReturn(['dog']);
     when(() => faker.locale.animal.snake).thenReturn(['dog']);
-   
+
     final result = animal.animal();
     expect(result, 'dog');
   });

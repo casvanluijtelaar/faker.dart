@@ -34,31 +34,31 @@ void main() {
     final image = loremPixel.food();
     expect(image.contains('food'), isTrue);
   });
-    test('nightlife image', () {
+  test('nightlife image', () {
     final image = loremPixel.nightlife();
     expect(image.contains('nightlife'), isTrue);
   });
-    test('fashion image', () {
+  test('fashion image', () {
     final image = loremPixel.fashion();
     expect(image.contains('fashion'), isTrue);
   });
-    test('people image', () {
+  test('people image', () {
     final image = loremPixel.people();
     expect(image.contains('people'), isTrue);
   });
-    test('nature image', () {
+  test('nature image', () {
     final image = loremPixel.nature();
     expect(image.contains('nature'), isTrue);
   });
-    test('sports image', () {
+  test('sports image', () {
     final image = loremPixel.sports();
     expect(image.contains('sports'), isTrue);
   });
-    test('technics image', () {
+  test('technics image', () {
     final image = loremPixel.technics();
     expect(image.contains('technics'), isTrue);
   });
-    test('transport image', () {
+  test('transport image', () {
     final image = loremPixel.transport();
     expect(image.contains('transport'), isTrue);
   });

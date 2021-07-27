@@ -4,7 +4,7 @@ import 'package:faker_dart/src/image.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 
-import 'test_utils.dart';
+import '../test_utils.dart';
 
 void main() {
   late Faker faker;

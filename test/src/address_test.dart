@@ -5,7 +5,7 @@ import 'package:faker_dart/src/name.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 
-import 'test_utils.dart';
+import '../test_utils.dart';
 
 void main() {
   late Faker faker;
@@ -33,7 +33,6 @@ void main() {
   });
 
   test('returns city in correct format', () {
-  
     final result = Faker.instance.address.city(format: '');
     expect(result, '');
 
@@ -192,7 +191,7 @@ void main() {
     expect(coord[1] >= -180 && coord[1] <= 180, isTrue);
 
     final coord2 = address.nearbyGPSCoordinate(coordinate: [2000, 2000]);
-    expect(coord, isNotEmpty);
+    expect(coord2, isNotEmpty);
   });
 
   test('returns timezone', () {

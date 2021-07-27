@@ -2,7 +2,7 @@ import 'package:faker_dart/faker_dart.dart';
 import 'package:faker_dart/src/utils/locale_utils.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'test_utils.dart';
+import '../test_utils.dart';
 
 void main() {
   test('get singleton', () {
@@ -32,6 +32,7 @@ void main() {
     expect(Faker.instance.address, isNotNull);
     expect(Faker.instance.animal, isNotNull);
     expect(Faker.instance.commerce, isNotNull);
+    expect(Faker.instance.company, isNotNull);
   });
 
   test('faker.fake correctly interpolates string', () {
@@ -46,6 +47,4 @@ void main() {
     expect(() => Faker.instance.fake('{{cookie.name}}'), throwsArgumentError);
     expect(() => Faker.instance.fake('{{name.cookie}}'), throwsArgumentError);
   });
-
-  
 }

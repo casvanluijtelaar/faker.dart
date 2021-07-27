@@ -1,6 +1,10 @@
+## 0.0.7
+* added the company module! generate all sorts of company related properties!
+
 ## 0.0.6
 * fixed regex bug with uuid generation
 * fixed an issue where some locales wouldn't properly generate
+* a bunch of smaller bits :)
 * we now have 100% coverage!
 
 ## 0.0.5

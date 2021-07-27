@@ -1,4 +1,5 @@
 import 'package:faker_dart/src/address.dart';
+import 'package:faker_dart/src/company.dart';
 import 'package:faker_dart/src/image.dart';
 
 import 'animal.dart';
@@ -57,6 +58,11 @@ class Faker {
   /// generate rondom commerce related items
   /// {@endtemplate}
   Commerce get commerce => Commerce(instance);
+
+  /// {@template company}
+  /// generate rondom company related items
+  /// {@endtemplate}
+  Company get company => Company(instance);
 
   /// Generator method for combining faker methods based on string input
   ///
@@ -188,6 +194,18 @@ class Faker {
           'productMaterial': commerce.productMaterial,
           'product': commerce.product,
           'productDescription': commerce.productDescription,
+        },
+        'company': {
+          'companyName': company.companyName,
+          'companySuffix': company.companySuffix,
+          'catchPhrase': company.catchPhrase,
+          'bs': company.bs,
+          'catchPhraseAdjective': company.catchPhraseAdjective,
+          'catchPhraseDescriptor': company.catchPhraseDescriptor,
+          'catchPhraseNoun': company.catchPhraseNoun,
+          'bsAdjective': company.bsAdjective,
+          'bsBuzz': company.bsBuzz,
+          'bsNoun': company.bsNoun,
         }
       };
 }

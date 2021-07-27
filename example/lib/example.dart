@@ -8,6 +8,7 @@ void main(List<String> arguments) {
   print(faker.address.zipCode());
   print(faker.animal.animal());
   print(faker.commerce.price());
+  print(faker.company.companyName());
 
   /// combine all prevous using the fake method
   print(faker.fake(

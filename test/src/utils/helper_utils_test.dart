@@ -18,5 +18,4 @@ void main() {
     final result = HelperUtils.repeatString('a', 4);
     expect(result, 'aaaa');
   });
-
 }

@@ -15,12 +15,12 @@ void main() {
     expect(result1.contains('blur=2'), isTrue);
   });
 
-    test('get image with grayscale', () {
+  test('get image with grayscale', () {
     final result1 = loremPicsum.grayImage();
     expect(result1.contains('grayscale'), isTrue);
   });
 
-      test('get image with grayscale & blur', () {
+  test('get image with grayscale & blur', () {
     final result1 = loremPicsum.grayImage();
     expect(result1.contains('grayscale'), isTrue);
   });

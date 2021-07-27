@@ -9,9 +9,8 @@ class HelperUtils {
     var replacement = '';
 
     for (var i = 0; i < string.length; i++) {
-      replacement += string[i] == '#' 
-          ? Random().nextInt(9).toString() 
-          : string[i];
+      replacement +=
+          string[i] == '#' ? Random().nextInt(9).toString() : string[i];
     }
 
     return replacement;
@@ -25,9 +24,8 @@ class HelperUtils {
     var replacement = '';
 
     for (var i = 0; i < string.length; i++) {
-       replacement += string[i] == '#' 
-          ? RandomUtils.arrayElement(alphabet)
-          : string[i];
+      replacement +=
+          string[i] == '#' ? RandomUtils.arrayElement(alphabet) : string[i];
     }
     return replacement;
   }
@@ -42,6 +40,4 @@ class HelperUtils {
     }
     return text;
   }
-
-
 }
