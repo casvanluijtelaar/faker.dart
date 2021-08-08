@@ -33,6 +33,7 @@ void main() {
     expect(Faker.instance.animal, isNotNull);
     expect(Faker.instance.commerce, isNotNull);
     expect(Faker.instance.company, isNotNull);
+    expect(Faker.instance.database, isNotNull);
   });
 
   test('faker.fake correctly interpolates string', () {

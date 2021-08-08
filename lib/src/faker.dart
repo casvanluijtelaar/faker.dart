@@ -1,5 +1,6 @@
 import 'package:faker_dart/src/address.dart';
 import 'package:faker_dart/src/company.dart';
+import 'package:faker_dart/src/database.dart';
 import 'package:faker_dart/src/image.dart';
 
 import 'animal.dart';
@@ -63,6 +64,11 @@ class Faker {
   /// generate rondom company related items
   /// {@endtemplate}
   Company get company => Company(instance);
+
+  /// {@template database}
+  /// generate rondom database related items
+  /// {@endtemplate}
+  Database get database => Database(instance);
 
   /// Generator method for combining faker methods based on string input
   ///
@@ -206,6 +212,12 @@ class Faker {
           'bsAdjective': company.bsAdjective,
           'bsBuzz': company.bsBuzz,
           'bsNoun': company.bsNoun,
+        },
+        'database': {
+          'column': database.column,
+          'type': database.type,
+          'collation': database.collation,
+          'engine': database.engine,
         }
       };
 }
