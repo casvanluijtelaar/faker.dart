@@ -47,6 +47,8 @@ This will interpolate the format string with the value of methods `name.lastName
 | animal  | type, animal, dog, cat, snake, bear, lion, catecean, horse, bird, cow, fish, corocodilia, insect, rabbit  |
 | commerce  | color, department, productName, price, productAdjective, productMaterial, product, productDescription |
 | company  |  companyName, companySuffix, catchPhrase, bs, catchPhraseAdjective, catchPhraseDescriptor, catchPhraseNoun, bsAdjective, bsBuzz, bsNoun  |
+| database  |  column, type, collation, engine  |
+| music  |  genre  |
 
 ## :speech_balloon: Localization
 
@@ -122,8 +124,6 @@ this package is still in active development. modules are still being added:
  * iban
  * internet
  * lorem
- * mersenne
- * music
  * phonenumber
  * system
  * time

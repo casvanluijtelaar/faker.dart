@@ -2,6 +2,7 @@ import 'package:faker_dart/src/address.dart';
 import 'package:faker_dart/src/company.dart';
 import 'package:faker_dart/src/database.dart';
 import 'package:faker_dart/src/image.dart';
+import 'package:faker_dart/src/music.dart';
 
 import 'animal.dart';
 import 'commerce.dart';
@@ -69,6 +70,11 @@ class Faker {
   /// generate rondom database related items
   /// {@endtemplate}
   Database get database => Database(instance);
+
+  /// {@template music}
+  /// generate rondom music related items
+  /// {@endtemplate}
+  Music get music => Music(instance);
 
   /// Generator method for combining faker methods based on string input
   ///
@@ -218,6 +224,9 @@ class Faker {
           'type': database.type,
           'collation': database.collation,
           'engine': database.engine,
-        }
+        },
+        'music': {
+          'genre': music.genre,
+        },
       };
 }

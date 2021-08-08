@@ -10,6 +10,7 @@ void main(List<String> arguments) {
   print(faker.commerce.price());
   print(faker.company.companyName());
   print(faker.database.column());
+  print(faker.music.genre());
 
   /// combine all prevous using the fake method
   print(faker.fake(

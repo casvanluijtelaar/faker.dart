@@ -34,6 +34,7 @@ void main() {
     expect(Faker.instance.commerce, isNotNull);
     expect(Faker.instance.company, isNotNull);
     expect(Faker.instance.database, isNotNull);
+    expect(Faker.instance.music, isNotNull);
   });
 
   test('faker.fake correctly interpolates string', () {

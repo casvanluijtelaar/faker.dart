@@ -1,3 +1,6 @@
+## 0.0.9
+* added the music module! Spotify got nothing on me.
+
 ## 0.0.8
 * added the database module! why use a database when you can fake one?
 
