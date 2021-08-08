@@ -9,6 +9,7 @@ void main(List<String> arguments) {
   print(faker.animal.animal());
   print(faker.commerce.price());
   print(faker.company.companyName());
+  print(faker.database.column());
 
   /// combine all prevous using the fake method
   print(faker.fake(

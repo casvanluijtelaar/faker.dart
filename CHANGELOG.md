@@ -1,3 +1,6 @@
+## 0.0.8
+* added the database module! why use a database when you can fake one?
+
 ## 0.0.7
 * added the company module! generate all sorts of company related properties!
 
