@@ -11,6 +11,7 @@ void main(List<String> arguments) {
   print(faker.company.companyName());
   print(faker.database.column());
   print(faker.music.genre());
+  print(faker.hacker.phrase());
 
   /// combine all prevous using the fake method
   print(faker.fake(

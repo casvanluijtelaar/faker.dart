@@ -49,6 +49,7 @@ This will interpolate the format string with the value of methods `name.lastName
 | company  |  companyName, companySuffix, catchPhrase, bs, catchPhraseAdjective, catchPhraseDescriptor, catchPhraseNoun, bsAdjective, bsBuzz, bsNoun  |
 | database  |  column, type, collation, engine  |
 | music  |  genre  |
+| hacker  |  abbreviation, adjective, noun, verb, ingverb, phrase |
 
 ## :speech_balloon: Localization
 
@@ -120,7 +121,6 @@ this package is still in active development. modules are still being added:
  * date
  * finance
  * git
- * hacker
  * iban
  * internet
  * lorem

@@ -30,8 +30,6 @@ class HelperUtils {
     return replacement;
   }
 
-/* 
-  String replaceCreditCardSymbols(String string) => string; */
 
   static String repeatString(String string, int amount) {
     var text = '';
@@ -40,4 +38,5 @@ class HelperUtils {
     }
     return text;
   }
+
 }

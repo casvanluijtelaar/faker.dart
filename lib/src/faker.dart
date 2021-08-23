@@ -1,6 +1,7 @@
 import 'package:faker_dart/src/address.dart';
 import 'package:faker_dart/src/company.dart';
 import 'package:faker_dart/src/database.dart';
+import 'package:faker_dart/src/hacker.dart';
 import 'package:faker_dart/src/image.dart';
 import 'package:faker_dart/src/music.dart';
 
@@ -75,6 +76,11 @@ class Faker {
   /// generate rondom music related items
   /// {@endtemplate}
   Music get music => Music(instance);
+
+  /// {@template hacker}
+  /// generate rondom music related items
+  /// {@endtemplate}
+  Hacker get hacker => Hacker(instance);
 
   /// Generator method for combining faker methods based on string input
   ///
@@ -227,6 +233,14 @@ class Faker {
         },
         'music': {
           'genre': music.genre,
+        },
+        'hacker': {
+          'abbreviation': hacker.abbreviation,
+          'adjective': hacker.adjective,
+          'noun': hacker.noun,
+          'verb': hacker.verb,
+          'ingverb': hacker.ingverb,
+          'phrase': hacker.phrase,
         },
       };
 }
