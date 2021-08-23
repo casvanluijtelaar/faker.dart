@@ -1,3 +1,6 @@
+## 0.1.1
+* removed flutter dependency (through flutter_test)
+
 ## 0.1.0
 * added the hacker module! engage hacker mode.
 * added the git module! initial-commit.

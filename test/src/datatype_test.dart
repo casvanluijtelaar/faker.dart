@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:faker_dart/src/datatype.dart';
-import 'package:flutter_test/flutter_test.dart';
+import 'package:test/test.dart';
 
 void main() {
   late DataType datatype;

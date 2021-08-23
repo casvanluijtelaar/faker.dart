@@ -1,6 +1,6 @@
 import 'package:faker_dart/src/models/faker_locale.dart';
 import 'package:faker_dart/src/utils/locale_utils.dart';
-import 'package:flutter_test/flutter_test.dart';
+import 'package:test/test.dart';
 
 void main() {
   test('get correct locale', () {

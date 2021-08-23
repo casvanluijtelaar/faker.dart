@@ -1,6 +1,6 @@
 import 'package:faker_dart/faker_dart.dart';
 import 'package:faker_dart/src/hacker.dart';
-import 'package:flutter_test/flutter_test.dart';
+import 'package:test/test.dart';
 import 'package:mocktail/mocktail.dart';
 
 import '../test_utils.dart';

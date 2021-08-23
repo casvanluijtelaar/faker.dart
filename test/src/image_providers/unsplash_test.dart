@@ -1,5 +1,5 @@
 import 'package:faker_dart/src/image_providers/unsplash.dart';
-import 'package:flutter_test/flutter_test.dart';
+import 'package:test/test.dart';
 
 void main() {
   final unsplash = Unsplash();
