@@ -50,6 +50,7 @@ This will interpolate the format string with the value of methods `name.lastName
 | database  |  column, type, collation, engine  |
 | music  |  genre  |
 | hacker  |  abbreviation, adjective, noun, verb, ingverb, phrase |
+| git | branch, commitEntry, commitMessage, commitSha, shortSha |
 
 ## :speech_balloon: Localization
 
@@ -120,7 +121,6 @@ this package is still in active development. modules are still being added:
  * database
  * date
  * finance
- * git
  * iban
  * internet
  * lorem

@@ -8,6 +8,7 @@ import 'package:faker_dart/src/music.dart';
 import 'animal.dart';
 import 'commerce.dart';
 import 'datatype.dart';
+import 'git.dart';
 import 'models/faker_locale.dart';
 import 'name.dart';
 import 'utils/locale_utils.dart';
@@ -81,6 +82,11 @@ class Faker {
   /// generate rondom music related items
   /// {@endtemplate}
   Hacker get hacker => Hacker(instance);
+
+  /// {@template git}
+  /// generate rondom git related items
+  /// {@endtemplate}
+  Git get git => Git(instance);
 
   /// Generator method for combining faker methods based on string input
   ///
@@ -242,5 +248,12 @@ class Faker {
           'ingverb': hacker.ingverb,
           'phrase': hacker.phrase,
         },
+        'git': {
+          'branch': git.branch,
+          'commitEntry': git.commitEntry,
+          'commitMessage': git.commitMessage,
+          'commitSha': git.commitSha,
+          'shortSha': git.shortSha,
+        }
       };
 }

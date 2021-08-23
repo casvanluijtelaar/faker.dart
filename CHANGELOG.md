@@ -1,5 +1,6 @@
 ## 0.1.0
 * added the hacker module! engage hacker mode.
+* added the git module! initial-commit.
 
 ## 0.0.9
 * added the music module! Spotify got nothing on me.

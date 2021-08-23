@@ -30,7 +30,6 @@ class HelperUtils {
     return replacement;
   }
 
-
   static String repeatString(String string, int amount) {
     var text = '';
     for (var i = 0; i < amount; i++) {
@@ -38,5 +37,4 @@ class HelperUtils {
     }
     return text;
   }
-
 }
