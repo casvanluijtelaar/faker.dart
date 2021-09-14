@@ -13,6 +13,7 @@ void main(List<String> arguments) {
   print(faker.music.genre());
   print(faker.hacker.phrase());
   print(faker.git.commitMessage());
+  print(faker.date.month());
 
   /// combine all prevous using the fake method
   print(faker.fake(

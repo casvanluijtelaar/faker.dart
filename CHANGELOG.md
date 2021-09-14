@@ -1,3 +1,6 @@
+## 0.1.2
+* added the date module! When was I born?.
+
 ## 0.1.1
 * removed flutter dependency (through flutter_test)
 

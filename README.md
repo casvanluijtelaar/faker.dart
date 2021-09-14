@@ -51,6 +51,7 @@ This will interpolate the format string with the value of methods `name.lastName
 | music  |  genre  |
 | hacker  |  abbreviation, adjective, noun, verb, ingverb, phrase |
 | git | branch, commitEntry, commitMessage, commitSha, shortSha |
+| date | past, future, between, month, weekday |
 
 ## :speech_balloon: Localization
 
@@ -118,8 +119,6 @@ faker.setCustomLocale(locale);
 ## :grey_question: what's up next
 this package is still in active development. modules are still being added:
 
- * database
- * date
  * finance
  * iban
  * internet

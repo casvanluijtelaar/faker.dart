@@ -1,17 +1,18 @@
-import 'package:faker_dart/src/address.dart';
-import 'package:faker_dart/src/company.dart';
-import 'package:faker_dart/src/database.dart';
-import 'package:faker_dart/src/hacker.dart';
-import 'package:faker_dart/src/image.dart';
-import 'package:faker_dart/src/music.dart';
+import 'package:faker_dart/src/models/faker_locale.dart';
+import 'package:faker_dart/src/utils/locale_utils.dart';
 
+import 'address.dart';
 import 'animal.dart';
 import 'commerce.dart';
+import 'company.dart';
+import 'database.dart';
 import 'datatype.dart';
+import 'date.dart';
 import 'git.dart';
-import 'models/faker_locale.dart';
+import 'hacker.dart';
+import 'image.dart';
+import 'music.dart';
 import 'name.dart';
-import 'utils/locale_utils.dart';
 
 /// generate massive amounts of fake data in dart!
 class Faker {
@@ -39,60 +40,65 @@ class Faker {
   final DataType datatype = DataType();
 
   /// {@template image}
-  /// generate rondom  valid image urls from different sources
+  /// generate random  valid image urls from different sources
   /// {@endtemplate}
   Image get image => Image(instance);
 
   /// {@template name}
-  /// generate rondom names & jobs
+  /// generate random names & jobs
   /// {@endtemplate}
   Name get name => Name(instance);
 
   /// {@template address}
-  /// generate rondom addresses
+  /// generate random addresses
   /// {@endtemplate}
   Address get address => Address(instance);
 
   /// {@template animal}
-  /// generate rondom animals
+  /// generate random animals
   /// {@endtemplate}
   Animal get animal => Animal(instance);
 
   /// {@template commerce}
-  /// generate rondom commerce related items
+  /// generate random commerce related items
   /// {@endtemplate}
   Commerce get commerce => Commerce(instance);
 
   /// {@template company}
-  /// generate rondom company related items
+  /// generate random company related items
   /// {@endtemplate}
   Company get company => Company(instance);
 
   /// {@template database}
-  /// generate rondom database related items
+  /// generate random database related items
   /// {@endtemplate}
   Database get database => Database(instance);
 
   /// {@template music}
-  /// generate rondom music related items
+  /// generate random music related items
   /// {@endtemplate}
   Music get music => Music(instance);
 
   /// {@template hacker}
-  /// generate rondom music related items
+  /// generate random music related items
   /// {@endtemplate}
   Hacker get hacker => Hacker(instance);
 
   /// {@template git}
-  /// generate rondom git related items
+  /// generate random git related items
   /// {@endtemplate}
   Git get git => Git(instance);
+
+  /// {@template date}
+  /// generate random date related items
+  /// {@endtemplate}
+  Date get date => Date(instance);
 
   /// Generator method for combining faker methods based on string input
   ///
   /// __Example:__
   ///
-  /// ```
+  /// ``` dart
   // ignore: lines_longer_than_80_chars
   /// print(faker.instance.fake('{{name.lastName}}, {{name.firstName}} {{name.suffix}}'));
   /// outputs: "Marks, Dean Sr."
@@ -254,6 +260,13 @@ class Faker {
           'commitMessage': git.commitMessage,
           'commitSha': git.commitSha,
           'shortSha': git.shortSha,
+        },
+        'date': {
+          'past': date.past,
+          'future': date.future,
+          'between': date.between,
+          'month': date.month,
+          'weekday': date.weekday,
         }
       };
 }

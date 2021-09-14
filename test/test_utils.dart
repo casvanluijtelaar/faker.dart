@@ -74,7 +74,17 @@ class MockCompany extends Mock implements Company {}
 
 class MockDatabase extends Mock implements Database {}
 
-class MockDate extends Mock implements Date {}
+class MockDate extends Mock implements Date {
+  @override
+  Month month = MockMonth();
+
+  @override
+  Weekday weekday = MockWeekday();
+}
+
+class MockMonth extends Mock implements Month {}
+
+class MockWeekday extends Mock implements Weekday {}
 
 class MockFinance extends Mock implements Finance {}
 
