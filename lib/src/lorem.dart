@@ -15,8 +15,7 @@ class Lorem {
   String word({int? length}) {
     final words = length == null
         ? _faker.locale.lorem.words
-        : _faker.locale.lorem.words ??
-            <String>[].where((w) => w.length == length).toList();
+        : _faker.locale.lorem.words!.where((w) => w.length == length).toList();
     return RandomUtils.arrayElement(words);
   }
 
