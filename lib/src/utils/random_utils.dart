@@ -10,10 +10,10 @@ class RandomUtils {
   }
 
   /// return a random [count] of items from a provided [list]
-  static List arrayElements(List? list, int count) {
+  static List<T> arrayElements<T>(List<T>? list, int count) {
     if (list == null) return [];
 
-    final newlist = [];
+    final newlist = <T>[];
     for (var i = 0; i < count; i++) {
       newlist.add(list[Random().nextInt(list.length)]);
     }

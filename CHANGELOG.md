@@ -1,3 +1,8 @@
+## 0.1.3
+* added the lorem module! Lorem ipsum dolor sid amet!.
+* added the phoneNumber module! Who's there?
+* updated dependencies.
+
 ## 0.1.2
 * added the date module! When was I born?.
 

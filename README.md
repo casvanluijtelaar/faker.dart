@@ -52,6 +52,8 @@ This will interpolate the format string with the value of methods `name.lastName
 | hacker  |  abbreviation, adjective, noun, verb, ingverb, phrase |
 | git | branch, commitEntry, commitMessage, commitSha, shortSha |
 | date | past, future, between, month, weekday |
+| phoneNumber | phoneNumber, phoneFormat |
+| lorem | word, sentence, paragraph, text |
 
 ## :speech_balloon: Localization
 
@@ -120,13 +122,8 @@ faker.setCustomLocale(locale);
 this package is still in active development. modules are still being added:
 
  * finance
- * iban
  * internet
- * lorem
- * phonenumber
  * system
- * time
- * unique
  * vehicle
  * word
 

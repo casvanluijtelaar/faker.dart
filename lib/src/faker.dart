@@ -11,8 +11,10 @@ import 'date.dart';
 import 'git.dart';
 import 'hacker.dart';
 import 'image.dart';
+import 'lorem.dart';
 import 'music.dart';
 import 'name.dart';
+import 'phone_number.dart';
 
 /// generate massive amounts of fake data in dart!
 class Faker {
@@ -93,6 +95,16 @@ class Faker {
   /// generate random date related items
   /// {@endtemplate}
   Date get date => Date(instance);
+
+  /// {@template phoneNumber}
+  /// generate random phone numbers and formats
+  /// {@endtemplate}
+  PhoneNumber get phoneNumber => PhoneNumber(instance);
+
+  /// {@template lorem}
+  /// generate random word and text related items
+  /// {@endtemplate}
+  Lorem get lorem => Lorem(instance);
 
   /// Generator method for combining faker methods based on string input
   ///
@@ -267,6 +279,16 @@ class Faker {
           'between': date.between,
           'month': date.month,
           'weekday': date.weekday,
+        },
+        'phoneNumber': {
+          'phoneNumber': phoneNumber.phoneNumber,
+          'phoneFormats': phoneNumber.phoneFormat,
+        },
+        'lorem': {
+          'word': lorem.word,
+          'sentence': lorem.sentence,
+          'paragraph': lorem.paragraph,
+          'text': lorem.text,
         }
       };
 }
