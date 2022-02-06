@@ -2,8 +2,8 @@ import 'package:faker_dart/faker_dart.dart';
 import 'package:faker_dart/src/datatype.dart';
 import 'package:faker_dart/src/git.dart';
 import 'package:faker_dart/src/hacker.dart';
-import 'package:test/test.dart';
 import 'package:mocktail/mocktail.dart';
+import 'package:test/test.dart';
 
 import '../test_utils.dart';
 
@@ -39,7 +39,7 @@ void main() {
     expect(resultWithMerge.contains('Merge'), isTrue);
   });
 
-  test('return a vallid commit message', () {
+  test('return a valid commit message', () {
     expect(git.commitMessage(),
         '{{hacker.verb}} {{hacker.adjective}} {{hacker.noun}}');
   });
