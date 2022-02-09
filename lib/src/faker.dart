@@ -295,9 +295,6 @@ class Faker {
           'sentence': lorem.sentence,
           'paragraph': lorem.paragraph,
           'text': lorem.text,
-        },
-        'internet': {
-          'ip': internet.ip,
-        },
+        }
       };
 }
