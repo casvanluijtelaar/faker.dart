@@ -11,6 +11,7 @@ import 'date.dart';
 import 'git.dart';
 import 'hacker.dart';
 import 'image.dart';
+import 'internet.dart';
 import 'lorem.dart';
 import 'music.dart';
 import 'name.dart';
@@ -105,6 +106,11 @@ class Faker {
   /// generate random word and text related items
   /// {@endtemplate}
   Lorem get lorem => Lorem(instance);
+
+  /// {@template internet}
+  /// generate random internet related items
+  /// {@endtemplate}
+  Internet get internet => Internet(instance);
 
   /// Generator method for combining faker methods based on string input
   ///

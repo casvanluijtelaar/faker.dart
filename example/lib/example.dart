@@ -14,8 +14,13 @@ void main(List<String> arguments) {
   print(faker.hacker.phrase());
   print(faker.git.commitMessage());
   print(faker.date.month());
+  print(faker.internet.url());
+  print(faker.internet.domainName());
+  print(faker.internet.domainSuffix());
+  print(faker.internet.httpMethod());
+  print(faker.internet.ip());
 
-  /// combine all prevous using the fake method
+  /// combine all previous using the fake method
   print(faker.fake(
       '{{name.firstName}}, {{datatype.boolean}}, and also: {{commerce.price}}'));
 }
