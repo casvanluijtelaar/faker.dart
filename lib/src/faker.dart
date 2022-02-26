@@ -295,6 +295,13 @@ class Faker {
           'sentence': lorem.sentence,
           'paragraph': lorem.paragraph,
           'text': lorem.text,
-        }
+        },
+        'internet': {
+          'url': internet.url,
+          'domainName': internet.domainName,
+          'domainSuffix': internet.domainSuffix,
+          'httpMethod': internet.httpMethod,
+          'ip': internet.ip,
+        },
       };
 }

@@ -1,3 +1,6 @@
+## 0.1.4
+* added the internet module! Thanks to [Bhupesh-V](https://github.com/casvanluijtelaar/faker.dart/pull/2).
+
 ## 0.1.3
 * added the lorem module! Lorem ipsum dolor sid amet!.
 * added the phoneNumber module! Who's there?

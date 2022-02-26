@@ -54,6 +54,7 @@ This will interpolate the format string with the value of methods `name.lastName
 | date | past, future, between, month, weekday |
 | phoneNumber | phoneNumber, phoneFormat |
 | lorem | word, sentence, paragraph, text |
+| internet | url, domainName, domainSuffix, httpMethod, ip |
 
 ## :speech_balloon: Localization
 
@@ -122,7 +123,6 @@ faker.setCustomLocale(locale);
 this package is still in active development. modules are still being added:
 
  * finance
- * internet
  * system
  * vehicle
  * word

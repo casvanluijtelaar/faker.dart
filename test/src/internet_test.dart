@@ -30,9 +30,8 @@ void main() {
   });
   test('get a random ip', () {
     final ip = internet.ip();
-    // TODO: check length
-    // TODO: validate IP
     expect(ip.isNotEmpty, isTrue);
+    expect(ip.split('.').length, 4);
   });
 
   test('get a random HTTP Method', () {

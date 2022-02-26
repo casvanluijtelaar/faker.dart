@@ -35,6 +35,12 @@ void main() {
     expect(Faker.instance.company, isNotNull);
     expect(Faker.instance.database, isNotNull);
     expect(Faker.instance.music, isNotNull);
+    expect(Faker.instance.hacker, isNotNull);
+    expect(Faker.instance.git, isNotNull);
+    expect(Faker.instance.date, isNotNull);
+    expect(Faker.instance.phoneNumber, isNotNull);
+    expect(Faker.instance.lorem, isNotNull);
+    expect(Faker.instance.internet, isNotNull);
   });
 
   test('faker.fake correctly interpolates string', () {

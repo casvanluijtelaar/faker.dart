@@ -1,6 +1,6 @@
 name: faker_dart
 description: generate massive amounts of fake data in Dart & Flutter! A dart port of the famous faker.js
-version: 0.1.3
+version: 0.1.4
 homepage: https://github.com/casvanluijtelaar/faker.dart
 repository: https://github.com/casvanluijtelaar/faker.dart
 
