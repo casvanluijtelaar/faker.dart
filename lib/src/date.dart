@@ -12,8 +12,8 @@ class Date {
   /// in years
   ///
   /// e.g. `Faker.instance.date.past(DateTime.now()); // DateTime('3/4/1995')`
-  DateTime past(DateTime reference, {int rangeInYears = 100}) {
-    final dateTime = DateTime.now();
+  DateTime past(DateTime? reference, {int rangeInYears = 100}) {
+    final dateTime = reference ?? DateTime.now();
     final currentDate = DateTime(dateTime.year, dateTime.month, dateTime.day);
 
     final rangeInDays = rangeInYears * 365;
@@ -26,8 +26,8 @@ class Date {
   /// in years
   ///
   /// e.g. `Faker.instance.date.future(DateTime.now()); // DateTime('3/4/2056')`
-  DateTime future(DateTime reference, {int rangeInYears = 100}) {
-    final dateTime = DateTime.now();
+  DateTime future(DateTime? reference, {int rangeInYears = 100}) {
+    final dateTime = reference ?? DateTime.now();
     final currentDate = DateTime(dateTime.year, dateTime.month, dateTime.day);
 
     final rangeInDays = rangeInYears * 365;
