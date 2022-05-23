@@ -1,7 +1,7 @@
 import 'package:faker_dart/src/datatype.dart';
 import 'package:faker_dart/src/faker.dart';
-import 'package:mocktail/mocktail.dart';
 import 'package:faker_dart/src/models/_models.dart';
+import 'package:mocktail/mocktail.dart';
 
 class MockFaker extends Mock implements Faker {
   @override

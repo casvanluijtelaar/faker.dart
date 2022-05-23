@@ -47,9 +47,10 @@ class Date {
   /// ```
   DateTime between(DateTime start, DateTime end) {
     final diff = end.millisecondsSinceEpoch - start.millisecondsSinceEpoch;
-    final randomMilliseconds = (_faker.datatype.number(max: 1 << 32) * (1 << 32) +
-            _faker.datatype.number(max: 1 << 32)) %
-        diff;
+    final randomMilliseconds =
+        (_faker.datatype.number(max: 1 << 32) * (1 << 32) +
+                _faker.datatype.number(max: 1 << 32)) %
+            diff;
 
     return start.add(Duration(milliseconds: randomMilliseconds));
   }

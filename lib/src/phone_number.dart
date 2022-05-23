@@ -9,7 +9,7 @@ class PhoneNumber {
 
   final Faker _faker;
 
-  /// retuns a random phonenumber, an optional [formatted] parameter can be
+  /// retuns a random phonenumber, an optional 'formatted' parameter can be
   /// provided that is formatted like '###-###-####'
   ///
   /// e.g. `faker.phoneNumber.phoneNumber() // 012-345-6789`

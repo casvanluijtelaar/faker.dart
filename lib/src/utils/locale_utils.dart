@@ -1,5 +1,4 @@
 import '../locales/_locales.dart';
-import '../locales/af_ZA.dart';
 import '../models/faker_locale.dart';
 
 class LocaleUtils {

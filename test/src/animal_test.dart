@@ -1,9 +1,8 @@
 import 'package:faker_dart/src/animal.dart';
 import 'package:faker_dart/src/datatype.dart';
 import 'package:faker_dart/src/faker.dart';
-
-import 'package:test/test.dart';
 import 'package:mocktail/mocktail.dart';
+import 'package:test/test.dart';
 
 import '../test_utils.dart';
 

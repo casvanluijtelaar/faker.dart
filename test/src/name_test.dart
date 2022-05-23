@@ -1,8 +1,8 @@
 import 'package:faker_dart/faker_dart.dart';
 import 'package:faker_dart/src/datatype.dart';
 import 'package:faker_dart/src/name.dart';
-import 'package:test/test.dart';
 import 'package:mocktail/mocktail.dart';
+import 'package:test/test.dart';
 
 import '../test_utils.dart';
 

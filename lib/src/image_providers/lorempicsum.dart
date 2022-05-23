@@ -41,7 +41,9 @@ class LoremPicsum {
       url += '?grayscale&blur=${blur.clamp(1, 10)}';
     } else if (grayscale != null) {
       url += '?grayscale';
-    } else if (blur != null) url += '?blur=${blur.clamp(1, 10)}';
+    } else if (blur != null) {
+      url += '?blur=${blur.clamp(1, 10)}';
+    }
 
     return url;
   }
