@@ -1,3 +1,5 @@
+## 0.1.6
+* exports `FakerLocalType` for use.
 ## 0.1.5
 * brought package in line with Dart 2.17 & Flutter 3.0
 * fixed an issue with incorrect generated date.between! Thanks to [sassanh](https://github.com/casvanluijtelaar/faker.dart/pull/4).
