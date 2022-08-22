@@ -24,9 +24,18 @@ class HelperUtils {
     final numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
 
     var replacement = '';
-    for (var i = 0; i < string.length; i++) {
-      if (string[i] == '#') replacement += RandomUtils.arrayElement(numbers);
-      if (string[i] == '?') replacement += RandomUtils.arrayElement(alphabet);
+    for (final char in string.split('')) {
+      switch (char) {
+        case '#':
+          replacement += RandomUtils.arrayElement(numbers);
+          break;
+        case '?':
+          replacement += RandomUtils.arrayElement(alphabet);
+          break;
+        default:
+          replacement += char;
+          break;
+      }
     }
     return replacement;
   }
