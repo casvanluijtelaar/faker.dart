@@ -14,6 +14,15 @@ void main() {
     expect(int.tryParse(result), isNull);
   });
 
+  test('replace Symbols with question mark should return letters', () {
+    final result = HelperUtils.replaceSymbols('??##');
+
+    final regex = RegExp(r'^-?[0-9]+$');
+    expect(regex.hasMatch(result.substring(0, 2)), isFalse);
+    expect(regex.hasMatch(result.substring(2)), isTrue);
+
+  });
+
   test('repeatString', () {
     final result = HelperUtils.repeatString('a', 4);
     expect(result, 'aaaa');
