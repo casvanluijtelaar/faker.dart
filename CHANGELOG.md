@@ -1,3 +1,6 @@
+## 0.1.7
+* fixes issue with incorrect zipcode generation for specific locales. 
+
 ## 0.1.6
 * exports `FakerLocalType` for use.
 ## 0.1.5
