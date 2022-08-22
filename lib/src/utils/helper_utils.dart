@@ -21,11 +21,21 @@ class HelperUtils {
       ...['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M'],
       ...['N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'],
     ];
-    var replacement = '';
+    final numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
 
-    for (var i = 0; i < string.length; i++) {
-      replacement +=
-          string[i] == '#' ? RandomUtils.arrayElement(alphabet) : string[i];
+    var replacement = '';
+    for (final char in string.split('')) {
+      switch (char) {
+        case '#':
+          replacement += RandomUtils.arrayElement(numbers);
+          break;
+        case '?':
+          replacement += RandomUtils.arrayElement(alphabet);
+          break;
+        default:
+          replacement += char;
+          break;
+      }
     }
     return replacement;
   }
