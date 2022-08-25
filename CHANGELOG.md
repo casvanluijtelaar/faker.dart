@@ -1,3 +1,6 @@
+## 0.1.8
+* adds option for random email addresses to the internet module.
+
 ## 0.1.7
 * fixes issue with incorrect zipcode generation for specific locales. 
 
