@@ -11,13 +11,11 @@ class RandomUtils {
 
   /// return a random [count] of items from a provided [list]
   static List<T> arrayElements<T>(List<T>? list, int count) {
-    if (list == null) return [];
+    list ??= [];
+    list.shuffle(Random());
 
-    final newlist = <T>[];
-    for (var i = 0; i < count; i++) {
-      newlist.add(list[Random().nextInt(list.length)]);
-    }
-
-    return newlist;
+    assert(count <= list.length, 'count cannot be grater than list size');
+    return list.take(count).toList();
+   
   }
 }

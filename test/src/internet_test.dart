@@ -46,4 +46,11 @@ void main() {
     final suffix = internet.domainName();
     expect(suffix, 'neural-monitor');
   });
+
+  test('get a valid (ish), randomized email address', () {
+    final email = Faker.instance.internet.email();
+    const regex = r'^\S+@\S+$';
+
+    expect(RegExp(regex).hasMatch(email), isTrue);
+  });
 }

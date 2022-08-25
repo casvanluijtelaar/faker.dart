@@ -57,4 +57,25 @@ class Internet {
     }
     return result.join('.');
   }
+
+  /// returns a randomized valid email address
+  ///
+  /// e.g. `faker.internet.email() // cat12345@gmail.com`
+  String email() {
+    final entries = <String>[
+      _faker.name.firstName(),
+      _faker.name.lastName(),
+      _faker.animal.type(),
+      _faker.datatype.number().toString(),
+      _faker.hacker.noun(),
+    ];
+
+    final contents = RandomUtils.arrayElements(entries, 2);
+    final sections = ['_', '', '-', '.'];
+
+    final start = contents.join(RandomUtils.arrayElement(sections));
+    final end = RandomUtils.arrayElement(_faker.locale.internet.freeEmail);
+
+    return '$start@$end';
+  }
 }

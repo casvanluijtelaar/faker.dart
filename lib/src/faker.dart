@@ -302,6 +302,7 @@ class Faker {
           'domainSuffix': internet.domainSuffix,
           'httpMethod': internet.httpMethod,
           'ip': internet.ip,
+          'email': internet.email,
         },
       };
 }

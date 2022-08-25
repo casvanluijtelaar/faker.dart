@@ -54,7 +54,7 @@ This will interpolate the format string with the value of methods `name.lastName
 | date | past, future, between, month, weekday |
 | phoneNumber | phoneNumber, phoneFormat |
 | lorem | word, sentence, paragraph, text |
-| internet | url, domainName, domainSuffix, httpMethod, ip |
+| internet | url, domainName, domainSuffix, httpMethod, ip, email |
 
 ## :speech_balloon: Localization
 
