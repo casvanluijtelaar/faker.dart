@@ -12,10 +12,8 @@ class RandomUtils {
   /// return a random [count] of items from a provided [list]
   static List<T> arrayElements<T>(List<T>? list, int count) {
     list ??= [];
-    list.shuffle(Random());
+    if(list.isEmpty) return [];
 
-    assert(count <= list.length, 'count cannot be grater than list size');
-    return list.take(count).toList();
-   
+    return List.generate(count, (_) => arrayElement(list));
   }
 }
