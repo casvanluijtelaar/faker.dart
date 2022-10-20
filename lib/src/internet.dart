@@ -76,6 +76,6 @@ class Internet {
     final start = contents.join(RandomUtils.arrayElement(sections));
     final end = RandomUtils.arrayElement(_faker.locale.internet.freeEmail);
 
-    return '$start@$end';
+    return '$start@$end'.replaceAll(' ', RandomUtils.arrayElement(sections));
   }
 }
