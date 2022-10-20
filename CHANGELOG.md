@@ -1,3 +1,6 @@
+## 0.1.9
+* fix chance of email containing a space
+
 ## 0.1.8
 * adds option for random email addresses to the internet module.
 
