@@ -185,8 +185,8 @@ void main() {
 
     final result = name.fullName();
 
-    final match = result == 'a a a' || result == 'a a';
-    expect(match, isTrue);
+    final words = result.split(' ').length;
+    expect(words == 2 || words == 3, isTrue);
   });
 
   test('title', () {

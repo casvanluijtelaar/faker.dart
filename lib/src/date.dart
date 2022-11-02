@@ -47,9 +47,9 @@ class Date {
   /// ```
   DateTime between(DateTime start, DateTime end) {
     final diff = end.millisecondsSinceEpoch - start.millisecondsSinceEpoch;
-    final randomMilliseconds = _faker.datatype.number(max: diff);
+    final randomMilliseconds = _faker.datatype.number(max: diff ~/ 1000);
 
-    return start.add(Duration(milliseconds: randomMilliseconds));
+    return start.add(Duration(milliseconds: randomMilliseconds * 100));
   }
 
   /// generates a random month name or [abbreviated] month name
