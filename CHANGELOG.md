@@ -1,3 +1,6 @@
+## 0.1.10
+* fix date.between throwing an out of range error
+
 ## 0.1.9
 * fix chance of email containing a space
 

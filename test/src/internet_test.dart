@@ -55,7 +55,7 @@ void main() {
   });
 
   test('assure no spaces in email', () {
-     final email = Faker.instance.internet.email();
-     expect(email.contains(' '), false);
+    final email = Faker.instance.internet.email();
+    expect(email.contains(' '), false);
   });
 }
