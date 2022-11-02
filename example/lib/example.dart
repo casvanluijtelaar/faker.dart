@@ -12,7 +12,7 @@ void main(List<String> arguments) {
   print(faker.company.companyName());
   print(faker.database.column());
   print(faker.music.genre());
-  print(faker.hacker.phrase());
+  print(faker.hacker.noun());
   print(faker.git.commitMessage());
   print(faker.date.month());
   print(faker.internet.url());
