@@ -1,4 +1,4 @@
-## 0.1.10
+## 0.1.11
 * fix date.between throwing an out of range error
 
 ## 0.1.9
