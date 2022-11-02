@@ -4,7 +4,6 @@ import 'package:faker_dart/faker_dart.dart';
 void main(List<String> arguments) {
   final faker = Faker.instance;
 
-  print(faker.date.between(DateTime(2021), DateTime(2021, 12)));
   print(faker.datatype.number());
   print(faker.name.fullName());
   print(faker.address.zipCode());
