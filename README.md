@@ -10,7 +10,7 @@
 </h1>
 
 
-Faker.dart is a dart port of the famous [faker.js](https://github.com/Marak/faker.js) package for the web and NodeJS
+Faker.dart is a dart port of the famous [faker.js](https://github.com/faker-js/faker) package for the web and NodeJS
 ## :hammer:  Usage
 
 faker.dart is split up into modules, where every module has a bunch of faker methods.
