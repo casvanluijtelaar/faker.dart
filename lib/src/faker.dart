@@ -45,7 +45,7 @@ class Faker {
   /// {@template image}
   /// generate random  valid image urls from different sources
   /// {@endtemplate}
-  Image get image => Image(instance);
+  Image get image => Image();
 
   /// {@template name}
   /// generate random names & jobs
