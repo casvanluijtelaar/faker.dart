@@ -45,7 +45,7 @@ class Name {
     }
 
     if (chance == 2) {
-      final middleName = this..middleName(gender: gender);
+      final middleName = this.middleName(gender: gender);
       return '$firstName $middleName $lastName';
     }
 

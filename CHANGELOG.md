@@ -1,3 +1,9 @@
+## 0.2.1
+* fixes issue with fullname generation
+
+## 0.2.0
+* BREAKING: remove depricated image providers
+
 ## 0.1.11
 * fix date.between throwing an out of range error
 

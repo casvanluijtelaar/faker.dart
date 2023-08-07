@@ -1,5 +1,4 @@
 import 'package:faker_dart/faker_dart.dart';
-import 'package:faker_dart/src/utils/locale_utils.dart';
 import 'package:test/test.dart';
 
 import '../test_utils.dart';
