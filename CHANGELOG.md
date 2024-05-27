@@ -1,3 +1,6 @@
+## 0.2.2
+* adds `Faker.unique()` which creates a unique instance of the faker class
+
 ## 0.2.1
 * fixes issue with fullname generation
 

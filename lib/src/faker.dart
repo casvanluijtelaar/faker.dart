@@ -30,6 +30,9 @@ class Faker {
   /// currently active locale
   FakerLocale get locale => _locale;
 
+  /// returnes a new (unique) instance of thr [Faker] class
+  static Faker unique() => Faker._internal();
+
   /// set a locale from one of the included locales
   void setLocale(FakerLocaleType type) =>
       _locale = LocaleUtils.generateLocale(type);

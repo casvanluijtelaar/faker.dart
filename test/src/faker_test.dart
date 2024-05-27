@@ -9,6 +9,13 @@ void main() {
     final faker2 = Faker.instance;
     expect(faker1, faker2);
   });
+
+  test('get unique faker', () {
+    final faker1 = Faker.unique()..setLocale(FakerLocaleType.cz);
+    final faker2 = Faker.unique();
+    expect(faker1 != faker2, isTrue);
+  });
+
   test('get the current locale', () {
     final locale = Faker.instance.locale;
     expect(locale, isNotNull);
