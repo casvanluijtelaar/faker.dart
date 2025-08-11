@@ -1,4 +1,4 @@
-## 0.2.2
+## 0.2.3
 * adds `Faker.unique()` which creates a unique instance of the faker class
 
 ## 0.2.2
