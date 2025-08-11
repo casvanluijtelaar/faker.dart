@@ -23,9 +23,9 @@ class Lorem {
   ///
   /// e.g. `faker.lorem.sentence(wordCount: 2) // 'Hello world.`
   String sentence({int wordCount = 5}) {
-    final _words = List<String>.generate(wordCount, (i) => word());
+    final words = List<String>.generate(wordCount, (i) => word());
     // ignore: lines_longer_than_80_chars
-    return '${_words.join(' ')[0].toUpperCase()}${_words.join(' ').substring(1)}.';
+    return '${words.join(' ')[0].toUpperCase()}${words.join(' ').substring(1)}.';
   }
 
   /// returns a randomly generated paragraph,
@@ -33,8 +33,8 @@ class Lorem {
   ///
   /// e.g. `faker.lorem.paragraph(sentenceCount: 2) // 'Hello world. What's up?'`
   String paragraph({int sentenceCount = 3}) {
-    final _sentences = List<String>.generate(sentenceCount, (i) => sentence());
-    return _sentences.join(' ');
+    final sentences = List<String>.generate(sentenceCount, (i) => sentence());
+    return sentences.join(' ');
   }
 
   /// returns a randomly generated text,
@@ -42,10 +42,10 @@ class Lorem {
   ///
   /// e.g. `faker.lorem.text(paragraphCount: 2)`
   String text({int paragraphCount = 3}) {
-    final _paragraphs = List<String>.generate(
+    final paragraphs = List<String>.generate(
       paragraphCount,
       (i) => paragraph(sentenceCount: _faker.datatype.number(min: 2, max: 7)),
     );
-    return _paragraphs.join('\n');
+    return paragraphs.join('\n');
   }
 }
